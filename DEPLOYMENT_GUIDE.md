@@ -1,5 +1,17 @@
 # 🚀 Guide de Déploiement LVLIA
 
+## 🎯 Démarrage Rapide (5 minutes)
+
+**Pour les débutants** - Voici les étapes essentielles pour mettre votre site en ligne :
+
+1. **Aller sur Netlify** : [netlify.com](https://www.netlify.com) → "Sign up with GitHub"
+2. **Importer le projet** : "Add new site" → "Import an existing project" → choisir ce dépôt
+3. **Configuration** : Laissez tout vide sauf "Publish directory" = `.` (un point)
+4. **Déployer** : Cliquez sur "Deploy site" → Votre site sera en ligne en 30 secondes !
+5. **⚠️ À PERSONNALISER APRÈS** : email de contact et lien Calendly (voir ci-dessous)
+
+---
+
 ## ✅ État Actuel
 
 Votre site est maintenant **prêt à être déployé** ! Tous les fichiers ont été extraits et organisés correctement dans le dépôt GitHub.
@@ -79,7 +91,10 @@ Si vous voulez tester rapidement sans GitHub :
 ### 📅 Calendly (Réservation d'appel)
 - Le widget Calendly est déjà intégré sur toutes les pages
 - URL actuelle : `https://calendly.com/lvlia/30min-consultation`
-- ⚠️ **À FAIRE** : Créez votre compte Calendly et remplacez cette URL par la vôtre
+- ⚠️ **IMPORTANT - À MODIFIER** : Cette URL est un placeholder ! Vous DEVEZ :
+  1. Créer votre compte gratuit sur [calendly.com](https://calendly.com)
+  2. Remplacer `https://calendly.com/lvlia/30min-consultation` par votre propre lien Calendly dans tous les fichiers HTML
+  3. Cherchez et remplacez dans tous les fichiers : `data-url="https://calendly.com/lvlia/30min-consultation"`
 
 ### 🔒 HTTPS
 - Netlify active automatiquement HTTPS (certificat SSL gratuit)
@@ -88,14 +103,18 @@ Si vous voulez tester rapidement sans GitHub :
 ## 🎨 Personnalisation
 
 ### Modifier votre email de contact
+⚠️ **IMPORTANT** : L'email actuel `contact@lvlia.example` est un placeholder !
+
 Dans chaque page HTML (footer), remplacez :
 ```html
 <a href="mailto:contact@lvlia.example">contact@lvlia.example</a>
 ```
 Par votre vrai email :
 ```html
-<a href="mailto:votre@email.com">votre@email.com</a>
+<a href="mailto:contact@votre-entreprise.com">contact@votre-entreprise.com</a>
 ```
+
+**Comment faire rapidement** : Utilisez la fonction "Rechercher et remplacer" de votre éditeur de code pour remplacer `contact@lvlia.example` dans tous les fichiers HTML.
 
 ### Modifier les liens réseaux sociaux
 Dans le footer de chaque page, remplacez les `#` par vos vrais liens :
