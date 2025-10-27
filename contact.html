@@ -1,49 +1,327 @@
 <!doctype html>
 <html lang="fr">
 <head>
-  <title>Contact – LVLIA</title>
+  <title>Contact - LVLIA Autonomie Alimentaire</title>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <meta name="description" content="Contactez LVLIA pour votre projet d'autonomie alimentaire ou de solution hydroponique professionnelle en Normandie." />
-  <link rel="stylesheet" href="assets/style.css" />
+  <meta name="description" content="Contactez LVLIA pour votre projet d'autonomie alimentaire hydroponique. Diagnostic gratuit, installation en Normandie sous 10 jours." />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body { 
+      font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif; 
+      line-height: 1.6; 
+      color: #1f2937; 
+      background: #ffffff;
+    }
+    .container { max-width: 1200px; margin: 0 auto; padding: 0 20px; }
+    .header {
+      background: rgba(255, 255, 255, 0.95);
+      backdrop-filter: blur(10px);
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      border-bottom: 1px solid #e5e7eb;
+    }
+    .header-inner {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 1rem 0;
+    }
+    .logo {
+      font-size: 1.5rem;
+      font-weight: 700;
+      color: #059669;
+      text-decoration: none;
+    }
+    .nav {
+      display: flex;
+      gap: 2rem;
+      list-style: none;
+    }
+    .nav a {
+      text-decoration: none;
+      color: #374151;
+      font-weight: 500;
+      transition: color 0.2s;
+    }
+    .nav a:hover, .nav a.active { color: #059669; }
+    .btn {
+      display: inline-block;
+      padding: 0.75rem 1.5rem;
+      border-radius: 0.5rem;
+      text-decoration: none;
+      font-weight: 600;
+      text-align: center;
+      transition: all 0.2s;
+      border: none;
+      cursor: pointer;
+      font-size: 1rem;
+    }
+    .btn-primary {
+      background: #059669;
+      color: white;
+    }
+    .btn-primary:hover {
+      background: #047857;
+      transform: translateY(-1px);
+    }
+    .page-header {
+      background: linear-gradient(135deg, #f0fdf4 0%, #ecfdf5 100%);
+      padding: 4rem 0 2rem;
+      text-align: center;
+    }
+    .page-header h1 {
+      font-size: 2.5rem;
+      font-weight: 700;
+      margin-bottom: 1rem;
+      color: #1f2937;
+    }
+    .page-header p {
+      font-size: 1.125rem;
+      color: #6b7280;
+      max-width: 600px;
+      margin: 0 auto;
+    }
+    .contact-section {
+      padding: 3rem 0;
+    }
+    .calendar-section {
+      background: white;
+      border-radius: 0.5rem;
+      box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+      overflow: hidden;
+      margin: 2rem 0;
+    }
+    .calendar-header {
+      background: #059669;
+      color: white;
+      padding: 1.5rem;
+      text-align: center;
+    }
+    .contact-form {
+      max-width: 600px;
+      margin: 2rem auto;
+      background: #f9fafb;
+      padding: 2rem;
+      border-radius: 0.5rem;
+    }
+    .contact-form label {
+      display: block;
+      margin-bottom: 1rem;
+      font-weight: 500;
+      color: #374151;
+    }
+    .contact-form input,
+    .contact-form textarea {
+      width: 100%;
+      padding: 0.75rem;
+      border: 1px solid #d1d5db;
+      border-radius: 0.375rem;
+      margin-top: 0.25rem;
+      font-size: 1rem;
+    }
+    .contact-form input:focus,
+    .contact-form textarea:focus {
+      outline: none;
+      border-color: #059669;
+      box-shadow: 0 0 0 3px rgba(5, 150, 105, 0.1);
+    }
+    .contact-form textarea {
+      resize: vertical;
+      min-height: 120px;
+    }
+    .footer {
+      background: #374151;
+      color: white;
+      padding: 3rem 0;
+      margin-top: 4rem;
+    }
+    .footer-content {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 2rem;
+    }
+    .footer h3 {
+      margin-bottom: 1rem;
+      color: #10b981;
+    }
+    .footer a {
+      color: #d1d5db;
+      text-decoration: none;
+    }
+    .footer a:hover {
+      color: #10b981;
+    }
+    .contact-info {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 1.5rem;
+      margin: 2rem 0;
+    }
+    .info-card {
+      background: #f0fdf4;
+      padding: 1.5rem;
+      border-radius: 0.5rem;
+      text-align: center;
+    }
+    .info-icon {
+      width: 48px;
+      height: 48px;
+      background: #059669;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin: 0 auto 1rem;
+      font-size: 1.25rem;
+      color: white;
+    }
+    @media (max-width: 768px) {
+      .nav { display: none; }
+      .page-header h1 { font-size: 2rem; }
+      .container { padding: 0 16px; }
+    }
+  </style>
 </head>
 <body>
-<header class="site-header">
-  <a class="logo" href="index.html">
-    <span class="logo-mark">LVLIA</span>
-    <span class="logo-sub">Hydroponie</span>
-  </a>
-  <nav class="main-nav" id="mainNav">
-    <a href="index.html">Accueil</a>
-    <a href="kit-particuliers.html">Particuliers – Kit Autonomie</a>
-    <a href="pros.html">Professionnels</a>
-    <a href="blog.html">Ressources/Blog</a>
-    <a href="contact.html">Contact</a>
-  </nav>
-</header>
-<main>
-  <section class="container">
-    <h1>Contact</h1>
-    <p>Ecrivez-nous, parlez‑nous de votre projet ! Réponse sous 24h ouvrées.</p>
-    <form name="contact" method="POST" netlify class="contact-form">
-      <label>Nom <input type="text" name="name" required></label>
-      <label>Email <input type="email" name="email" required></label>
-      <label>Téléphone <input type="tel" name="phone"></label>
-      <label>Message <textarea name="message" placeholder="Votre demande..."></textarea></label>
-      <button type="submit" class="btn primary">Envoyer</button>
-    </form>
-    <h2>Prendre rendez‑vous</h2>
-    <div class="calendly-inline-widget" data-url="https://calendly.com/lvlia/30min-consultation" style="min-width:320px;height:530px;"></div>
-    <script src="https://assets.calendly.com/assets/external/widget.js" async></script>
+  <header class="header">
+    <div class="container">
+      <div class="header-inner">
+        <a href="index.html" class="logo">LVLIA</a>
+        <nav class="nav">
+          <a href="index.html">Accueil</a>
+          <a href="kit-particuliers.html">Kit Autonomie</a>
+          <a href="pros.html">Professionnels</a>
+          <a href="blog.html">Blog</a>
+          <a href="contact.html" class="active">Contact</a>
+        </nav>
+        <a href="https://calendar.app.google/9TATamoia8m57MhM7" class="btn btn-primary" target="_blank" rel="noopener">Réserver un appel</a>
+      </div>
+    </div>
+  </header>
+
+  <section class="page-header">
+    <div class="container">
+      <h1>Parlons de votre projet</h1>
+      <p>Diagnostic gratuit, conseils personnalisés et accompagnement pour votre autonomie alimentaire</p>
+    </div>
   </section>
-</main>
-<footer class="site-footer">
-  <div class="container footer-grid">
-    <div><strong>LVLIA Hydroponie</strong><br/>Normandie, France<br/><a href="mailto:contact@lvlia.fr">contact@lvlia.fr</a></div>
-    <div class="socials"><a href="#">Facebook</a><a href="#">Instagram</a><a href="#">LinkedIn</a></div>
-    <div class="legal"><a href="sitemap.xml">Sitemap</a> · <a href="robots.txt">Robots.txt</a></div>
-  </div>
-  <div class="copyright">© 2025 LVLIA.</div>
-</footer>
+
+  <section class="contact-section">
+    <div class="container">
+      <div class="contact-info">
+        <div class="info-card">
+          <div class="info-icon">✉️</div>
+          <h3>Email</h3>
+          <p><a href="mailto:contact@lvlia.fr" style="color: #059669; font-weight: 600;">contact@lvlia.fr</a></p>
+          <p style="font-size: 0.875rem; color: #6b7280; margin-top: 0.5rem;">Réponse sous 24h ouvrables</p>
+        </div>
+        
+        <div class="info-card">
+          <div class="info-icon">📍</div>
+          <h3>Zone d'intervention</h3>
+          <p>Normandie et régions limitrophes</p>
+          <p style="font-size: 0.875rem; color: #6b7280; margin-top: 0.5rem;">Installation sous 10 jours</p>
+        </div>
+        
+        <div class="info-card">
+          <div class="info-icon">🔧</div>
+          <h3>Support technique</h3>
+          <p>Accompagnement illimité</p>
+          <p style="font-size: 0.875rem; color: #6b7280; margin-top: 0.5rem;">Email, téléphone, visio</p>
+        </div>
+      </div>
+
+      <div class="calendar-section">
+        <div class="calendar-header">
+          <h3>Réserver un créneau gratuit</h3>
+          <p>Diagnostic personnalisé - 30 minutes par visio ou téléphone</p>
+        </div>
+        <iframe src="https://calendar.app.google/9TATamoia8m57MhM7" 
+                style="border: 0; width: 100%; height: 600px;"
+                scrolling="no"
+                title="Réserver un diagnostic gratuit avec LVLIA">
+        </iframe>
+        <p style="text-align: center; padding: 1rem; color: #6b7280; background: #f9fafb;">
+          Problème d'affichage ? 
+          <a href="https://calendar.app.google/9TATamoia8m57MhM7" target="_blank" rel="noopener" style="color: #059669; font-weight: 600;">Ouvrir dans un nouvel onglet</a>
+        </p>
+      </div>
+
+      <form name="contact" method="POST" netlify class="contact-form">
+        <h3 style="text-align: center; margin-bottom: 1.5rem; color: #059669;">Ou écrivez-nous directement</h3>
+        
+        <label>
+          Nom complet *
+          <input type="text" name="name" required>
+        </label>
+        
+        <label>
+          Adresse email *
+          <input type="email" name="email" required>
+        </label>
+        
+        <label>
+          Téléphone
+          <input type="tel" name="phone">
+        </label>
+        
+        <label>
+          Type de projet
+          <select name="project-type" style="width: 100%; padding: 0.75rem; border: 1px solid #d1d5db; border-radius: 0.375rem; margin-top: 0.25rem; font-size: 1rem;">
+            <option value="">Sélectionner...</option>
+            <option value="particulier-kit">Particulier - Kit 1m²</option>
+            <option value="professionnel-restaurant">Professionnel - Restaurant</option>
+            <option value="professionnel-hotel">Professionnel - Hôtel</option>
+            <option value="professionnel-epicerie">Professionnel - Épicerie</option>
+            <option value="autre">Autre</option>
+          </select>
+        </label>
+        
+        <label>
+          Votre message
+          <textarea name="message" placeholder="Décrivez votre projet, vos objectifs, votre localisation..."></textarea>
+        </label>
+        
+        <button type="submit" class="btn btn-primary" style="width: 100%; margin-top: 1rem;">Envoyer ma demande</button>
+        
+        <p style="font-size: 0.875rem; color: #6b7280; text-align: center; margin-top: 1rem;">
+          En soumettant ce formulaire, vous acceptez d'être recontacté(e) par LVLIA concernant votre demande.
+        </p>
+      </form>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-content">
+        <div>
+          <h3>LVLIA</h3>
+          <p>Autonomie alimentaire hydroponique<br>
+          Normandie, France<br>
+          <a href="mailto:contact@lvlia.fr">contact@lvlia.fr</a></p>
+        </div>
+        <div>
+          <h3>Solutions</h3>
+          <p><a href="kit-particuliers.html">Kit Particuliers</a><br>
+          <a href="pros.html">Solutions Professionnels</a><br>
+          <a href="contact.html">Diagnostic gratuit</a></p>
+        </div>
+        <div>
+          <h3>Ressources</h3>
+          <p><a href="blog.html">Blog & Guides</a><br>
+          <a href="https://calendar.app.google/9TATamoia8m57MhM7" target="_blank" rel="noopener">Prendre RDV</a><br>
+          <a href="contact.html">Contact</a></p>
+        </div>
+      </div>
+      <div style="text-align: center; margin-top: 2rem; padding-top: 2rem; border-top: 1px solid #4b5563;">
+        <p>&copy; 2025 LVLIA - Tous droits réservés</p>
+      </div>
+    </div>
+  </footer>
 </body>
 </html>

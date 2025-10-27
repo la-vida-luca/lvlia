@@ -1,86 +1,476 @@
 <!doctype html>
 <html lang="fr">
-  <head>
-    <title>LVLIA – Autonomie Alimentaire
-    </title>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta name="description" content="Passez à l’autonomie alimentaire avec LVLIA : solutions hydroponiques clé en main pour particuliers et pros. Kit 1m² livré, installé et accompagné en Normandie." />
-    <meta property="og:title" content="LVLIA – Autonomie alimentaire clé en main" />
-    <meta property="og:description" content="Passez à l’autonomie alimentaire avec LVLIA : kit hydroponique 1m² livré, installé et accompagné." />
-    <meta name="twitter:card" content="summary_large_image" />
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&family=Poppins:wght@600;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="assets/style.css" />
-    <script defer src="assets/main.js"></script>
-  </head>
-  <body>
-<header class="site-header">
-  <a class="logo" href="index.html">
-    <span class="logo-mark">LVLIA</span>
-    <span class="logo-sub">Hydroponie</span>
-  </a>
-  <nav class="main-nav" id="mainNav">
-    <a href="index.html">Accueil</a>
-    <a href="kit-particuliers.html">Particuliers – Kit Autonomie</a>
-    <a href="pros.html">Professionnels</a>
-    <a href="blog.html">Ressources/Blog</a>
-    <a href="contact.html">Contact</a>
-  </nav>
-  <button class="cta" data-scroll="#rendezvous">Demander mon diagnostic</button>
-  <button class="burger" id="burger" aria-label="Ouvrir le menu">☰</button>
-</header>
-<main>
-<section class="hero">
-  <div class="container">
-    <h1>Devenez autonome alimentaire.<br/><span class="logo-mark">Kit hydroponique 1m² clé en main</span></h1>
-    <p>Crise économique, inflation, pénurie ? Prenez le contrôle avec nos kits livrés, installés et accompagnés partout en Normandie.</p>
-    <div class="hero-cta">
-      <a class="btn primary" href="kit-particuliers.html">Je veux mon autonomie alimentaire</a>
-      <a class="btn outline" href="pros.html">Je suis un professionnel</a>
+<head>
+  <title>LVLIA - Devenez autonome alimentaire sur 1m²</title>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="Kit hydroponique clé en main : récoltez salades, herbes et fraises fraîches toute l'année chez vous. Installation sous 10 jours en Normandie, abonnement 50€/mois sans engagement." />
+  <meta property="og:title" content="LVLIA - Autonomie alimentaire hydroponique" />
+  <meta property="og:description" content="Kit 1m² livré, installé et accompagné. 30-42 plants simultanés, récoltes dès 3-4 semaines. 1990€ + 50€/mois sans engagement." />
+  <meta property="og:type" content="website" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body { 
+      font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif; 
+      line-height: 1.6; 
+      color: #1f2937; 
+      background: #ffffff;
+    }
+    .container { max-width: 1200px; margin: 0 auto; padding: 0 20px; }
+    .header {
+      background: rgba(255, 255, 255, 0.95);
+      backdrop-filter: blur(10px);
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      border-bottom: 1px solid #e5e7eb;
+    }
+    .header-inner {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 1rem 0;
+    }
+    .logo {
+      font-size: 1.5rem;
+      font-weight: 700;
+      color: #059669;
+      text-decoration: none;
+    }
+    .nav {
+      display: flex;
+      gap: 2rem;
+      list-style: none;
+    }
+    .nav a {
+      text-decoration: none;
+      color: #374151;
+      font-weight: 500;
+      transition: color 0.2s;
+    }
+    .nav a:hover { color: #059669; }
+    .btn {
+      display: inline-block;
+      padding: 0.75rem 1.5rem;
+      border-radius: 0.5rem;
+      text-decoration: none;
+      font-weight: 600;
+      text-align: center;
+      transition: all 0.2s;
+      border: none;
+      cursor: pointer;
+      font-size: 1rem;
+    }
+    .btn-primary {
+      background: #059669;
+      color: white;
+    }
+    .btn-primary:hover {
+      background: #047857;
+      transform: translateY(-1px);
+    }
+    .btn-secondary {
+      background: white;
+      color: #059669;
+      border: 2px solid #059669;
+    }
+    .btn-secondary:hover {
+      background: #f0fdf4;
+    }
+    .hero {
+      background: linear-gradient(135deg, #f0fdf4 0%, #ecfdf5 100%);
+      padding: 4rem 0;
+    }
+    .hero-content {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 3rem;
+      align-items: center;
+    }
+    .hero h1 {
+      font-size: 3rem;
+      font-weight: 700;
+      line-height: 1.1;
+      margin-bottom: 1.5rem;
+      color: #1f2937;
+    }
+    .hero p {
+      font-size: 1.25rem;
+      color: #6b7280;
+      margin-bottom: 2rem;
+    }
+    .hero-cta {
+      display: flex;
+      gap: 1rem;
+      margin-bottom: 2rem;
+    }
+    .hero-image {
+      border-radius: 1rem;
+      overflow: hidden;
+      box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1);
+    }
+    .hero-image img {
+      width: 100%;
+      height: 400px;
+      object-fit: cover;
+    }
+    .stats {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 2rem;
+      margin-top: 3rem;
+    }
+    .stat {
+      text-align: center;
+      padding: 1.5rem;
+      background: white;
+      border-radius: 0.5rem;
+      box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+    }
+    .stat-number {
+      font-size: 2rem;
+      font-weight: 700;
+      color: #059669;
+      display: block;
+    }
+    .benefits {
+      padding: 4rem 0;
+      background: white;
+    }
+    .benefits-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 2rem;
+      margin-top: 3rem;
+    }
+    .benefit {
+      padding: 2rem;
+      background: #f9fafb;
+      border-radius: 0.5rem;
+      text-align: center;
+    }
+    .benefit-icon {
+      width: 60px;
+      height: 60px;
+      background: #059669;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin: 0 auto 1rem;
+      font-size: 1.5rem;
+      color: white;
+    }
+    .section-title {
+      font-size: 2.5rem;
+      font-weight: 700;
+      text-align: center;
+      margin-bottom: 1rem;
+      color: #1f2937;
+    }
+    .section-subtitle {
+      font-size: 1.125rem;
+      color: #6b7280;
+      text-align: center;
+      max-width: 600px;
+      margin: 0 auto;
+    }
+    .why-now {
+      padding: 4rem 0;
+      background: #fef3c7;
+    }
+    .why-now-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 2rem;
+      margin-top: 2rem;
+    }
+    .why-now-item {
+      background: white;
+      padding: 1.5rem;
+      border-radius: 0.5rem;
+      box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+    }
+    .cta-section {
+      padding: 4rem 0;
+      background: #1f2937;
+      color: white;
+      text-align: center;
+    }
+    .cta-section h2 {
+      font-size: 2.5rem;
+      margin-bottom: 1rem;
+    }
+    .cta-section p {
+      font-size: 1.25rem;
+      margin-bottom: 2rem;
+      opacity: 0.9;
+    }
+    .calendar-embed {
+      background: white;
+      padding: 2rem;
+      border-radius: 1rem;
+      margin: 2rem 0;
+      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+    }
+    .footer {
+      background: #374151;
+      color: white;
+      padding: 3rem 0;
+    }
+    .footer-content {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 2rem;
+    }
+    .footer h3 {
+      margin-bottom: 1rem;
+      color: #10b981;
+    }
+    .footer a {
+      color: #d1d5db;
+      text-decoration: none;
+    }
+    .footer a:hover {
+      color: #10b981;
+    }
+    .guarantees {
+      display: flex;
+      justify-content: center;
+      gap: 2rem;
+      margin-top: 2rem;
+      flex-wrap: wrap;
+    }
+    .guarantee {
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+      padding: 0.5rem 1rem;
+      background: rgba(5, 150, 105, 0.1);
+      border-radius: 0.25rem;
+      font-size: 0.875rem;
+      font-weight: 500;
+    }
+    .mobile-menu { display: none; }
+    @media (max-width: 768px) {
+      .hero-content { grid-template-columns: 1fr; }
+      .hero h1 { font-size: 2rem; }
+      .stats { grid-template-columns: 1fr; }
+      .nav { display: none; }
+      .hero-cta { flex-direction: column; }
+      .container { padding: 0 16px; }
+    }
+  </style>
+</head>
+<body>
+  <header class="header">
+    <div class="container">
+      <div class="header-inner">
+        <a href="index.html" class="logo">LVLIA</a>
+        <nav class="nav">
+          <a href="index.html">Accueil</a>
+          <a href="kit-particuliers.html">Kit Autonomie</a>
+          <a href="pros.html">Professionnels</a>
+          <a href="blog.html">Blog</a>
+          <a href="contact.html">Contact</a>
+        </nav>
+        <a href="https://calendar.app.google/9TATamoia8m57MhM7" class="btn btn-primary" target="_blank" rel="noopener">Réserver un appel</a>
+      </div>
     </div>
-  </div>
-</section>
-<section class="kit-offre container">
-  <h2>Kit 1m² complet, livré &amp; installé</h2>
-  <ul>
-    <li>Système vertical complet (culture de 30-42 plantes)</li>
-    <li>Livré et installé chez vous</li>
-    <li>Formation à la mise en route et entretien</li>
-    <li>Abonnement mensuel : graines bio, substrats, support &amp; guides</li>
-    <li>Assistance technique illimitée</li>
-    <li>Garantie et SAV</li>
-  </ul>
-  <p>Prix à partir de <strong>1 990€</strong> puis <strong>50€/mois</strong> <span style="font-size:0.9em">(abonnement sans engagement)</span></p>
-</section>
-<section class="rendezvous" id="rendezvous">
-  <div class="container narrow">
-    <h2>Prendre rendez‑vous</h2>
-    <p>Programmez une visio ou un appel avec notre équipe d’experts hydroponie.</p>
-    <!-- Intégration Calendly ou autre outil de prise de rendez-vous réelle -->
-    <div class="calendly-inline-widget" data-url="https://calendly.com/lvlia/30min-consultation" style="min-width:320px;height:630px;"></div>
-    <script src="https://assets.calendly.com/assets/external/widget.js" async></script>
-  </div>
-</section>
-</main>
-<footer class="site-footer">
-  <div class="container footer-grid">
-    <div>
-      <strong>LVLIA Hydroponie</strong><br/>
-      Normandie, France<br/>
-      <a href="mailto:contact@lvlia.fr">contact@lvlia.fr</a>
+  </header>
+
+  <section class="hero">
+    <div class="container">
+      <div class="hero-content">
+        <div>
+          <h1>Devenez autonome alimentaire sur 1m²</h1>
+          <p>Kit hydroponique vertical clé en main : récoltez salades, herbes aromatiques et fraises fraîches toute l'année, chez vous, sans terre et avec 90% d'eau en moins.</p>
+          
+          <div class="hero-cta">
+            <a href="kit-particuliers.html" class="btn btn-primary">Je veux mon autonomie</a>
+            <a href="pros.html" class="btn btn-secondary">Solutions pro</a>
+          </div>
+          
+          <div class="guarantees">
+            <div class="guarantee">
+              <span>✓</span> Installation sous 10 jours
+            </div>
+            <div class="guarantee">
+              <span>✓</span> Satisfait ou remboursé
+            </div>
+            <div class="guarantee">
+              <span>✓</span> Support illimité
+            </div>
+          </div>
+        </div>
+        
+        <div class="hero-image">
+          <img src="https://images.unsplash.com/photo-1416879595882-3373a0480b5b?w=800&h=600&fit=crop&auto=format" alt="Tour hydroponique verticale avec légumes frais en intérieur moderne" loading="lazy">
+        </div>
+      </div>
+
+      <div class="stats">
+        <div class="stat">
+          <span class="stat-number">30-42</span>
+          <span>plants simultanés</span>
+        </div>
+        <div class="stat">
+          <span class="stat-number">3-4</span>
+          <span>semaines jusqu'aux premières récoltes</span>
+        </div>
+        <div class="stat">
+          <span class="stat-number">90%</span>
+          <span>d'eau économisée vs culture classique</span>
+        </div>
+      </div>
     </div>
-    <div class="socials">
-      <a href="#" aria-label="Facebook">Facebook</a>
-      <a href="#" aria-label="Instagram">Instagram</a>
-      <a href="#" aria-label="LinkedIn">LinkedIn</a>
+  </section>
+
+  <section class="why-now">
+    <div class="container">
+      <h2 class="section-title">Pourquoi maintenant ?</h2>
+      <p class="section-subtitle">Face à l'inflation alimentaire et aux pénuries, reprendre le contrôle de son alimentation n'a jamais été aussi important.</p>
+      
+      <div class="why-now-grid">
+        <div class="why-now-item">
+          <h3><strong>Prix alimentaires +25%</strong></h3>
+          <p>Légumes frais et bio de plus en plus chers. Votre kit s'amortit en 8-12 mois.</p>
+        </div>
+        <div class="why-now-item">
+          <h3><strong>Ruptures fréquentes</strong></h3>
+          <p>Grèves, intempéries, transport... Vous ne dépendez plus des circuits longs.</p>
+        </div>
+        <div class="why-now-item">
+          <h3><strong>Qualité garantie</strong></h3>
+          <p>Zéro pesticide, fraîcheur maximale, goût incomparable des légumes cueillis à maturité.</p>
+        </div>
+        <div class="why-now-item">
+          <h3><strong>Simplicité totale</strong></h3>
+          <p>15 min par semaine d'entretien. Nous nous occupons de tout le reste.</p>
+        </div>
+      </div>
     </div>
-    <div class="legal">
-      <a href="sitemap.xml">Sitemap</a> · <a href="robots.txt">Robots.txt</a>
+  </section>
+
+  <section class="benefits">
+    <div class="container">
+      <h2 class="section-title">Ce que comprend votre abonnement mensuel</h2>
+      <p class="section-subtitle">Pour seulement 50€/mois sans engagement, tout est inclus pour réussir vos cultures</p>
+      
+      <div class="benefits-grid">
+        <div class="benefit">
+          <div class="benefit-icon">🌱</div>
+          <h3>Box graines bio</h3>
+          <p>6-8 variétés de saison sélectionnées par nos experts. Salades, herbes, légumes fruits selon la période.</p>
+        </div>
+        <div class="benefit">
+          <div class="benefit-icon">🥥</div>
+          <h3>Substrats écologiques</h3>
+          <p>Fibre de coco, perlite, vermiculite. Quantités exactes pour vos plantations du mois.</p>
+        </div>
+        <div class="benefit">
+          <div class="benefit-icon">📖</div>
+          <h3>Guides pratiques</h3>
+          <p>Calendrier de plantation, conseils de récolte, recettes avec vos légumes. Adapté à votre niveau.</p>
+        </div>
+        <div class="benefit">
+          <div class="benefit-icon">💬</div>
+          <h3>Support illimité</h3>
+          <p>Email, téléphone, visio. Notre équipe vous accompagne jusqu'à la réussite de vos cultures.</p>
+        </div>
+      </div>
     </div>
-  </div>
-  <div class="copyright">© 2025 LVLIA – Autonomie alimentaire hydroponique en Normandie.</div>
-</footer>
-  </body>
+  </section>
+
+  <section class="cta-section">
+    <div class="container">
+      <h2>Prêt à reprendre le contrôle de votre alimentation ?</h2>
+      <p>Échangeons 30 minutes sur votre projet d'autonomie alimentaire</p>
+      
+      <div class="calendar-embed">
+        <iframe src="https://calendar.app.google/9TATamoia8m57MhM7" 
+                style="border: 0; width: 100%; height: 600px; border-radius: 8px;"
+                scrolling="no"
+                title="Réserver un rendez-vous avec LVLIA - Autonomie alimentaire hydroponique">
+        </iframe>
+        <p style="text-align: center; margin-top: 1rem; color: #6b7280;">
+          Problème d'affichage ? 
+          <a href="https://calendar.app.google/9TATamoia8m57MhM7" target="_blank" rel="noopener" style="color: #059669; font-weight: 600;">Ouvrir dans un nouvel onglet</a>
+        </p>
+      </div>
+      
+      <div style="display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap; margin-top: 2rem;">
+        <a href="kit-particuliers.html" class="btn btn-primary">Kit Particuliers - 1990€</a>
+        <a href="pros.html" class="btn btn-secondary">Solutions Pros</a>
+      </div>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-content">
+        <div>
+          <h3>LVLIA</h3>
+          <p>Autonomie alimentaire hydroponique<br>
+          Normandie, France<br>
+          <a href="mailto:contact@lvlia.fr">contact@lvlia.fr</a></p>
+        </div>
+        <div>
+          <h3>Solutions</h3>
+          <p><a href="kit-particuliers.html">Kit Particuliers</a><br>
+          <a href="pros.html">Solutions Professionnels</a><br>
+          <a href="contact.html">Diagnostic gratuit</a></p>
+        </div>
+        <div>
+          <h3>Ressources</h3>
+          <p><a href="blog.html">Blog & Guides</a><br>
+          <a href="https://calendar.app.google/9TATamoia8m57MhM7" target="_blank" rel="noopener">Prendre RDV</a><br>
+          <a href="contact.html">Contact</a></p>
+        </div>
+      </div>
+      <div style="text-align: center; margin-top: 2rem; padding-top: 2rem; border-top: 1px solid #4b5563;">
+        <p>&copy; 2025 LVLIA - Tous droits réservés</p>
+      </div>
+    </div>
+  </footer>
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    "name": "LVLIA",
+    "description": "Solutions d'autonomie alimentaire hydroponique en Normandie",
+    "url": "https://lvlia.fr",
+    "contactPoint": {
+      "@type": "ContactPoint",
+      "contactType": "customer service",
+      "email": "contact@lvlia.fr",
+      "areaServed": "FR",
+      "availableLanguage": "French"
+    },
+    "address": {
+      "@type": "PostalAddress",
+      "addressRegion": "Normandie",
+      "addressCountry": "FR"
+    },
+    "serviceArea": {
+      "@type": "GeoCircle",
+      "name": "Zone de livraison Normandie"
+    }
+  }
+  </script>
+
+  <!-- Google Analytics placeholder - à remplacer par ton ID -->
+  <!-- <script async src="https://www.googletagmanager.com/gtag/js?id=GA_MEASUREMENT_ID"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'GA_MEASUREMENT_ID');
+  </script> -->
+</body>
 </html>
