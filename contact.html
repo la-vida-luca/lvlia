@@ -1,10 +1,10 @@
 <!doctype html>
 <html lang="fr">
 <head>
-  <title>Contact - LVLIA Autonomie Alimentaire</title>
+  <title>Contact - LVLIA Fermes Urbaines</title>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <meta name="description" content="Contactez LVLIA pour votre projet d'autonomie alimentaire hydroponique. Diagnostic gratuit, installation en Normandie sous 10 jours." />
+  <meta name="description" content="Contactez LVLIA pour créer votre ferme urbaine hydroponique. Diagnostic gratuit, installation clé en main en Normandie sous 10 jours." />
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
@@ -116,7 +116,8 @@
       color: #374151;
     }
     .contact-form input,
-    .contact-form textarea {
+    .contact-form textarea,
+    .contact-form select {
       width: 100%;
       padding: 0.75rem;
       border: 1px solid #d1d5db;
@@ -125,7 +126,8 @@
       font-size: 1rem;
     }
     .contact-form input:focus,
-    .contact-form textarea:focus {
+    .contact-form textarea:focus,
+    .contact-form select:focus {
       outline: none;
       border-color: #059669;
       box-shadow: 0 0 0 3px rgba(5, 150, 105, 0.1);
@@ -194,20 +196,20 @@
         <a href="index.html" class="logo">LVLIA</a>
         <nav class="nav">
           <a href="index.html">Accueil</a>
-          <a href="kit-particuliers.html">Kit Autonomie</a>
-          <a href="pros.html">Professionnels</a>
+          <a href="kit-particuliers.html">Fermes Urbaines</a>
+          <a href="pros.html">Solutions Pro</a>
           <a href="blog.html">Blog</a>
           <a href="contact.html" class="active">Contact</a>
         </nav>
-        <a href="https://calendar.app.google/9TATamoia8m57MhM7" class="btn btn-primary" target="_blank" rel="noopener">Réserver un appel</a>
+        <a href="https://calendar.app.google/9TATamoia8m57MhM7" class="btn btn-primary" target="_blank" rel="noopener">Créer ma ferme</a>
       </div>
     </div>
   </header>
 
   <section class="page-header">
     <div class="container">
-      <h1>Parlons de votre projet</h1>
-      <p>Diagnostic gratuit, conseils personnalisés et accompagnement pour votre autonomie alimentaire</p>
+      <h1>Parlons de votre ferme urbaine</h1>
+      <p>Diagnostic gratuit, conseils personnalisés et accompagnement pour créer votre ferme urbaine</p>
     </div>
   </section>
 
@@ -222,15 +224,15 @@
         </div>
         
         <div class="info-card">
-          <div class="info-icon">📍</div>
-          <h3>Zone d'intervention</h3>
+          <div class="info-icon">🎯</div>
+          <h3>Zone fermes urbaines</h3>
           <p>Normandie et régions limitrophes</p>
           <p style="font-size: 0.875rem; color: #6b7280; margin-top: 0.5rem;">Installation sous 10 jours</p>
         </div>
         
         <div class="info-card">
-          <div class="info-icon">🔧</div>
-          <h3>Support technique</h3>
+          <div class="info-icon">🌱</div>
+          <h3>Agriculture urbaine</h3>
           <p>Accompagnement illimité</p>
           <p style="font-size: 0.875rem; color: #6b7280; margin-top: 0.5rem;">Email, téléphone, visio</p>
         </div>
@@ -239,12 +241,13 @@
       <div class="calendar-section">
         <div class="calendar-header">
           <h3>Réserver un créneau gratuit</h3>
-          <p>Diagnostic personnalisé - 30 minutes par visio ou téléphone</p>
+          <p>Consultation ferme urbaine personnalisée - 30 minutes par visio ou téléphone</p>
         </div>
         <iframe src="https://calendar.app.google/9TATamoia8m57MhM7" 
                 style="border: 0; width: 100%; height: 600px;"
+                frameborder="0" 
                 scrolling="no"
-                title="Réserver un diagnostic gratuit avec LVLIA">
+                title="Créer ma ferme urbaine - Consultation LVLIA">
         </iframe>
         <p style="text-align: center; padding: 1rem; color: #6b7280; background: #f9fafb;">
           Problème d'affichage ? 
@@ -252,7 +255,7 @@
         </p>
       </div>
 
-      <form name="contact" method="POST" netlify class="contact-form">
+      <form name="contact-ferme-urbaine" method="POST" netlify class="contact-form">
         <h3 style="text-align: center; margin-bottom: 1.5rem; color: #059669;">Ou écrivez-nous directement</h3>
         
         <label>
@@ -271,26 +274,25 @@
         </label>
         
         <label>
-          Type de projet
-          <select name="project-type" style="width: 100%; padding: 0.75rem; border: 1px solid #d1d5db; border-radius: 0.375rem; margin-top: 0.25rem; font-size: 1rem;">
+          Type de ferme urbaine
+          <select name="ferme-type">
             <option value="">Sélectionner...</option>
-            <option value="particulier-kit">Particulier - Kit 1m²</option>
-            <option value="professionnel-restaurant">Professionnel - Restaurant</option>
-            <option value="professionnel-hotel">Professionnel - Hôtel</option>
-            <option value="professionnel-epicerie">Professionnel - Épicerie</option>
-            <option value="autre">Autre</option>
+            <option value="ferme-1m2">Ferme Urbaine 1m²</option>
+            <option value="ferme-2m2">Ferme Urbaine 2m²</option>
+            <option value="ferme-surmesure">Ferme Sur-Mesure</option>
+            <option value="conseil">Conseil agriculture urbaine</option>
           </select>
         </label>
         
         <label>
-          Votre message
-          <textarea name="message" placeholder="Décrivez votre projet, vos objectifs, votre localisation..."></textarea>
+          Votre projet de ferme urbaine
+          <textarea name="message" placeholder="Décrivez votre projet : espace disponible, objectifs (autonomie familiale, production, pédagogie...), localisation, contraintes..."></textarea>
         </label>
         
         <button type="submit" class="btn btn-primary" style="width: 100%; margin-top: 1rem;">Envoyer ma demande</button>
         
         <p style="font-size: 0.875rem; color: #6b7280; text-align: center; margin-top: 1rem;">
-          En soumettant ce formulaire, vous acceptez d'être recontacté(e) par LVLIA concernant votre demande.
+          En soumettant ce formulaire, vous acceptez d'être recontacté(e) par LVLIA concernant votre projet de ferme urbaine.
         </p>
       </form>
     </div>
@@ -300,26 +302,26 @@
     <div class="container">
       <div class="footer-content">
         <div>
-          <h3>LVLIA</h3>
-          <p>Autonomie alimentaire hydroponique<br>
+          <h3>LVLIA Fermes Urbaines</h3>
+          <p>Révolution de l'autonomie alimentaire<br>
           Normandie, France<br>
           <a href="mailto:contact@lvlia.fr">contact@lvlia.fr</a></p>
         </div>
         <div>
           <h3>Solutions</h3>
-          <p><a href="kit-particuliers.html">Kit Particuliers</a><br>
-          <a href="pros.html">Solutions Professionnels</a><br>
+          <p><a href="kit-particuliers.html">Fermes Urbaines 1m²/2m²</a><br>
+          <a href="pros.html">Fermes Professionnelles</a><br>
           <a href="contact.html">Diagnostic gratuit</a></p>
         </div>
         <div>
           <h3>Ressources</h3>
-          <p><a href="blog.html">Blog & Guides</a><br>
-          <a href="https://calendar.app.google/9TATamoia8m57MhM7" target="_blank" rel="noopener">Prendre RDV</a><br>
+          <p><a href="blog.html">Blog Agriculture Urbaine</a><br>
+          <a href="https://calendar.app.google/9TATamoia8m57MhM7" target="_blank" rel="noopener">Créer ma ferme</a><br>
           <a href="contact.html">Contact</a></p>
         </div>
       </div>
       <div style="text-align: center; margin-top: 2rem; padding-top: 2rem; border-top: 1px solid #4b5563;">
-        <p>&copy; 2025 LVLIA - Tous droits réservés</p>
+        <p>© 2025 LVLIA Fermes Urbaines - Tous droits réservés</p>
       </div>
     </div>
   </footer>

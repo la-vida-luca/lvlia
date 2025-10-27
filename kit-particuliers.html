@@ -1,71 +1,121 @@
 <!doctype html>
 <html lang="fr">
 <head>
-  <title>Kits autonomie hydroponique – LVLIA</title>
+  <title>Fermes Urbaines LVLIA – 1m², 2m² et sur-mesure</title>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <meta name="description" content="Kits hydroponiques clé en main pour particuliers : 1m², 2m² et sur-mesure. Livraison, installation, LEDs, box mensuelle, SAV pro. Comparez les solutions, découvrez les prix réels et démarrez l’autonomie alimentaire rentable." />
+  <meta name="description" content="Fermes urbaines hydroponiques clé en main pour particuliers : 1m², 2m² et sur-mesure. Livraison, installation, LEDs, box mensuelle, SAV pro. Comparez les solutions, découvrez les prix réels et démarrez l’autonomie alimentaire rentable." />
   <link rel="stylesheet" href="assets/style.css" />
+  <style>
+    .ferme-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 2rem; margin: 2rem 0; }
+    .ferme-card { background: #f9fafb; padding: 2rem; border-radius: 0.5rem; text-align: center; box-shadow: 0 2px 4px rgba(0,0,0,0.1); }
+    .ferme-card img { width: 100%; height: 200px; object-fit: cover; border-radius: 0.5rem; margin-bottom: 1rem; }
+    .ferme-card h3 { color: #059669; margin-bottom: 1rem; }
+    .ferme-card .price { font-size: 1.5rem; font-weight: 700; color: #1f2937; margin: 1rem 0; }
+    .ferme-card .features { text-align: left; margin: 1rem 0; }
+    .ferme-card .features li { margin: 0.5rem 0; }
+    table { width: 100%; border-collapse: collapse; margin: 2rem 0; background: #fcfcfc; }
+    th, td { padding: 1rem; border: 1px solid #e5e7eb; text-align: left; }
+    th { background: #e0f2fe; font-weight: 600; }
+    .highlight-box { background: #fef9c3; padding: 1.5rem; border-radius: 0.5rem; margin: 2rem 0; }
+  </style>
 </head>
 <body>
 <header class="site-header">
   <a class="logo" href="index.html">
     <span class="logo-mark">LVLIA</span>
-    <span class="logo-sub">Hydroponie</span>
+    <span class="logo-sub">Fermes Urbaines</span>
   </a>
   <nav class="main-nav" id="mainNav">
     <a href="index.html">Accueil</a>
-    <a href="kit-particuliers.html" class="active">Particuliers – Kits</a>
-    <a href="pros.html">Professionnels</a>
+    <a href="kit-particuliers.html" class="active">Fermes Urbaines</a>
+    <a href="pros.html">Solutions Pro</a>
     <a href="blog.html">Ressources/Blog</a>
     <a href="contact.html">Contact</a>
   </nav>
+  <a href="https://calendar.app.google/9TATamoia8m57MhM7" class="btn" target="_blank" rel="noopener">Créer ma ferme</a>
 </header>
 <main>
   <section class="container">
-    <h1>Kits hydroponiques 1m², 2m² et plus : choisissez votre autonomie</h1>
-    <p><strong>LVLIA vous accompagne selon votre espace et vos objectifs :</strong> nos kits sont complets (structure, LED horticoles, système d’irrigation automatique, substrats, box graines et support). <br> <span style="background:#fef9c3;padding:2px 6px;border-radius:0.3em">1m² : le minimum viable recommandé</span>, <b>2m² : ratio optimal pour une famille ou double stock pro</b>. Possibilité sur-mesure.
+    <h1>Fermes urbaines 1m², 2m² et plus : choisissez votre autonomie</h1>
+    <p><strong>LVLIA vous accompagne selon votre espace et vos objectifs :</strong> nos fermes urbaines sont complètes (structure, LED horticoles, système d’irrigation automatique, substrats, box graines et support). <br> <span style="background:#fef9c3;padding:2px 6px;border-radius:0.3em">1m² : le minimum viable recommandé</span>, <b>2m² : ratio optimal pour une famille ou double production</b>. Possibilité sur-mesure.
     </p>
-    <div style="display:flex;gap:2rem;flex-wrap:wrap;margin:2rem 0;justify-content:center">
-      <figure style="width:320px;text-align:center">
-        <img src="https://images.unsplash.com/photo-1416879595882-3373a0480b5b?w=600&h=550&fit=crop" alt="Kit hydroponique LED 1m² compact" style="border-radius:0.6em;width:100%;height:auto;object-fit:cover;box-shadow:0 2px 16px rgba(0,0,0,0.09)">
-        <figcaption style="font-size:0.98em;color:#52525b;margin-top:0.6em">Exemple : kit complet 1m², timer, réservoir, LED horticole 95W, box mensuelle incluse.</figcaption>
-      </figure>
-      <figure style="width:320px;text-align:center">
-        <img src="https://images.unsplash.com/photo-1464983953574-0892a716854b?w=600&h=550&fit=crop" alt="Kit vertical 2m² famille" style="border-radius:0.6em;width:100%;height:auto;object-fit:cover;box-shadow:0 2px 16px rgba(0,0,0,0.09)">
-        <figcaption style="font-size:0.98em;color:#52525b;margin-top:0.6em">Kit vertical 2m² : double production, lighting full spectrum 190W, tout inclus livraison/installation.</figcaption>
-      </figure>
-      <figure style="width:320px;text-align:center">
-        <img src="https://images.unsplash.com/photo-1506744038136-46273834b3fb?w=600&h=550&fit=crop" alt="Exemple installation familiale LED" style="border-radius:0.6em;width:100%;height:auto;object-fit:cover;box-shadow:0 2px 16px rgba(0,0,0,0.09)">
-        <figcaption style="font-size:0.98em;color:#52525b;margin-top:0.6em">Exemple d’installation chez un particulier : rendement max, kit 2m² double ligne.</figcaption>
-      </figure>
+    
+    <div class="ferme-grid">
+      <div class="ferme-card">
+        <img src="https://images.unsplash.com/photo-1416879595882-3373a0480b5b?w=600&h=400&fit=crop" alt="Ferme urbaine LED 1m² compact" loading="lazy">
+        <h3>Ferme Urbaine 1m²</h3>
+        <p>Parfait pour démarrer l'autonomie alimentaire. Compact mais productif.</p>
+        <div class="price">2 390€ TTC</div>
+        <ul class="features">
+          <li>✓ Structure verticale optimisée 1m²</li>
+          <li>✓ LED horticole 95W full spectrum</li>
+          <li>✓ Jusqu'à 40 plants simultanés</li>
+          <li>✓ Installation + formation incluses</li>
+          <li>✓ Box mensuelle 50€/mois</li>
+          <li>✓ SAV 2 ans</li>
+        </ul>
+      </div>
+      
+      <div class="ferme-card" style="border: 2px solid #059669; background: #f0fdf4;">
+        <img src="https://images.unsplash.com/photo-1464983953574-0892a716854b?w=600&h=400&fit=crop" alt="Ferme urbaine verticale 2m²" loading="lazy">
+        <h3>Ferme Urbaine 2m² ★ POPULAIRE</h3>
+        <p>Le meilleur rapport production/investissement pour une famille.</p>
+        <div class="price">3 790€ TTC</div>
+        <ul class="features">
+          <li>✓ Structure double ligne 2m²</li>
+          <li>✓ 2x LED horticoles 95W</li>
+          <li>✓ Jusqu'à 80 plants simultanés</li>
+          <li>✓ Double irrigation automatique</li>
+          <li>✓ Box mensuelle 90€/mois</li>
+          <li>✓ SAV 2 ans + maintenance</li>
+        </ul>
+      </div>
+      
+      <div class="ferme-card">
+        <img src="https://images.unsplash.com/photo-1506744038136-46273834b3fb?w=600&h=400&fit=crop" alt="Ferme urbaine sur-mesure professionnelle" loading="lazy">
+        <h3>Ferme Sur-Mesure</h3>
+        <p>Solution personnalisée pour espaces atypiques et gros besoins.</p>
+        <div class="price">À partir de 5 490€</div>
+        <ul class="features">
+          <li>✓ 3m² et plus</li>
+          <li>✓ LED full spectrum adapté</li>
+          <li>✓ 120+ plants</li>
+          <li>✓ Cahier des charges personnalisé</li>
+          <li>✓ Abonnement sur devis</li>
+          <li>✓ SAV professionnel</li>
+        </ul>
+      </div>
     </div>
-    <h2>Tableau comparatif des kits LVLIA</h2>
-    <table style="width:100%;border-collapse:collapse;margin:2rem 0;background:#fcfcfc">
-      <thead style="background:#e0f2fe">
-        <tr><th>Modèle</th><th>Superficie utile</th><th>Production/mois</th><th>LED et irrigation</th><th>Installation comprise</th><th>Prix TTC livré/posé</th><th>Abonnement (mois)</th></tr>
-      </thead>
-      <tbody>
-        <tr><td><strong>Kit autonomie 1m²</strong></td><td>1,0 m²</td><td>Jusqu'à 40 plants</td><td>LED 95W, timer, irrigation auto</td><td>Oui</td><td><b>2 390 €</b></td><td>50 €</td></tr>
-        <tr><td><strong>Kit autonomie 2m²</strong></td><td>2,0 m²</td><td>Jusqu'à 80 plants</td><td>2x LED 95W, double irrigation auto</td><td>Oui</td><td><b>3 790 €</b></td><td>90 €</td></tr>
-        <tr><td><strong>Kit Pro / Sur-mesure</strong></td><td>3m² et +</td><td>120+ plants</td><td>LED(s) full spectrum suivant cahier des charges</td><td>Oui</td><td><b>À partir de 5 490 €</b></td><td>Sur devis</td></tr>
-      </tbody>
-    </table>
-    <div style="font-size:1.05em;background:#fef9c3;padding:1em;border-radius:0.6em;margin-bottom:1.2em;">
-      <b>À savoir :</b> Tous nos kits sont <b>prêts à installer</b> : structure, bacs, éclairage LED, pompe/système auto, box mensuelle graines+substrats, guide installation, SAV 1 an. Subvention possible (nous contacter).<br><br>
+    
+    <div class="highlight-box">
+      <b>À savoir :</b> Toutes nos fermes urbaines sont <b>prêtes à installer</b> : structure, bacs, éclairage LED, pompe/système auto, box mensuelle graines+substrats, guide installation, SAV. Subvention possible (nous contacter).<br><br>
       <b>Livraison sous 10 jours en Normandie et grandes villes.</b>
     </div>
+    
+    <h2>Tableau comparatif des fermes urbaines LVLIA</h2>
+    <table>
+      <thead>
+        <tr><th>Modèle</th><th>Superficie</th><th>Production/mois</th><th>LED et irrigation</th><th>Installation</th><th>Prix TTC livré/posé</th><th>Abonnement</th></tr>
+      </thead>
+      <tbody>
+        <tr><td><strong>Ferme Urbaine 1m²</strong></td><td>1,0 m²</td><td>Jusqu'à 40 plants</td><td>LED 95W, timer, irrigation auto</td><td>Incluse</td><td><b>2 390 €</b></td><td>50 €/mois</td></tr>
+        <tr><td><strong>Ferme Urbaine 2m²</strong></td><td>2,0 m²</td><td>Jusqu'à 80 plants</td><td>2x LED 95W, double irrigation</td><td>Incluse</td><td><b>3 790 €</b></td><td>90 €/mois</td></tr>
+        <tr><td><strong>Ferme Sur-Mesure</strong></td><td>3m² +</td><td>120+ plants</td><td>LED(s) selon cahier des charges</td><td>Incluse</td><td><b>À partir de 5 490 €</b></td><td>Sur devis</td></tr>
+      </tbody>
+    </table>
+    
     <h2>Commander ou demander un devis</h2>
-    <form name="commande-kit" method="POST" netlify class="contact-form">
+    <form name="commande-ferme" method="POST" netlify class="contact-form">
       <label>Nom <input type="text" name="name" required></label>
       <label>Email <input type="email" name="email" required></label>
       <label>Téléphone <input type="tel" name="phone"></label>
       <label>Adresse <input type="text" name="address" required></label>
-      <label>Choix du kit
+      <label>Choix de la ferme urbaine
         <select name="modele" required>
-          <option value="kit1">Kit 1m²</option>
-          <option value="kit2">Kit 2m²</option>
-          <option value="surmesure">Kit pro/sur-mesure</option>
+          <option value="ferme1">Ferme Urbaine 1m²</option>
+          <option value="ferme2">Ferme Urbaine 2m²</option>
+          <option value="surmesure">Ferme Sur-Mesure</option>
         </select>
       </label>
       <label>Message <textarea name="message" placeholder="Usage, date, besoins, volume, etc"></textarea></label>
@@ -73,22 +123,23 @@
     </form>
   </section>
   <section class="container">
-    <h2>FAQ hydroponie LVLIA : questions fréquentes</h2>
-    <details><summary>Que comprend exactement mon kit ?</summary><p><b>Structure optimisée (verticale ou sur table), LED horticole pro, timer et pompe, bacs, substrats premium, guide illustré, installation, SAV.</b> Le tout prêt à brancher à la livraison.</p></details>
-    <details><summary>Quels types de plantes puis-je cultiver ?</summary><p>Légumes feuilles (salades, épinards, blette), herbes aromatiques (basilic, menthe, ciboulette, coriandre, persil), tomates-cerises, fleurs comestibles, micropousses.</p></details>
-    <details><summary>Quel coût d’entretien/par mois (hors abonnement) ?</summary><p>Consommation électrique d’une LED : env. 5€ par mois. Eau : 90% de moins qu’en potager classique.</p></details>
-    <details><summary>Peut-on moduler la taille ou l’installer dans un espace atypique ?</summary><p>Oui, nous proposons du sur-mesure : cuisine, grenier, local, cave ventilée… Demandez-nous une étude rapide.</p></details>
-    <details><summary>Est-ce bruyant ou contraignant ?</summary><p>Non, le bruit est négligeable (<30dB pompe). Entretien 15min/semaine. Zéro terre à manipuler.</p></details>
-    <details><summary>L’abonnement est-il obligatoire ?</summary><p>Recommandé pour garantir la qualité et la constance des cultures, mais vous pouvez gérer l’approvisionnement seul sur demande.</p></details>
+    <h2>FAQ fermes urbaines LVLIA : questions fréquentes</h2>
+    <details><summary>Que comprend exactement ma ferme urbaine ?</summary><p><b>Structure optimisée (verticale ou modulaire), LED horticole professionnelle, timer et pompe, bacs, substrats premium, guide illustré, installation, SAV.</b> Le tout prêt à brancher à la livraison.</p></details>
+    <details><summary>Quels types de plantes puis-je cultiver dans ma ferme urbaine ?</summary><p>Légumes feuilles (salades, épinards, blette), herbes aromatiques (basilic, menthe, ciboulette, coriandre, persil), tomates-cerises, fleurs comestibles, micropousses.</p></details>
+    <details><summary>Quel coût d’entretien/par mois (hors abonnement) ?</summary><p>Consommation électrique d’une LED : env. 5€ par mois. Eau : 90% de moins qu’en potager classique. Entretien hebdomadaire : 15 minutes.</p></details>
+    <details><summary>Peut-on moduler la taille ou l’installer dans un espace atypique ?</summary><p>Oui, nos fermes urbaines sont modulables : cuisine, grenier, local, cave ventilée… Demandez-nous une étude rapide pour votre projet sur-mesure.</p></details>
+    <details><summary>Est-ce bruyant ou contraignant ?</summary><p>Non, le bruit est négligeable (<30dB pompe). Entretien 15min/semaine. Zéro terre à manipuler, système hydroponique propre.</p></details>
+    <details><summary>L’abonnement est-il obligatoire pour ma ferme urbaine ?</summary><p>Recommandé pour garantir la qualité et la constance des cultures, mais vous pouvez gérer l’approvisionnement seul sur demande (graines, substrats, nutriments).</p></details>
+    <details><summary>Quelle différence avec un potager traditionnel ?</summary><p>Production 365j/an, 90% d'eau en moins, zéro pesticides, pas de dépendance météo, croissance 3x plus rapide, pas de mauvaises herbes. L'agriculture urbaine moderne.</p></details>
   </section>
 </main>
 <footer class="site-footer">
   <div class="container footer-grid">
-    <div><strong>LVLIA Hydroponie</strong><br/>Normandie, France<br/><a href="mailto:contact@lvlia.fr">contact@lvlia.fr</a></div>
+    <div><strong>LVLIA Fermes Urbaines</strong><br/>Normandie, France<br/><a href="mailto:contact@lvlia.fr">contact@lvlia.fr</a></div>
     <div class="socials"><a href="#">Facebook</a><a href="#">Instagram</a><a href="#">LinkedIn</a></div>
     <div class="legal"><a href="sitemap.xml">Sitemap</a> · <a href="robots.txt">Robots.txt</a></div>
   </div>
-  <div class="copyright">© 2025 LVLIA – Autonomie alimentaire hydroponique.</div>
+  <div class="copyright">© 2025 LVLIA Fermes Urbaines – Autonomie alimentaire.</div>
 </footer>
 </body>
 </html>
