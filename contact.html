@@ -1,10 +1,10 @@
 <!doctype html>
 <html lang="fr">
 <head>
-  <title>Contact – LVLIA</title>
+  <title>Contact - Démo Fermes Connectées – LVLIA</title>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <meta name="description" content="Parlez-nous de votre espace. Nous installons votre ferme urbaine et vous récoltez. Réponse sous 24h." />
+  <meta name="description" content="Réservez une démo de nos fermes urbaines connectées IoT. Découvrez l’app, testez les alertes, et planifiez votre installation." />
   <link rel="stylesheet" href="assets/style.css" />
 </head>
 <body>
@@ -12,55 +12,78 @@
   <a class="logo" href="index.html"><span>LVLIA</span></a>
   <nav class="main-nav">
     <a href="index.html">Accueil</a>
-    <a href="kit-particuliers.html">Fermes 1m²/2m²</a>
+    <a href="kit-particuliers.html">Fermes Connectées</a>
     <a href="pros.html">Pro</a>
     <a href="blog.html">Blog</a>
     <a href="contact.html" class="active">Contact</a>
   </nav>
-  <a class="btn" href="https://calendar.app.google/9TATamoia8m57MhM7" target="_blank" rel="noopener">Choisir mon créneau</a>
+  <a class="btn" href="https://calendar.app.google/9TATamoia8m57MhM7" target="_blank" rel="noopener">Réserver une démo</a>
 </header>
 <section class="page-head">
   <div class="container">
-    <h1>Parlons de votre ferme urbaine</h1>
-    <p>Parlez-nous de votre espace. Nous venons, nous installons, vous récoltez.</p>
+    <h1>Découvrez les fermes connectées</h1>
+    <p>30 minutes pour tout comprendre : l’app, les capteurs, et votre future installation.</p>
   </div>
 </section>
 <main class="container">
   <section class="grid grid-2">
     <div class="card">
-      <h2>Réserver un créneau</h2>
-      <p>30 minutes en visio ou téléphone pour répondre à vos questions et préparer votre installation.</p>
-      <iframe src="https://calendar.app.google/9TATamoia8m57MhM7" style="border:0;width:100%;height:520px;border-radius:10px" title="Choisir un créneau"></iframe>
-      <p><a class="btn outline" href="https://calendar.app.google/9TATamoia8m57MhM7" target="_blank" rel="noopener">Ouvrir dans un nouvel onglet</a></p>
+      <h2>Réserver votre démo IoT</h2>
+      <p>Visio ou téléphone. Nous vous montrons l’application en direct, avec de vraies données de ferme.</p>
+      <iframe src="https://calendar.app.google/9TATamoia8m57MhM7" style="border:0;width:100%;height:520px;border-radius:10px" title="Démo fermes connectées LVLIA"></iframe>
+      <p><a class="btn outline" href="https://calendar.app.google/9TATamoia8m57MhM7" target="_blank" rel="noopener">Ouvrir en grand</a></p>
     </div>
-    <div class="card">
-      <h2>Nous écrire</h2>
-      <form name="contact" method="POST" netlify class="contact-form">
-        <label>Nom complet<input type="text" name="name" required></label>
-        <label>Email<input type="email" name="email" required></label>
-        <label>Téléphone<input type="tel" name="phone"></label>
-        <label>Votre projet
-          <select name="ferme-type">
-            <option value="">Sélectionner…</option>
-            <option value="1m2">Ferme 1m²</option>
-            <option value="2m2">Ferme 2m²</option>
-            <option value="pro">Projet pro / sur-mesure</option>
-          </select>
-        </label>
-        <label>Message<textarea name="message" placeholder="Espace disponible, objectifs, localisation…"></textarea></label>
-        <button type="submit" class="btn">Envoyer</button>
-        <p style="color:#475569;font-size:14px;margin-top:8px">Réponse sous 24h ouvrées.</p>
-      </form>
+    <div>
+      <div class="card">
+        <h2>Ce que vous découvrirez</h2>
+        <ul>
+          <li>📱 Démo live de l’app LVLIA Farm</li>
+          <li>📈 Dashboard temps réel avec vrais capteurs</li>
+          <li>🔔 Alertes intelligentes en action</li>
+          <li>🏠 Visite virtuelle installation 1m²/2m²</li>
+          <li>📋 Devis personnalisé et planning</li>
+        </ul>
+      </div>
+      <div class="card">
+        <h2>Ou nous écrire</h2>
+        <form name="demo-iot" method="POST" netlify class="contact-form">
+          <label>Nom complet<input type="text" name="name" required></label>
+          <label>Email<input type="email" name="email" required></label>
+          <label>Téléphone<input type="tel" name="phone"></label>
+          <label>Intérêt
+            <select name="ferme-type">
+              <option value="">Sélectionner…</option>
+              <option value="1m2-connectee">Ferme 1m² Connectée</option>
+              <option value="2m2-connectee">Ferme 2m² Connectée</option>
+              <option value="demo-app">Démo application seulement</option>
+            </select>
+          </label>
+          <label>Message<textarea name="message" placeholder="Questions, espace disponible, planning souhaité…"></textarea></label>
+          <button type="submit" class="btn">Demander ma démo</button>
+          <p style="color:#475569;font-size:14px;margin-top:8px">Démo sous 48h. Installation sous 10 jours.</p>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container">
+      <blockquote>
+        «Avec l’IoT, votre ferme devient autonome. Elle vous dit ce dont elle a besoin, quand elle en a besoin.»
+      </blockquote>
+      <p style="text-align:center;margin-top:16px">
+        <a class="btn" href="https://calendar.app.google/9TATamoia8m57MhM7" target="_blank" rel="noopener">Réserver ma démo maintenant</a>
+      </p>
     </div>
   </section>
 </main>
 <footer class="site-footer">
   <div class="footer-grid container">
     <div><strong>LVLIA Fermes Urbaines</strong><br/>Caen, Normandie<br/><a href="mailto:contact@lvlia.fr">contact@lvlia.fr</a></div>
-    <div><a href="kit-particuliers.html">Fermes 1m²/2m²</a><br/><a href="pros.html">Pro</a><br/><a href="contact.html">Contact</a></div>
-    <div><a href="blog.html">Blog</a><br/><a href="https://calendar.app.google/9TATamoia8m57MhM7" target="_blank" rel="noopener">Choisir mon créneau</a></div>
+    <div><a href="kit-particuliers.html">Fermes Connectées</a><br/><a href="pros.html">Pro</a><br/><a href="contact.html">Contact</a></div>
+    <div><a href="blog.html">Blog</a><br/><a href="https://calendar.app.google/9TATamoia8m57MhM7" target="_blank" rel="noopener">Réserver une démo</a></div>
   </div>
-  <div class="copyright">© 2025 LVLIA – Fermes Urbaines</div>
+  <div class="copyright">© 2025 LVLIA – Fermes Urbaines Connectées</div>
 </footer>
 </body>
 </html>
