@@ -1,0 +1,17 @@
+{
+  "ile_de_france": {
+    "surface_cultivee": "190 hectares",
+    "emplois": "1100",
+    "projets": "1600+",
+    "sites": "1625"
+  },
+  "national": {
+    "projets_estimes": "4000",
+    "fermes_anru_2022": "98",
+    "quartiers_prioritaires": "140"
+  },
+  "observatoire": {
+    "creation": "janvier 2022",
+    "objectif": "recensement exhaustif projets français"
+  }
+}
