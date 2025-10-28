@@ -1,0 +1,1 @@
+<img src="/assets/photos/IMG_6799.jpg" alt="Micro-serre LVLIA 1m² en tente fermée avec LED et étagères"/>
