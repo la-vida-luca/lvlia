@@ -1,468 +1,114 @@
 <!doctype html>
 <html lang="fr">
 <head>
-  <title>LVLIA - Fermes Urbaines | Votre autonomie alimentaire en Normandie</title>
+  <title>LVLIA – Fermes urbaines connectées, en Normandie</title>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <meta name="description" content="Créez votre ferme urbaine hydroponique sur 1m² ou 2m². Installation clé en main, LED horticoles, abonnement graines bio. Autonomie alimentaire garantie en Normandie." />
-  <meta property="og:title" content="LVLIA - Fermes Urbaines clé en main" />
-  <meta property="og:description" content="Fermes urbaines hydroponiques 1m² et 2m² livrées, installées. 30-80 plants, récoltes dès 3-4 semaines. À partir de 2390€ + abonnement." />
-  <meta property="og:type" content="website" />
-  <meta name="twitter:card" content="summary_large_image" />
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
-  <style>
-    * { margin: 0; padding: 0; box-sizing: border-box; }
-    body { 
-      font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif; 
-      line-height: 1.6; 
-      color: #1f2937; 
-      background: #ffffff;
-    }
-    .container { max-width: 1200px; margin: 0 auto; padding: 0 20px; }
-    .header {
-      background: rgba(255, 255, 255, 0.95);
-      backdrop-filter: blur(10px);
-      position: sticky;
-      top: 0;
-      z-index: 100;
-      border-bottom: 1px solid #e5e7eb;
-    }
-    .header-inner {
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      padding: 1rem 0;
-    }
-    .logo {
-      font-size: 1.5rem;
-      font-weight: 700;
-      color: #059669;
-      text-decoration: none;
-    }
-    .nav {
-      display: flex;
-      gap: 2rem;
-      list-style: none;
-    }
-    .nav a {
-      text-decoration: none;
-      color: #374151;
-      font-weight: 500;
-      transition: color 0.2s;
-    }
-    .nav a:hover { color: #059669; }
-    .btn {
-      display: inline-block;
-      padding: 0.75rem 1.5rem;
-      border-radius: 0.5rem;
-      text-decoration: none;
-      font-weight: 600;
-      text-align: center;
-      transition: all 0.2s;
-      border: none;
-      cursor: pointer;
-      font-size: 1rem;
-    }
-    .btn-primary {
-      background: #059669;
-      color: white;
-    }
-    .btn-primary:hover {
-      background: #047857;
-      transform: translateY(-1px);
-    }
-    .btn-secondary {
-      background: white;
-      color: #059669;
-      border: 2px solid #059669;
-    }
-    .btn-secondary:hover {
-      background: #f0fdf4;
-    }
-    .hero {
-      background: linear-gradient(135deg, #f0fdf4 0%, #ecfdf5 100%);
-      padding: 4rem 0;
-    }
-    .hero-content {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 3rem;
-      align-items: center;
-    }
-    .hero h1 {
-      font-size: 3rem;
-      font-weight: 700;
-      line-height: 1.1;
-      margin-bottom: 1.5rem;
-      color: #1f2937;
-    }
-    .hero p {
-      font-size: 1.25rem;
-      color: #6b7280;
-      margin-bottom: 2rem;
-    }
-    .hero-cta {
-      display: flex;
-      gap: 1rem;
-      margin-bottom: 2rem;
-    }
-    .hero-image {
-      border-radius: 1rem;
-      overflow: hidden;
-      box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1);
-    }
-    .hero-image img {
-      width: 100%;
-      height: 400px;
-      object-fit: cover;
-    }
-    .stats {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 2rem;
-      margin-top: 3rem;
-    }
-    .stat {
-      text-align: center;
-      padding: 1.5rem;
-      background: white;
-      border-radius: 0.5rem;
-      box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
-    }
-    .stat-number {
-      font-size: 2rem;
-      font-weight: 700;
-      color: #059669;
-      display: block;
-    }
-    .benefits {
-      padding: 4rem 0;
-      background: white;
-    }
-    .benefits-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-      gap: 2rem;
-      margin-top: 3rem;
-    }
-    .benefit {
-      padding: 2rem;
-      background: #f9fafb;
-      border-radius: 0.5rem;
-      text-align: center;
-    }
-    .benefit-icon {
-      width: 60px;
-      height: 60px;
-      background: #059669;
-      border-radius: 50%;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      margin: 0 auto 1rem;
-      font-size: 1.5rem;
-      color: white;
-    }
-    .section-title {
-      font-size: 2.5rem;
-      font-weight: 700;
-      text-align: center;
-      margin-bottom: 1rem;
-      color: #1f2937;
-    }
-    .section-subtitle {
-      font-size: 1.125rem;
-      color: #6b7280;
-      text-align: center;
-      max-width: 600px;
-      margin: 0 auto;
-    }
-    .why-now {
-      padding: 4rem 0;
-      background: #fef3c7;
-    }
-    .why-now-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-      gap: 2rem;
-      margin-top: 2rem;
-    }
-    .why-now-item {
-      background: white;
-      padding: 1.5rem;
-      border-radius: 0.5rem;
-      box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
-    }
-    .cta-section {
-      padding: 4rem 0;
-      background: #1f2937;
-      color: white;
-      text-align: center;
-    }
-    .cta-section h2 {
-      font-size: 2.5rem;
-      margin-bottom: 1rem;
-    }
-    .cta-section p {
-      font-size: 1.25rem;
-      margin-bottom: 2rem;
-      opacity: 0.9;
-    }
-    .calendar-embed {
-      background: white;
-      padding: 2rem;
-      border-radius: 1rem;
-      margin: 2rem 0;
-      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
-    }
-    .footer {
-      background: #374151;
-      color: white;
-      padding: 3rem 0;
-    }
-    .footer-content {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-      gap: 2rem;
-    }
-    .footer h3 {
-      margin-bottom: 1rem;
-      color: #10b981;
-    }
-    .footer a {
-      color: #d1d5db;
-      text-decoration: none;
-    }
-    .footer a:hover {
-      color: #10b981;
-    }
-    .guarantees {
-      display: flex;
-      justify-content: center;
-      gap: 2rem;
-      margin-top: 2rem;
-      flex-wrap: wrap;
-    }
-    .guarantee {
-      display: flex;
-      align-items: center;
-      gap: 0.5rem;
-      padding: 0.5rem 1rem;
-      background: rgba(5, 150, 105, 0.1);
-      border-radius: 0.25rem;
-      font-size: 0.875rem;
-      font-weight: 500;
-    }
-    .mobile-menu { display: none; }
-    @media (max-width: 768px) {
-      .hero-content { grid-template-columns: 1fr; }
-      .hero h1 { font-size: 2rem; }
-      .stats { grid-template-columns: 1fr; }
-      .nav { display: none; }
-      .hero-cta { flex-direction: column; }
-      .container { padding: 0 16px; }
-    }
-  </style>
+  <meta name="description" content="Fermes urbaines 1m²/2m² avec capteurs IoT temps réel. Votre ferme vous parle : pH, température, humidité, alertes sur téléphone. Installation en Normandie." />
+  <link rel="stylesheet" href="assets/style.css" />
 </head>
 <body>
-  <header class="header">
-    <div class="container">
-      <div class="header-inner">
-        <a href="index.html" class="logo">LVLIA</a>
-        <nav class="nav">
-          <a href="index.html">Accueil</a>
-          <a href="kit-particuliers.html">Fermes Urbaines</a>
-          <a href="pros.html">Solutions Pro</a>
-          <a href="blog.html">Blog</a>
-          <a href="contact.html">Contact</a>
-        </nav>
-        <a href="https://calendar.app.google/9TATamoia8m57MhM7" class="btn btn-primary" target="_blank" rel="noopener">Créer ma ferme</a>
+<header class="site-header">
+  <a class="logo" href="index.html"><span>LVLIA</span></a>
+  <nav class="main-nav">
+    <a href="index.html" class="active">Accueil</a>
+    <a href="kit-particuliers.html">Fermes Connectées</a>
+    <a href="pros.html">Pro</a>
+    <a href="blog.html">Blog</a>
+    <a href="contact.html">Contact</a>
+  </nav>
+  <a class="btn" href="https://calendar.app.google/9TATamoia8m57MhM7" target="_blank" rel="noopener">Réserver une démo</a>
+</header>
+<section class="hero">
+  <div class="container">
+    <h1>Votre ferme urbaine vous parle.</h1>
+    <p>Capteurs IoT temps réel, alertes sur votre téléphone, conseils personnalisés. Nous venons, nous installons, vous récoltez sans stress.</p>
+    <div class="hero-cta">
+      <a class="btn" href="kit-particuliers.html">Découvrir les fermes connectées</a>
+      <a class="btn outline" href="#demo-app">Voir l’application</a>
+    </div>
+  </div>
+</section>
+<section class="section">
+  <div class="container grid grid-3">
+    <div class="stat"><div class="badge">Surveillance</div><h3>24h/7j</h3><p>Capteurs IoT temps réel</p></div>
+    <div class="stat"><div class="badge">Alertes</div><h3>Sur téléphone</h3><p>pH, eau, température</p></div>
+    <div class="stat"><div class="badge">Coaching</div><h3>Personnalisé</h3><p>Selon vos cultures</p></div>
+  </div>
+</section>
+<section class="section">
+  <div class="container grid grid-2">
+    <div class="card">
+      <h2>Ferme 1m² Connectée</h2>
+      <p>Compacte, surveillée, rassurante. Capteurs IoT inclus et application de monitoring.</p>
+      <ul>
+        <li>Jusqu’à ~40 plants + capteurs pH/temp/eau</li>
+        <li>LED 95W + monitoring luminosité</li>
+        <li>App LVLIA Farm : alertes temps réel</li>
+      </ul>
+      <p><strong>2890€ TTC</strong> · Abonnement 75€/mois</p>
+      <p><a class="btn" href="contact.html">Demander un devis</a></p>
+    </div>
+    <div class="card" style="border:2px solid var(--brand);background:#F0FDF4">
+      <h2>Ferme 2m² Connectée ★</h2>
+      <p>Double production, double sécurité. Monitoring complet pour une famille autonome.</p>
+      <ul>
+        <li>Jusqu’à ~80 plants + 6 capteurs IoT</li>
+        <li>2× LED 95W + double monitoring</li>
+        <li>App premium : historiques et prédictions</li>
+      </ul>
+      <p><strong>4290€ TTC</strong> · Abonnement 125€/mois</p>
+      <p><a class="btn" href="contact.html">Demander un devis</a></p>
+    </div>
+  </div>
+</section>
+<section class="section" id="demo-app">
+  <div class="container">
+    <h2>Votre ferme dans votre poche</h2>
+    <p>Découvrez l’application LVLIA Farm : surveillez, recevez des alertes, optimisez vos récoltes.</p>
+    <div class="card">
+      <iframe src="https://ppl-ai-code-interpreter-files.s3.amazonaws.com/web/direct-files/f7518e9eb7a38a11393929c2ea8564ff/b549950a-bd76-448d-83c1-fba82f2b2723/index.html" 
+              style="border:0;width:100%;height:600px;border-radius:10px" 
+              title="Démo application LVLIA Farm"></iframe>
+      <p style="text-align:center;margin-top:16px;color:#475569">
+        <a href="https://ppl-ai-code-interpreter-files.s3.amazonaws.com/web/direct-files/f7518e9eb7a38a11393929c2ea8564ff/b549950a-bd76-448d-83c1-fba82f2b2723/index.html" target="_blank" rel="noopener" style="color:var(--brand);font-weight:600">Ouvrir la démo en plein écran</a>
+      </p>
+    </div>
+    <blockquote style="margin:24px 0">
+      «Votre ferme vous prévient quand elle a soif. Vous recevez une notification, vous ajustez, elle vous remercie.»
+    </blockquote>
+  </div>
+</section>
+<section class="section">
+  <div class="container">
+    <h2>Pourquoi connecter sa ferme ?</h2>
+    <div class="grid grid-2">
+      <div>
+        <h3>📱 Alertes intelligentes</h3>
+        <p>pH trop bas ? Niveau d’eau critique ? Votre téléphone vous prévient avec l’action précise à faire.</p>
+      </div>
+      <div>
+        <h3>📈 Optimisation continue</h3>
+        <p>L’app apprend de vos cultures et vous suggère les meilleurs moments pour semer, tailler, récolter.</p>
+      </div>
+      <div>
+        <h3>🚫 Zéro stress</h3>
+        <p>Plus besoin de vérifier tous les jours. Les capteurs surveillent, vous êtes alerté seulement si nécessaire.</p>
+      </div>
+      <div>
+        <h3>📉 Rendements supérieurs</h3>
+        <p>Contrôle précis = cultures optimales = +20% de rendement vs ferme manuelle.</p>
       </div>
     </div>
-  </header>
-
-  <section class="hero">
-    <div class="container">
-      <div class="hero-content">
-        <div>
-          <h1>Créez votre ferme urbaine sur 1m²</h1>
-          <p>La révolution alimentaire commence chez vous. Fermes urbaines hydroponiques clé en main : récoltez légumes, herbes et fruits frais toute l'année, sans terre, avec 90% d'eau en moins.</p>
-          
-          <div class="hero-cta">
-            <a href="kit-particuliers.html" class="btn btn-primary">Découvrir nos fermes</a>
-            <a href="pros.html" class="btn btn-secondary">Solutions pro</a>
-          </div>
-          
-          <div class="guarantees">
-            <div class="guarantee">
-              <span>✓</span> Installation sous 10 jours
-            </div>
-            <div class="guarantee">
-              <span>✓</span> Satisfait ou remboursé
-            </div>
-            <div class="guarantee">
-              <span>✓</span> Support illimité
-            </div>
-          </div>
-        </div>
-        
-        <div class="hero-image">
-          <img src="https://images.unsplash.com/photo-1416879595882-3373a0480b5b?w=800&h=600&fit=crop&auto=format" alt="Ferme urbaine verticale LVLIA dans un intérieur moderne" loading="lazy">
-        </div>
-      </div>
-
-      <div class="stats">
-        <div class="stat">
-          <span class="stat-number">1-2m²</span>
-          <span>de fermes urbaines disponibles</span>
-        </div>
-        <div class="stat">
-          <span class="stat-number">30-80</span>
-          <span>plants selon votre ferme</span>
-        </div>
-        <div class="stat">
-          <span class="stat-number">3-4</span>
-          <span>semaines jusqu'aux premières récoltes</span>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <section class="why-now">
-    <div class="container">
-      <h2 class="section-title">Pourquoi créer sa ferme urbaine maintenant ?</h2>
-      <p class="section-subtitle">L'agriculture urbaine est la réponse aux défis alimentaires actuels : inflation, ruptures, qualité.</p>
-      
-      <div class="why-now-grid">
-        <div class="why-now-item">
-          <h3><strong>Indépendance alimentaire</strong></h3>
-          <p>Légumes frais et bio de plus en plus chers. Votre ferme urbaine s'amortit en 8-12 mois.</p>
-        </div>
-        <div class="why-now-item">
-          <h3><strong>Production constante</strong></h3>
-          <p>Grèves, intempéries, transport... Votre ferme urbaine produit 365j/an, indépendamment des circuits.</p>
-        </div>
-        <div class="why-now-item">
-          <h3><strong>Qualité supérieure</strong></h3>
-          <p>Zéro pesticide, fraîcheur maximale, goût incomparable des légumes cueillis à maturité chez vous.</p>
-        </div>
-        <div class="why-now-item">
-          <h3><strong>Facilité d'usage</strong></h3>
-          <p>15 min par semaine d'entretien. Installation complète, formation et accompagnement inclus.</p>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <section class="benefits">
-    <div class="container">
-      <h2 class="section-title">Ce que comprend votre ferme urbaine LVLIA</h2>
-      <p class="section-subtitle">Installation complète clé en main + abonnement premium sans engagement</p>
-      
-      <div class="benefits-grid">
-        <div class="benefit">
-          <div class="benefit-icon">🌱</div>
-          <h3>Structure & Éclairage</h3>
-          <p>Tour verticale optimisée, LEDs horticoles full spectrum, timer automatique, irrigation goutte-à-goutte.</p>
-        </div>
-        <div class="benefit">
-          <div class="benefit-icon">🚚</div>
-          <h3>Livraison & Installation</h3>
-          <p>Livré et installé chez vous en Normandie sous 10 jours. Formation pratique incluse, mise en route garantie.</p>
-        </div>
-        <div class="benefit">
-          <div class="benefit-icon">📦</div>
-          <h3>Box mensuelle premium</h3>
-          <p>Graines bio de saison, substrats écologiques, guides pratiques, conseils personnalisés chaque mois.</p>
-        </div>
-        <div class="benefit">
-          <div class="benefit-icon">🛠️</div>
-          <h3>SAV & Accompagnement</h3>
-          <p>Support illimité par email/téléphone/visio, garantie 2 ans, pièces de rechange disponibles.</p>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <section class="cta-section">
-    <div class="container">
-      <h2>Prêt à lancer votre ferme urbaine ?</h2>
-      <p>Échangeons 30 minutes sur votre projet de ferme urbaine personnalisée</p>
-      
-      <div class="calendar-embed">
-        <iframe src="https://calendar.app.google/9TATamoia8m57MhM7" 
-                style="border: 0; width: 100%; height: 600px; border-radius: 8px;"
-                frameborder="0" 
-                scrolling="no"
-                title="Créer ma ferme urbaine - Consultation LVLIA">
-        </iframe>
-        <p style="text-align: center; margin-top: 1rem; color: #6b7280;">
-          Problème d'affichage ? 
-          <a href="https://calendar.app.google/9TATamoia8m57MhM7" target="_blank" rel="noopener" style="color: #059669; font-weight: 600;">Ouvrir dans un nouvel onglet</a>
-        </p>
-      </div>
-      
-      <div style="display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap; margin-top: 2rem;">
-        <a href="kit-particuliers.html" class="btn btn-primary">Fermes 1m²/2m² - À partir de 2390€</a>
-        <a href="pros.html" class="btn btn-secondary">Fermes Pro sur-mesure</a>
-      </div>
-    </div>
-  </section>
-
-  <footer class="footer">
-    <div class="container">
-      <div class="footer-content">
-        <div>
-          <h3>LVLIA Fermes Urbaines</h3>
-          <p>Révolution de l'autonomie alimentaire<br>
-          Normandie, France<br>
-          <a href="mailto:contact@lvlia.fr">contact@lvlia.fr</a></p>
-        </div>
-        <div>
-          <h3>Solutions</h3>
-          <p><a href="kit-particuliers.html">Fermes Urbaines 1m²/2m²</a><br>
-          <a href="pros.html">Fermes Professionnelles</a><br>
-          <a href="contact.html">Diagnostic gratuit</a></p>
-        </div>
-        <div>
-          <h3>Ressources</h3>
-          <p><a href="blog.html">Blog Agriculture Urbaine</a><br>
-          <a href="https://calendar.app.google/9TATamoia8m57MhM7" target="_blank" rel="noopener">Créer ma ferme</a><br>
-          <a href="contact.html">Contact</a></p>
-        </div>
-      </div>
-      <div style="text-align: center; margin-top: 2rem; padding-top: 2rem; border-top: 1px solid #4b5563;">
-        <p>© 2025 LVLIA - Fermes Urbaines - Tous droits réservés</p>
-      </div>
-    </div>
-  </footer>
-
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "Organization",
-    "name": "LVLIA Fermes Urbaines",
-    "description": "Fermes urbaines hydroponiques clé en main pour l'autonomie alimentaire en Normandie",
-    "url": "https://lvlia.fr",
-    "contactPoint": {
-      "@type": "ContactPoint",
-      "contactType": "customer service",
-      "email": "contact@lvlia.fr",
-      "areaServed": "FR",
-      "availableLanguage": "French"
-    },
-    "address": {
-      "@type": "PostalAddress",
-      "addressRegion": "Normandie",
-      "addressCountry": "FR"
-    },
-    "serviceArea": {
-      "@type": "GeoCircle",
-      "name": "Zone fermes urbaines Normandie"
-    }
-  }
-  </script>
+  </div>
+</section>
+<footer class="site-footer">
+  <div class="footer-grid container">
+    <div><strong>LVLIA Fermes Urbaines</strong><br/>Caen, Normandie<br/><a href="mailto:contact@lvlia.fr">contact@lvlia.fr</a></div>
+    <div><a href="kit-particuliers.html">Fermes Connectées</a><br/><a href="pros.html">Pro</a><br/><a href="contact.html">Contact</a></div>
+    <div><a href="blog.html">Blog</a><br/><a href="https://calendar.app.google/9TATamoia8m57MhM7" target="_blank" rel="noopener">Réserver une démo</a></div>
+  </div>
+  <div class="copyright">© 2025 LVLIA – Fermes Urbaines Connectées</div>
+</footer>
 </body>
 </html>
