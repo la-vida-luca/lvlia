@@ -19,8 +19,10 @@ export async function statsHandler(req, res) {
     fetch(`${PLAUSIBLE_API}/stats/breakdown?site_id=${siteId}&period=7d&property=event:page&limit=5`, { headers })
   ]).then((responses) => Promise.all(responses.map((r) => r.json())));
 
-  const sessions7d = visitors.results.reduce((acc, item) => acc + item.visitors, 0);
-  const topPagesFormatted = topPages.results.map((item) => ({ path: item.page, sessions: item.visitors }));
+  const visitorResults = Array.isArray(visitors?.results) ? visitors.results : [];
+  const topPagesResults = Array.isArray(topPages?.results) ? topPages.results : [];
+  const sessions7d = visitorResults.reduce((acc, item) => acc + item.visitors, 0);
+  const topPagesFormatted = topPagesResults.map((item) => ({ path: item.page, sessions: item.visitors }));
 
   const leads = await loadLeads();
   const leads7d = leads.filter((lead) => Date.now() - new Date(lead.date_iso).getTime() <= 7 * 24 * 60 * 60 * 1000).length;
