@@ -1,0 +1,21 @@
+{
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": "Titre de l'article",
+  "description": "Résumé de 160 caractères pour le SEO.",
+  "image": ["https://fermesurbaines.com/assets/blog/default.jpg"],
+  "author": {
+    "@type": "Person",
+    "name": "Equipe Fermes Urbaines"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "Fermes Urbaines",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://fermesurbaines.com/assets/logo.png"
+    }
+  },
+  "datePublished": "2024-01-01",
+  "dateModified": "2024-01-01"
+}

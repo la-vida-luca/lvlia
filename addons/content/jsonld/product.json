@@ -1,0 +1,54 @@
+{
+  "@context": "https://schema.org",
+  "@type": "Product",
+  "name": "Micro-serre connectée Fermes Urbaines",
+  "image": [
+    "https://fermesurbaines.com/assets/micro-serre-interieur.jpg"
+  ],
+  "description": "Micro-serre connectée autonome pour produire des fruits et légumes frais toute l'année avec pilotage intelligent.",
+  "brand": {
+    "@type": "Brand",
+    "name": "Fermes Urbaines"
+  },
+  "sku": "FU-MICRO-6",
+  "offers": {
+    "@type": "Offer",
+    "priceCurrency": "EUR",
+    "price": "8900",
+    "availability": "https://schema.org/PreOrder",
+    "url": "https://fermesurbaines.com/micro-serre-connectee/"
+  },
+  "isSimilarTo": [
+    {
+      "@type": "Product",
+      "name": "Potager traditionnel",
+      "url": "https://fermesurbaines.com/addons/content/comparatif.html"
+    }
+  ],
+  "additionalProperty": [
+    {"@type": "PropertyValue", "name": "Surface", "value": "6 m²"},
+    {"@type": "PropertyValue", "name": "Consommation d'eau", "value": "-70% vs potager"},
+    {"@type": "PropertyValue", "name": "Suivi", "value": "Application mobile iOS/Android"}
+  ],
+  "hasFAQPage": {
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "Quels sont les bénéfices d'une micro-serre connectée ?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Elle permet de produire 12 mois sur 12, réduit la consommation d'eau et automatise les tâches d'arrosage et de nutrition."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Quel accompagnement est prévu ?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Nos agronomes suivent votre serre à distance, proposent des ajustements et assurent une hotline 5/7."
+        }
+      }
+    ]
+  }
+}

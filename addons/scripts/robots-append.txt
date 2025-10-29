@@ -1,0 +1,3 @@
+# Ajouter les lignes suivantes dans robots.txt si non présentes
+Sitemap: https://fermesurbaines.com/sitemap.xml
+Sitemap: https://fermesurbaines.com/addons/sitemap.xml

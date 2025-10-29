@@ -1,0 +1,17 @@
+{
+  "@context": "https://schema.org",
+  "@type": "Organization",
+  "name": "Fermes Urbaines",
+  "url": "https://fermesurbaines.com",
+  "logo": "https://fermesurbaines.com/assets/logo.png",
+  "sameAs": [
+    "https://www.linkedin.com/company/fermes-urbaines",
+    "https://www.facebook.com/fermesurbaines"
+  ],
+  "contactPoint": {
+    "@type": "ContactPoint",
+    "telephone": "+33 2 00 00 00 00",
+    "contactType": "customer service",
+    "areaServed": "FR"
+  }
+}

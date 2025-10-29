@@ -1,0 +1,29 @@
+{
+  "@context": "https://schema.org",
+  "@type": "LocalBusiness",
+  "name": "Fermes Urbaines Caen",
+  "image": "https://fermesurbaines.com/assets/atelier-caen.jpg",
+  "@id": "https://fermesurbaines.com/#local",
+  "url": "https://fermesurbaines.com",
+  "telephone": "+33 2 00 00 00 00",
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "12 rue de l'Agriculture Urbaine",
+    "addressLocality": "Caen",
+    "postalCode": "14000",
+    "addressCountry": "FR"
+  },
+  "openingHoursSpecification": [
+    {
+      "@type": "OpeningHoursSpecification",
+      "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
+      "opens": "09:00",
+      "closes": "18:00"
+    }
+  ],
+  "geo": {
+    "@type": "GeoCoordinates",
+    "latitude": 49.182863,
+    "longitude": -0.370679
+  }
+}
