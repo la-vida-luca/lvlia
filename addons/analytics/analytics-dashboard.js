@@ -49,6 +49,12 @@ export async function eventsHandler(req, res) {
     return;
   }
   const lines = fs.readFileSync(logPath, 'utf8').trim().split('\n').filter(Boolean);
-  const events = lines.slice(-limit).map((line) => JSON.parse(line));
+  const events = lines.slice(-limit).map((line) => {
+    try {
+      return JSON.parse(line);
+    } catch (e) {
+      return null;
+    }
+  }).filter(Boolean);
   res.status(200).json(events.reverse());
 }
