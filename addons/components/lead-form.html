@@ -1,0 +1,38 @@
+<section class="cro-module cro-lead-form" aria-labelledby="lead-form-title">
+  <h2 id="lead-form-title">Construisons votre micro-serre connectée</h2>
+  <form id="lead-form" data-endpoint="/api/leads" method="post">
+    <input type="hidden" name="token" value="" data-token-field>
+    <div>
+      <label for="lead-name">Nom et prénom *</label>
+      <input id="lead-name" name="name" type="text" autocomplete="name" required>
+    </div>
+    <div>
+      <label for="lead-email">Email *</label>
+      <input id="lead-email" name="email" type="email" autocomplete="email" required>
+    </div>
+    <div>
+      <label for="lead-phone">Téléphone</label>
+      <input id="lead-phone" name="phone" type="tel" autocomplete="tel">
+    </div>
+    <div>
+      <label for="lead-surface">Surface disponible (m²)</label>
+      <input id="lead-surface" name="surface" type="number" inputmode="decimal" min="1">
+    </div>
+    <div>
+      <label for="lead-goal">Objectif d'autonomie</label>
+      <select id="lead-goal" name="goal">
+        <option value="">Sélectionnez</option>
+        <option value="particulier">Particulier - Autonomie familiale</option>
+        <option value="collectivite">Collectivité / cantine</option>
+        <option value="restaurant">Restaurant locavore</option>
+        <option value="commerce">Commerce de proximité</option>
+      </select>
+    </div>
+    <div>
+      <label for="lead-message">Précisions</label>
+      <textarea id="lead-message" name="message" rows="4"></textarea>
+    </div>
+    <button type="submit">Recevoir ma proposition personnalisée</button>
+    <p class="form-feedback" role="status" aria-live="polite"></p>
+  </form>
+</section>

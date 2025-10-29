@@ -1,0 +1,20 @@
+<section class="cro-module" aria-labelledby="roi-title">
+  <h2 id="roi-title">Calculateur de ROI & de surface idéale</h2>
+  <form id="roi-calculator" class="roi-calculator" data-export-dir="/addons/exports/">
+    <div class="field">
+      <label for="roi-surface">Surface disponible (m²)</label>
+      <input id="roi-surface" name="surface" type="number" min="1" value="6" required>
+    </div>
+    <div class="field">
+      <label for="roi-budget">Budget mensuel (€/mois)</label>
+      <input id="roi-budget" name="budget" type="number" min="10" value="120" required>
+    </div>
+    <div class="field">
+      <label for="roi-autonomy">Objectif d'autonomie (%)</label>
+      <input id="roi-autonomy" name="autonomy" type="number" min="10" max="100" value="60" required>
+    </div>
+    <button type="submit">Calculer mon plan</button>
+    <button type="button" id="roi-export">Exporter en PDF</button>
+  </form>
+  <div id="roi-results" class="roi-results" aria-live="polite"></div>
+</section>

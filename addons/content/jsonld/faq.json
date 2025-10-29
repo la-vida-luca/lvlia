@@ -1,0 +1,22 @@
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "Quel est le coût d'une micro-serre connectée ?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Nos modèles démarrent à 8 900 € pour 6 m² avec accompagnement agronomique."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Quelle consommation électrique prévoir ?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Comptez environ 22 € par mois grâce aux LED horticoles basse consommation."
+      }
+    }
+  ]
+}
