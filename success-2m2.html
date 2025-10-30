@@ -2,26 +2,183 @@
 <html lang="fr">
 <head>
     <meta charset="UTF-8">
-    <title>Commande Confirmée - Micro-Serre 2m² LVLIA</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Commande Confirmée - Micro-Serre 2m² LVLIA Premium</title>
+    <link rel="stylesheet" href="assets/style.css" />
     <style>
-        body { font-family: Arial, sans-serif; text-align: center; padding: 50px; background: #f8f9fa; }
-        .success-box { background: white; padding: 3rem; border-radius: 20px; box-shadow: 0 10px 30px rgba(0,0,0,0.1); max-width: 600px; margin: 0 auto; }
-        h1 { color: #27ae60; font-size: 2.5rem; margin-bottom: 1rem; }
-        .checkmark { font-size: 4rem; color: #27ae60; }
+        body { 
+            font-family: Arial, sans-serif; 
+            text-align: center; 
+            padding: 50px; 
+            background: #f8f9fa; 
+        }
+        .success-box { 
+            background: white; 
+            padding: 3rem; 
+            border-radius: 20px; 
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1); 
+            max-width: 700px; 
+            margin: 0 auto;
+            border: 2px solid #10b981;
+        }
+        h1 { 
+            color: #10b981; 
+            font-size: 2.5rem; 
+            margin-bottom: 1rem; 
+        }
+        .checkmark { 
+            font-size: 5rem; 
+            color: #10b981; 
+            animation: scaleIn 0.5s ease-out;
+        }
+        .premium-badge {
+            display: inline-block;
+            background: linear-gradient(135deg, #ffd700, #ffed4e);
+            color: #000;
+            padding: 6px 16px;
+            border-radius: 20px;
+            font-size: 0.9rem;
+            font-weight: 600;
+            margin-left: 10px;
+        }
+        @keyframes scaleIn {
+            from { transform: scale(0); }
+            to { transform: scale(1); }
+        }
+        .info-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 20px;
+            margin: 30px 0;
+            text-align: left;
+        }
+        .info-card {
+            background: #f8f9fa;
+            padding: 20px;
+            border-radius: 12px;
+            border-left: 4px solid #10b981;
+        }
+        .info-card h3 {
+            margin-top: 0;
+            color: #10b981;
+            font-size: 1rem;
+        }
+        .premium-features {
+            background: linear-gradient(135deg, #f0fdf4, #ecfdf5);
+            padding: 25px;
+            border-radius: 12px;
+            margin: 30px 0;
+            border: 2px solid #10b981;
+        }
+        .premium-features h3 {
+            color: #10b981;
+            margin-top: 0;
+        }
+        .premium-features ul {
+            list-style: none;
+            padding: 0;
+            margin: 15px 0;
+            text-align: left;
+        }
+        .premium-features li {
+            padding: 8px 0;
+            padding-left: 30px;
+            position: relative;
+        }
+        .premium-features li:before {
+            content: "★";
+            position: absolute;
+            left: 0;
+            color: #ffd700;
+            font-size: 1.2em;
+        }
+        .cta-buttons {
+            display: flex;
+            gap: 15px;
+            justify-content: center;
+            margin-top: 30px;
+            flex-wrap: wrap;
+        }
+        .btn {
+            padding: 12px 24px;
+            border-radius: 8px;
+            text-decoration: none;
+            font-weight: 600;
+            transition: all 0.3s ease;
+        }
+        .btn-primary {
+            background: #10b981;
+            color: white;
+        }
+        .btn-primary:hover {
+            background: #059669;
+        }
+        .btn-secondary {
+            background: white;
+            color: #10b981;
+            border: 2px solid #10b981;
+        }
+        .btn-secondary:hover {
+            background: #f0fdf4;
+        }
     </style>
 </head>
 <body>
     <div class="success-box">
         <div class="checkmark">✅</div>
-        <h1>Micro-Serre 2m² Commandée !</h1>
-        <p><strong>Votre système premium LVLIA sera bientôt chez vous</strong></p>
-        <hr style="margin: 2rem 0; border: none; height: 1px; background: #eee;">
-        <p>📧 Email de confirmation envoyé<br>
-        📦 Expédition prioritaire dans 2-5 jours<br>
-        📱 Accès app LVLIA Farm Pro dans 24h<br>
-        🛠️ Installation offerte sous 48h en Normandie</p>
-        <p style="margin-top: 2rem; color: #666;">
-            Questions ? <a href="mailto:support@lvlia.fr">support@lvlia.fr</a>
+        <h1>
+            Micro-Serre 2m² Commandée !
+            <span class="premium-badge">★ PREMIUM</span>
+        </h1>
+        <p style="font-size: 1.2rem;"><strong>Votre système premium LVLIA Glasshouse sera bientôt chez vous</strong></p>
+        <p style="color: #666; margin-top: 10px;">Commande confirmée et paiement validé</p>
+        
+        <hr style="margin: 2rem 0; border: none; height: 1px; background: #e0e0e0;">
+        
+        <div class="info-grid">
+            <div class="info-card">
+                <h3>📧 Confirmation</h3>
+                <p>Email envoyé avec tous les détails et votre numéro de commande</p>
+            </div>
+            <div class="info-card">
+                <h3>📦 Livraison</h3>
+                <p>Expédition prioritaire sous 2-5 jours. Suivi en temps réel</p>
+            </div>
+            <div class="info-card">
+                <h3>📱 Application Pro</h3>
+                <p>Accès à LVLIA Farm Pro envoyé dans les 24h</p>
+            </div>
+            <div class="info-card">
+                <h3>🛠️ Installation</h3>
+                <p>Installation offerte sous 48h en Normandie</p>
+            </div>
+        </div>
+
+        <div class="premium-features">
+            <h3>🌟 Avantages Premium Inclus</h3>
+            <ul style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 10px;">
+                <li>Premier mois d'abonnement Pro offert</li>
+                <li>Installation premium offerte en Normandie</li>
+                <li>2 sessions de coaching agronomique</li>
+                <li>Accès aux données historiques et IA</li>
+                <li>Support technique prioritaire 7j/7</li>
+                <li>Formation approfondie à domicile</li>
+            </ul>
+        </div>
+
+        <div class="cta-buttons">
+            <a href="https://calendar.app.google/9TATamoia8m57MhM7" target="_blank" rel="noopener" class="btn btn-primary">
+                📅 Planifier mon installation premium
+            </a>
+            <a href="index.html" class="btn btn-secondary">
+                🏠 Retour à l'accueil
+            </a>
+        </div>
+
+        <p style="margin-top: 3rem; color: #666; font-size: 0.95rem;">
+            Des questions sur votre commande premium ?<br>
+            <a href="mailto:lucas.horville@lvlia.net" style="color: #10b981; text-decoration: none; font-weight: 600;">lucas.horville@lvlia.net</a> | 
+            Support prioritaire disponible 7j/7
         </p>
     </div>
 </body>
