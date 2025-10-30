@@ -6,7 +6,7 @@ LVLIA transforme votre salon en ferme autonome ultra-productive grâce à l'inte
 
 ### 📦 Gamme Produits
 
-#### 🏠 Micro-Serre 1m² - STARTER (2.990€)
+#### 🏠 Micro-Serre 1m² - STARTER (3.490€)
 - 70 plants simultanés
 - 30-40kg/an de production  
 - LED Samsung 100W
