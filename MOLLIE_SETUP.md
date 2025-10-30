@@ -4,14 +4,23 @@ Ce document explique comment configurer les liens de paiement Mollie pour les mi
 
 ## ⚠️ Configuration Requise Avant Production
 
-Avant de déployer ces pages en production, assurez-vous de :
+✅ **Mise à jour complétée** :
+- Email de contact mis à jour : lucas.horville@lvlia.net
+- Numéro de téléphone mis à jour : 06 15 47 28 13
+- Formulaires de livraison ajoutés avant le paiement
 
-1. **Mettre à jour le numéro de téléphone** dans les fichiers suivants :
-   - `paiement-1m2.html` (ligne 212)
-   - `paiement-2m2.html` (ligne 235)
-   - Remplacer `00 00 00 00 00` par le numéro de téléphone réel de LVLIA
+**Reste à faire** :
+1. **Configurer les redirections Mollie** (voir ci-dessous)
 
-2. **Configurer les redirections Mollie** (voir ci-dessous)
+## Flux de Commande Complet
+
+1. Client visite `/kit-particuliers.html`
+2. Clique sur "Commander maintenant" → `/livraison-1m2.html` ou `/livraison-2m2.html`
+3. Remplit le formulaire de livraison
+4. Redirigé vers `/paiement-1m2.html` ou `/paiement-2m2.html`
+5. Clique sur "Payer maintenant" → Lien Mollie
+6. Effectue le paiement sur Mollie
+7. Redirigé vers `/success-1m2.html` ou `/success-2m2.html`
 
 ## Liens de Paiement Actuels
 
