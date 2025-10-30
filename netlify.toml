@@ -1,10 +1,25 @@
 [build]
   publish = "."
-  command = ""
+  command = "echo 'Site statique LVLIA prêt'"
 
 [[headers]]
   for = "/*"
   [headers.values]
-    X-Frame-Options = "SAMEORIGIN"
+    X-Frame-Options = "DENY"
     X-Content-Type-Options = "nosniff"
     Referrer-Policy = "strict-origin-when-cross-origin"
+
+[[redirects]]
+  from = "/success-1m2.html"
+  to = "/success-1m2.html"
+  status = 200
+
+[[redirects]]
+  from = "/success"
+  to = "/success-2m2.html"
+  status = 200
+
+[[redirects]]
+  from = "/*"
+  to = "/index.html"
+  status = 200

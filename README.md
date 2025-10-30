@@ -1,63 +1,56 @@
-# LVLIA — Site vitrine (static)
+# 🌱 LVLIA - Micro-Serres Connectées
 
-Site statique mult-pages pour **LVLIA** (solutions hydroponiques).
+## 🚀 Révolution Agriculture Urbaine IA
 
-## Stack
-- HTML5, CSS3 (responsive), JS vanilla
-- Netlify Forms (contact)
-- Calendly (appel gratuit 30 min)
-- Chart.js (graphique – page Restaurants)
+LVLIA transforme votre salon en ferme autonome ultra-productive grâce à l'intelligence artificielle et l'hydroponie connectée.
 
-## Arborescence
-```
-/site
-  index.html
-  cafes.html
-  restaurants.html
-  boulangers.html
-  hotels.html
-  bouchers.html
-  epiceries.html
-  collectivites.html
-  contact.html
-  sitemap.xml
-  robots.txt
-  netlify.toml
-  assets/
-    style.css
-    main.js
-    og-banner.png
-```
-## Développement local
-Ouvrez `index.html` dans un navigateur ou servez le dossier :
-```bash
-npx serve .
-```
+### 📦 Gamme Produits
 
-## Déploiement
-1. **GitHub**
-   ```bash
-   git init
-   git branch -M main
-   git remote add origin git@github.com:VOTRE_COMPTE/lvlia-site.git
-   git add .
-   git commit -m "Initial commit: LVLIA site"
-   git push -u origin main
-   ```
-2. **Netlify**
-   - Créez un nouveau site depuis un dépôt, choisissez `lvlia-site`.
-   - Réglages:
-     - Build command: *(vide)*
-     - Publish directory: `.`
-   - Activez **Netlify Forms** (déjà prêt grâce à `form name="contact" method="POST" netlify"`).
-   - HTTPS est activé automatiquement via Let’s Encrypt.
-3. **Variables Calendly**
-   - Rien à configurer : le widget est intégré sur toutes les pages (section “Prendre rendez‑vous”).
+#### 🏠 Micro-Serre 1m² - STARTER (3.490€)
+- 70 plants simultanés
+- 30-40kg/an de production  
+- LED Samsung 100W
+- App LVLIA Farm connectée
 
-## SEO
-- Meta description et Open Graph inclus.
-- `sitemap.xml` et `robots.txt` fournis (remplacez `lvlia.example` par votre domaine).
+#### 🚀 Micro-Serre 2m² - PREMIUM (5.990€)
+- 138 plants simultanés
+- 60-80kg/an de production
+- LED Samsung 2×100W  
+- App LVLIA Farm Pro + IA
 
-## Personnalisation
-- Couleurs (palette LVLIA) et polices (Google Fonts Poppins & Open Sans).
-- Remplacez les images Unsplash si besoin.
+### 🎯 Technologies
+
+- **NFT** : Nutrient Film Technique multi-étages
+- **Aéroponie** : Tours verticales optimisées
+- **IoT** : Capteurs pH, température, CO2, humidité
+- **IA** : Optimisation automatique croissance
+- **App Mobile** : Monitoring 24/7 + alertes
+
+### 💰 Business Model
+
+- **Marge 1m²** : 66.4% (1.988€ net)
+- **Marge 2m²** : 66.0% (3.953€ net)
+- **Paiement** : Mollie (CB, Apple Pay, Google Pay, PayPal)
+- **Livraison** : Gratuite France métropolitaine
+
+### 🛠️ Installation
+
+1. Montage mécanique simple (2-3h)
+2. Connexion app LVLIA Farm
+3. Configuration capteurs IoT
+4. Première culture guidée
+
+### 📞 Support
+
+- **Email** : support@lvlia.fr
+- **Formation** : Installation incluse
+- **Garantie** : 2 ans matériel + récolte
+
+### 🔗 Liens Utiles
+
+- [Commande Micro-Serre 1m²](https://payment-links.mollie.com/payment/cb2k9hjwLNhFPEgmVbEyw)
+- [Commande Micro-Serre 2m²](https://payment-links.mollie.com/payment/mWjrRDEzXjiMVPqtFiVQp)
+
+---
+
+**LVLIA** - *L'autonomie alimentaire commence chez vous* 🌱

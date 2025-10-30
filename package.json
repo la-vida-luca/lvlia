@@ -1,0 +1,20 @@
+{
+  "name": "lvlia-microserre-connectee",
+  "version": "1.0.0",
+  "description": "LVLIA - Micro-Serres Connectées Agriculture Urbaine IA",
+  "main": "index.html",
+  "scripts": {
+    "start": "python -m http.server 8000",
+    "deploy": "netlify deploy --prod"
+  },
+  "keywords": [
+    "hydroponie",
+    "agriculture-urbaine", 
+    "iot",
+    "intelligence-artificielle",
+    "micro-serre",
+    "autonomie-alimentaire"
+  ],
+  "author": "Lucas Horville - La Vida Luca",
+  "license": "MIT"
+}
