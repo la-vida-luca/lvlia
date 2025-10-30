@@ -2,6 +2,17 @@
 
 Ce document explique comment configurer les liens de paiement Mollie pour les micro-serres LVLIA.
 
+## ⚠️ Configuration Requise Avant Production
+
+Avant de déployer ces pages en production, assurez-vous de :
+
+1. **Mettre à jour le numéro de téléphone** dans les fichiers suivants :
+   - `paiement-1m2.html` (ligne 212)
+   - `paiement-2m2.html` (ligne 235)
+   - Remplacer `00 00 00 00 00` par le numéro de téléphone réel de LVLIA
+
+2. **Configurer les redirections Mollie** (voir ci-dessous)
+
 ## Liens de Paiement Actuels
 
 ### Micro-serre 1m² - 2990€
