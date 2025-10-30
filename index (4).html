@@ -1,0 +1,374 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LVLIA - Micro-Serres Connectées | Autonomie Alimentaire IA</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background: #f8f9fa;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        header {
+            background: linear-gradient(135deg, #2d5a27 0%, #4a7c59 100%);
+            color: white;
+            padding: 3rem 0;
+            text-align: center;
+        }
+
+        .hero-title {
+            font-size: 3rem;
+            font-weight: 800;
+            margin-bottom: 0.5rem;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+        }
+
+        .hero-subtitle {
+            font-size: 1.3rem;
+            opacity: 0.9;
+            margin-bottom: 2rem;
+        }
+
+        .products-section {
+            padding: 4rem 0;
+        }
+
+        .section-title {
+            text-align: center;
+            font-size: 2.5rem;
+            color: #2d5a27;
+            margin-bottom: 3rem;
+        }
+
+        .products-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(500px, 1fr));
+            gap: 3rem;
+            margin-top: 2rem;
+        }
+
+        .product-card {
+            background: white;
+            border-radius: 20px;
+            overflow: hidden;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .product-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 20px 50px rgba(0,0,0,0.15);
+        }
+
+        .product-header {
+            padding: 2rem;
+            text-align: center;
+        }
+
+        .product-badge {
+            display: inline-block;
+            background: #e74c3c;
+            color: white;
+            padding: 0.5rem 1rem;
+            border-radius: 20px;
+            font-size: 0.8rem;
+            font-weight: 600;
+            margin-bottom: 1rem;
+        }
+
+        .product-badge.premium {
+            background: #f39c12;
+        }
+
+        .product-title {
+            font-size: 1.8rem;
+            color: #2d5a27;
+            margin-bottom: 0.5rem;
+        }
+
+        .product-subtitle {
+            color: #666;
+            margin-bottom: 1.5rem;
+        }
+
+        .price {
+            font-size: 2.5rem;
+            font-weight: 800;
+            color: #e74c3c;
+            margin-bottom: 1rem;
+        }
+
+        .price-old {
+            font-size: 1.5rem;
+            text-decoration: line-through;
+            color: #999;
+            margin-right: 0.5rem;
+        }
+
+        .features {
+            padding: 0 2rem;
+            margin-bottom: 2rem;
+        }
+
+        .features ul {
+            list-style: none;
+        }
+
+        .features li {
+            padding: 0.5rem 0;
+            border-bottom: 1px solid #f0f0f0;
+        }
+
+        .features li:before {
+            content: "✅ ";
+            color: #27ae60;
+            font-weight: bold;
+        }
+
+        .product-cta {
+            background: linear-gradient(135deg, #27ae60 0%, #2ecc71 100%);
+            padding: 2rem;
+            text-align: center;
+        }
+
+        .buy-button {
+            display: inline-block;
+            background: linear-gradient(135deg, #e74c3c 0%, #c0392b 100%);
+            color: white;
+            padding: 1.2rem 2.5rem;
+            border-radius: 50px;
+            text-decoration: none;
+            font-size: 1.2rem;
+            font-weight: 700;
+            box-shadow: 0 8px 25px rgba(231, 76, 60, 0.4);
+            transition: all 0.3s ease;
+        }
+
+        .buy-button:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 12px 35px rgba(231, 76, 60, 0.6);
+        }
+
+        .payment-methods {
+            margin-top: 1rem;
+            color: white;
+            font-size: 0.9rem;
+            opacity: 0.9;
+        }
+
+        .comparison-section {
+            background: white;
+            padding: 4rem 0;
+        }
+
+        .comparison-table {
+            background: #f8f9fa;
+            border-radius: 15px;
+            overflow: hidden;
+            margin-top: 2rem;
+        }
+
+        .comparison-table table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+
+        .comparison-table th,
+        .comparison-table td {
+            padding: 1rem;
+            text-align: center;
+            border-bottom: 1px solid #dee2e6;
+        }
+
+        .comparison-table th {
+            background: #2d5a27;
+            color: white;
+            font-weight: 600;
+        }
+
+        .comparison-table tr:last-child td {
+            border-bottom: none;
+        }
+
+        .guarantee {
+            background: linear-gradient(135deg, #3498db 0%, #2980b9 100%);
+            color: white;
+            padding: 3rem 0;
+            text-align: center;
+            margin-top: 2rem;
+        }
+
+        .guarantee h3 {
+            font-size: 2rem;
+            margin-bottom: 1rem;
+        }
+
+        @media (max-width: 768px) {
+            .hero-title { font-size: 2rem; }
+            .products-grid { grid-template-columns: 1fr; }
+            .price { font-size: 2rem; }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1 class="hero-title">🌱 LVLIA</h1>
+            <p class="hero-subtitle">Micro-Serres Connectées • Agriculture Urbaine IA</p>
+            <p>La révolution de l'autonomie alimentaire commence dans votre salon</p>
+        </div>
+    </header>
+
+    <section class="products-section">
+        <div class="container">
+            <h2 class="section-title">Choisissez Votre Micro-Serre</h2>
+
+            <div class="products-grid">
+                <!-- PRODUIT 1m² -->
+                <div class="product-card">
+                    <div class="product-header">
+                        <div class="product-badge">🏠 STARTER</div>
+                        <h3 class="product-title">Micro-Serre 1m²</h3>
+                        <p class="product-subtitle">Parfaite pour débuter • Appartement & balcon</p>
+                        <div class="price">
+                            <span class="price-old">3.990€</span>
+                            <strong>2.990€</strong>
+                        </div>
+                        <p style="color: #666; font-size: 0.9rem;">Livraison gratuite</p>
+                    </div>
+
+                    <div class="features">
+                        <ul>
+                            <li><strong>70 plants simultanés</strong> (NFT 3 étages + Mini tour)</li>
+                            <li><strong>30-40kg/an de production</strong></li>
+                            <li><strong>LED Samsung 100W</strong> - Spectre optimisé</li>
+                            <li><strong>App LVLIA Farm</strong> - Monitoring connecté</li>
+                            <li><strong>Capteurs IoT</strong> - pH, température, humidité</li>
+                            <li><strong>Support 2 ans</strong> - Installation incluse</li>
+                        </ul>
+                    </div>
+
+                    <div class="product-cta">
+                        <a href="https://payment-links.mollie.com/payment/cb2k9hjwLNhFPEgmVbEyw" class="buy-button">
+                            COMMANDER 1m² - 2.990€
+                        </a>
+                        <div class="payment-methods">
+                            💳 CB • 🍎 Apple Pay • 📱 Google Pay • 🅿️ PayPal
+                        </div>
+                    </div>
+                </div>
+
+                <!-- PRODUIT 2m² -->
+                <div class="product-card">
+                    <div class="product-header">
+                        <div class="product-badge premium">🚀 PREMIUM</div>
+                        <h3 class="product-title">Micro-Serre 2m²</h3>
+                        <p class="product-subtitle">Autonomie totale • Famille & semi-pro</p>
+                        <div class="price">
+                            <span class="price-old">7.990€</span>
+                            <strong>5.990€</strong>
+                        </div>
+                        <p style="color: #666; font-size: 0.9rem;">Livraison gratuite • Installation offerte</p>
+                    </div>
+
+                    <div class="features">
+                        <ul>
+                            <li><strong>138 plants simultanés</strong> (NFT 4 étages + Tour aéro)</li>
+                            <li><strong>60-80kg/an de production</strong></li>
+                            <li><strong>LED Samsung 2×100W</strong> - Système double</li>
+                            <li><strong>App LVLIA Farm Pro</strong> - IA avancée</li>
+                            <li><strong>Capteurs premium</strong> - CO2, EC, monitoring 24/7</li>
+                            <li><strong>Support prioritaire</strong> - Formation incluse</li>
+                        </ul>
+                    </div>
+
+                    <div class="product-cta">
+                        <a href="https://payment-links.mollie.com/payment/mWjrRDEzXjiMVPqtFiVQp" class="buy-button">
+                            COMMANDER 2m² - 5.990€
+                        </a>
+                        <div class="payment-methods">
+                            💳 CB • 🍎 Apple Pay • 📱 Google Pay • 🅿️ PayPal
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="comparison-section">
+        <div class="container">
+            <h2 class="section-title">Comparaison des Modèles</h2>
+            <div class="comparison-table">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Caractéristique</th>
+                            <th>Micro-Serre 1m²</th>
+                            <th>Micro-Serre 2m²</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><strong>Surface</strong></td>
+                            <td>120×80×200cm</td>
+                            <td>240×120×200cm</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Capacité plants</strong></td>
+                            <td>70 simultanés</td>
+                            <td>138 simultanés</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Production annuelle</strong></td>
+                            <td>30-40kg</td>
+                            <td>60-80kg</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Éclairage LED</strong></td>
+                            <td>1× 100W Samsung</td>
+                            <td>2× 100W Samsung</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Systèmes culture</strong></td>
+                            <td>NFT 3 étages + Mini tour</td>
+                            <td>NFT 4 étages + Tour aéro</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Monitoring</strong></td>
+                            <td>Basique (pH, temp, humidité)</td>
+                            <td>Premium (+ CO2, EC, PAR)</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Cible utilisateur</strong></td>
+                            <td>Débutant, appartement</td>
+                            <td>Famille, semi-professionnel</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </section>
+
+    <section class="guarantee">
+        <div class="container">
+            <h3>🛡️ Garantie Totale LVLIA</h3>
+            <p>
+                ✅ Matériel garanti 2 ans • ✅ Support technique illimité<br>
+                ✅ Satisfait ou remboursé 30 jours • ✅ Récolte garantie<br>
+                ✅ Installation offerte en Normandie • ✅ Formation incluse
+            </p>
+        </div>
+    </section>
+</body>
+</html>
