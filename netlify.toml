@@ -18,8 +18,3 @@
   from = "/success"
   to = "/success-2m2.html"
   status = 200
-
-[[redirects]]
-  from = "/*"
-  to = "/index.html"
-  status = 200
