@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vérification Déploiement LVLIA</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            max-width: 800px;
+            margin: 50px auto;
+            padding: 20px;
+            background: #f0f0f0;
+        }
+        .check {
+            background: white;
+            padding: 15px;
+            margin: 10px 0;
+            border-radius: 5px;
+            border-left: 4px solid #ccc;
+        }
+        .check.success {
+            border-left-color: #4CAF50;
+            background: #f1f8f4;
+        }
+        .check.error {
+            border-left-color: #f44336;
+            background: #fef1f1;
+        }
+        .status {
+            font-weight: bold;
+            font-size: 1.2em;
+        }
+        img {
+            max-width: 200px;
+            height: auto;
+            margin: 10px 0;
+            border: 2px solid #ddd;
+        }
+    </style>
+</head>
+<body>
+    <h1>🔍 Vérification du Déploiement LVLIA</h1>
+    <p>Cette page vérifie que les fichiers sont correctement déployés sur Netlify.</p>
+    
+    <div id="checks"></div>
+
+    <script>
+        const checks = [
+            {
+                name: 'Fichier de test présent',
+                url: '/assets/photos/DEPLOYMENT_TEST.txt',
+                type: 'text'
+            },
+            {
+                name: 'Image IMG_6813.jpeg',
+                url: '/assets/photos/IMG_6813.jpeg',
+                type: 'image'
+            },
+            {
+                name: 'Image IMG_6805.jpeg',
+                url: '/assets/photos/IMG_6805.jpeg',
+                type: 'image'
+            }
+        ];
+
+        const container = document.getElementById('checks');
+
+        checks.forEach(check => {
+            const div = document.createElement('div');
+            div.className = 'check';
+            div.innerHTML = `<div class="status">⏳ Test: ${check.name}</div><div id="${check.name}">Vérification en cours...</div>`;
+            container.appendChild(div);
+
+            if (check.type === 'image') {
+                const img = new Image();
+                img.onload = function() {
+                    div.className = 'check success';
+                    div.querySelector('.status').textContent = `✅ ${check.name}`;
+                    div.querySelector(`#${check.name}`).innerHTML = `Image chargée avec succès (${img.width}x${img.height}px)<br><img src="${check.url}" alt="${check.name}">`;
+                };
+                img.onerror = function() {
+                    div.className = 'check error';
+                    div.querySelector('.status').textContent = `❌ ${check.name}`;
+                    div.querySelector(`#${check.name}`).textContent = `Échec du chargement - URL: ${window.location.origin}${check.url}`;
+                };
+                img.src = check.url;
+            } else {
+                fetch(check.url)
+                    .then(response => {
+                        if (response.ok) {
+                            div.className = 'check success';
+                            div.querySelector('.status').textContent = `✅ ${check.name}`;
+                            return response.text();
+                        } else {
+                            throw new Error(`HTTP ${response.status}`);
+                        }
+                    })
+                    .then(text => {
+                        div.querySelector(`#${check.name}`).textContent = `Fichier accessible. Contenu: ${text.substring(0, 100)}...`;
+                    })
+                    .catch(error => {
+                        div.className = 'check error';
+                        div.querySelector('.status').textContent = `❌ ${check.name}`;
+                        div.querySelector(`#${check.name}`).textContent = `Erreur: ${error.message} - URL: ${window.location.origin}${check.url}`;
+                    });
+            }
+        });
+    </script>
+</body>
+</html>

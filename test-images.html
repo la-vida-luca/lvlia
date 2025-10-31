@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Test Images LVLIA</title>
+    <style>
+        body {
+            font-family: system-ui, -apple-system, sans-serif;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+            background: #f5f5f5;
+        }
+        .test-section {
+            background: white;
+            padding: 20px;
+            margin: 20px 0;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+        .image-test {
+            margin: 20px 0;
+            padding: 15px;
+            border: 2px solid #e0e0e0;
+            border-radius: 4px;
+        }
+        .image-test img {
+            max-width: 300px;
+            height: auto;
+            display: block;
+            margin: 10px 0;
+            border: 1px solid #ddd;
+        }
+        .image-test .status {
+            padding: 8px 12px;
+            border-radius: 4px;
+            font-weight: bold;
+            display: inline-block;
+            margin-top: 10px;
+        }
+        .status.loading {
+            background: #fff3cd;
+            color: #856404;
+        }
+        .status.loaded {
+            background: #d4edda;
+            color: #155724;
+        }
+        .status.error {
+            background: #f8d7da;
+            color: #721c24;
+        }
+        .info {
+            background: #e7f3ff;
+            padding: 15px;
+            border-left: 4px solid #2196f3;
+            margin: 20px 0;
+        }
+        code {
+            background: #f4f4f4;
+            padding: 2px 6px;
+            border-radius: 3px;
+            font-family: monospace;
+        }
+    </style>
+</head>
+<body>
+    <h1>🧪 Test de Chargement des Images LVLIA</h1>
+    
+    <div class="info">
+        <p><strong>Cette page teste le chargement des images sur le site LVLIA.</strong></p>
+        <p>Si les images ne s'affichent pas ici, vérifiez la console du navigateur pour les erreurs.</p>
+    </div>
+
+    <div class="test-section">
+        <h2>Test 1: Image Héro (IMG_6813.jpeg)</h2>
+        <div class="image-test" id="test1">
+            <p><strong>Chemin:</strong> <code>assets/photos/IMG_6813.jpeg</code></p>
+            <img src="assets/photos/IMG_6813.jpeg" alt="Serre LVLIA connectée">
+            <div class="status loading">Chargement...</div>
+        </div>
+    </div>
+
+    <div class="test-section">
+        <h2>Test 2: Image 1m² (IMG_6805.jpeg)</h2>
+        <div class="image-test" id="test2">
+            <p><strong>Chemin:</strong> <code>assets/photos/IMG_6805.jpeg</code></p>
+            <img src="assets/photos/IMG_6805.jpeg" alt="Serre 1m²">
+            <div class="status loading">Chargement...</div>
+        </div>
+    </div>
+
+    <div class="test-section">
+        <h2>Test 3: Image 2m² (IMG_6815.jpeg)</h2>
+        <div class="image-test" id="test3">
+            <p><strong>Chemin:</strong> <code>assets/photos/IMG_6815.jpeg</code></p>
+            <img src="assets/photos/IMG_6815.jpeg" alt="Serre 2m²">
+            <div class="status loading">Chargement...</div>
+        </div>
+    </div>
+
+    <div class="test-section">
+        <h2>Test 4: Image UUID (acd007ba...)</h2>
+        <div class="image-test" id="test4">
+            <p><strong>Chemin:</strong> <code>assets/photos/acd007ba-366e-4e03-8255-88f6fd6330d9.jpeg</code></p>
+            <img src="assets/photos/acd007ba-366e-4e03-8255-88f6fd6330d9.jpeg" alt="Culture fraises">
+            <div class="status loading">Chargement...</div>
+        </div>
+    </div>
+
+    <div class="test-section">
+        <h2>Test 5: Image SVG (micro-serre-1m2.svg)</h2>
+        <div class="image-test" id="test5">
+            <p><strong>Chemin:</strong> <code>assets/photos/micro-serre-1m2.svg</code></p>
+            <img src="assets/photos/micro-serre-1m2.svg" alt="Diagramme micro-serre">
+            <div class="status loading">Chargement...</div>
+        </div>
+    </div>
+
+    <div class="test-section">
+        <h2>📊 Résultats des Tests</h2>
+        <div id="results">
+            <p>Les résultats s'afficheront après le chargement des images...</p>
+        </div>
+    </div>
+
+    <script>
+        // Test chaque image
+        const tests = [
+            { id: 'test1', name: 'IMG_6813.jpeg' },
+            { id: 'test2', name: 'IMG_6805.jpeg' },
+            { id: 'test3', name: 'IMG_6815.jpeg' },
+            { id: 'test4', name: 'acd007ba-366e-4e03-8255-88f6fd6330d9.jpeg' },
+            { id: 'test5', name: 'micro-serre-1m2.svg' }
+        ];
+
+        let results = {
+            loaded: 0,
+            failed: 0,
+            total: tests.length
+        };
+
+        tests.forEach(test => {
+            const container = document.getElementById(test.id);
+            const img = container.querySelector('img');
+            const status = container.querySelector('.status');
+
+            img.addEventListener('load', function() {
+                status.textContent = '✅ Chargée avec succès';
+                status.className = 'status loaded';
+                results.loaded++;
+                updateResults();
+                console.log(`✅ Image chargée: ${test.name}`);
+            });
+
+            img.addEventListener('error', function() {
+                status.textContent = '❌ Échec du chargement';
+                status.className = 'status error';
+                results.failed++;
+                updateResults();
+                console.error(`❌ Échec du chargement: ${test.name}`);
+                console.error('URL complète:', this.src);
+            });
+        });
+
+        function updateResults() {
+            const resultsDiv = document.getElementById('results');
+            const percentage = Math.round((results.loaded / results.total) * 100);
+            
+            let html = `
+                <h3>Statistiques</h3>
+                <p><strong>Images chargées:</strong> ${results.loaded}/${results.total} (${percentage}%)</p>
+                <p><strong>Images en échec:</strong> ${results.failed}/${results.total}</p>
+            `;
+
+            if (results.loaded === results.total) {
+                html += '<p style="color: green; font-weight: bold;">🎉 Toutes les images sont chargées correctement!</p>';
+            } else if (results.loaded + results.failed === results.total) {
+                html += '<p style="color: red; font-weight: bold;">⚠️ Certaines images n\'ont pas pu être chargées. Vérifiez la console.</p>';
+            }
+
+            resultsDiv.innerHTML = html;
+        }
+
+        // Log de diagnostic
+        console.log('🔍 Informations de diagnostic:');
+        console.log('URL de la page:', window.location.href);
+        console.log('Domaine:', window.location.hostname);
+        console.log('User Agent:', navigator.userAgent);
+    </script>
+</body>
+</html>
