@@ -1,0 +1,5 @@
+This file exists to verify that the assets/photos directory is properly deployed to Netlify.
+If you can read this file at https://your-site.netlify.app/assets/photos/DEPLOYMENT_TEST.txt
+then the directory structure is working correctly and images should also be accessible.
+
+Test URL: /assets/photos/DEPLOYMENT_TEST.txt

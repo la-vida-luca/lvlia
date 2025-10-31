@@ -1,6 +1,6 @@
 [build]
   publish = "."
-  command = "echo 'Site statique LVLIA prêt'"
+  command = "echo 'Site statique LVLIA prêt' && ls -la assets/photos/*.jpeg | wc -l"
 
 # Images - proper caching and MIME types
 [[headers]]
