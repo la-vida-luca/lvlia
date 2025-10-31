@@ -47,4 +47,27 @@ document.addEventListener('DOMContentLoaded', function() {
       form.prepend(honeypot);
     }
   });
+  
+  // Image loading error handling and lazy loading
+  document.querySelectorAll('img').forEach(img => {
+    // Add loading attribute for better performance
+    if (!img.hasAttribute('loading')) {
+      img.setAttribute('loading', 'lazy');
+    }
+    
+    // Error handling for failed image loads
+    img.addEventListener('error', function() {
+      console.error('Failed to load image:', this.src);
+      // Add a visual indicator for missing images
+      this.style.backgroundColor = '#f1f5f9';
+      this.style.border = '2px dashed #cbd5e1';
+      this.style.minHeight = '200px';
+      this.alt = this.alt || 'Image non disponible';
+    });
+    
+    // Log successful image loads for debugging
+    img.addEventListener('load', function() {
+      console.log('Successfully loaded image:', this.src);
+    });
+  });
 });
