@@ -8,9 +8,9 @@
 window.dataLayer = window.dataLayer || [];
 function gtag(){dataLayer.push(arguments);}
 
-// Configure GA4 (REMPLACER G-XXXXXXXXXX par votre ID GA4 réel)
+// Configure GA4
 gtag('js', new Date());
-gtag('config', 'G-XXXXXXXXXX', {
+gtag('config', 'G-GEDJJ82JS6', {
   'cookie_flags': 'SameSite=None;Secure',
   'anonymize_ip': true,
   'send_page_view': true
