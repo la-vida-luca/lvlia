@@ -69,4 +69,24 @@ document.addEventListener('DOMContentLoaded', function() {
       this.alt = this.alt || 'Image non disponible';
     });
   });
+  
+  // === STICKY CTA MOBILE ===
+  // Afficher après scroll 50% de la page
+  const stickyCTA = document.querySelector('.sticky-cta-mobile');
+  let stickyVisible = false;
+  
+  if (stickyCTA) {
+    window.addEventListener('scroll', function() {
+      const scrollPercent = (window.scrollY / (document.body.scrollHeight - window.innerHeight)) * 100;
+      
+      // Afficher après 50% de scroll
+      if (scrollPercent > 50 && !stickyVisible) {
+        stickyCTA.style.display = 'block';
+        stickyVisible = true;
+      } else if (scrollPercent <= 50 && stickyVisible) {
+        stickyCTA.style.display = 'none';
+        stickyVisible = false;
+      }
+    });
+  }
 });

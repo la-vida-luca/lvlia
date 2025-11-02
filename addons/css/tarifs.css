@@ -1,0 +1,487 @@
+/**
+ * LVLIA - Styles page Tarifs
+ * Version: 1.0.0
+ */
+
+/* === Toggle paiement === */
+.payment-toggle {
+  display: flex;
+  justify-content: center;
+  gap: 12px;
+  margin: 32px 0 40px;
+  flex-wrap: wrap;
+}
+
+.payment-toggle button {
+  padding: 12px 32px;
+  border: 2px solid var(--line);
+  background: white;
+  color: var(--muted);
+  border-radius: 999px;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  min-height: 44px;
+}
+
+.payment-toggle button:hover {
+  border-color: var(--brand);
+  color: var(--brand);
+}
+
+.payment-toggle button.active {
+  background: var(--brand);
+  color: white;
+  border-color: var(--brand);
+}
+
+/* === Grille pricing === */
+.pricing-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 32px;
+  margin: 40px 0;
+}
+
+/* === Carte pricing === */
+.pricing-card {
+  background: white;
+  border: 2px solid var(--line);
+  border-radius: 20px;
+  padding: 40px 32px;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  transition: all 0.3s ease;
+}
+
+.pricing-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 12px 32px rgba(5, 150, 105, 0.2);
+}
+
+/* Carte featured (Premium) */
+.pricing-card.featured {
+  border-color: var(--brand);
+  border-width: 3px;
+  background: linear-gradient(180deg, #f0fdf4 0%, white 100%);
+  transform: scale(1.05);
+}
+
+.pricing-card.featured:hover {
+  transform: scale(1.05) translateY(-8px);
+}
+
+/* Badge "POPULAIRE" */
+.popular-badge {
+  position: absolute;
+  top: -16px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: var(--brand);
+  color: white;
+  padding: 8px 24px;
+  border-radius: 999px;
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: 1px;
+  box-shadow: 0 4px 12px rgba(5, 150, 105, 0.4);
+}
+
+/* Titre pack */
+.pricing-card h3 {
+  font-size: 28px;
+  margin: 0 0 24px 0;
+  text-align: center;
+  color: var(--fg);
+}
+
+/* Prix */
+.pricing-card .price,
+.pricing-card .price-monthly {
+  text-align: center;
+  margin-bottom: 32px;
+  padding-bottom: 32px;
+  border-bottom: 2px solid var(--line);
+}
+
+.pricing-card .price .amount,
+.pricing-card .price-monthly .amount {
+  display: block;
+  font-size: 48px;
+  font-weight: 800;
+  color: var(--brand);
+  line-height: 1;
+  margin-bottom: 8px;
+}
+
+.pricing-card .price .period,
+.pricing-card .price-monthly .period {
+  display: block;
+  font-size: 16px;
+  color: var(--muted);
+  font-weight: 500;
+}
+
+/* Features liste */
+.pricing-card .features {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 32px 0;
+  flex: 1;
+}
+
+.pricing-card .features li {
+  padding: 12px 0;
+  color: var(--fg);
+  font-size: 16px;
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  line-height: 1.5;
+}
+
+.pricing-card .features li::before {
+  content: '✓';
+  color: var(--brand);
+  font-weight: bold;
+  font-size: 18px;
+  flex-shrink: 0;
+}
+
+/* Abonnement */
+.pricing-card .subscription {
+  background: #f9fafb;
+  padding: 16px;
+  border-radius: 12px;
+  text-align: center;
+  margin-bottom: 24px;
+  border: 1px solid var(--line);
+}
+
+.pricing-card .subscription strong {
+  display: block;
+  font-size: 24px;
+  color: var(--brand);
+  margin-bottom: 4px;
+}
+
+.pricing-card .subscription span {
+  font-size: 14px;
+  color: var(--muted);
+}
+
+/* Bouton */
+.pricing-card .btn {
+  width: 100%;
+  text-align: center;
+  font-size: 18px;
+  padding: 16px 24px;
+}
+
+/* === Section "Tous les packs incluent" === */
+.all-packs-include {
+  margin: 60px 0;
+  padding: 48px 32px;
+  background: linear-gradient(135deg, #f0fdf4, #dcfce7);
+  border-radius: 20px;
+}
+
+.all-packs-include h2 {
+  text-align: center;
+  font-size: 32px;
+  margin-bottom: 40px;
+  color: var(--fg);
+}
+
+.all-packs-include .grid-4 {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 24px;
+}
+
+.guarantee-item {
+  background: white;
+  padding: 24px;
+  border-radius: 16px;
+  text-align: center;
+  border: 1px solid #86efac;
+  transition: transform 0.3s ease;
+}
+
+.guarantee-item:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 20px rgba(5, 150, 105, 0.15);
+}
+
+.guarantee-item .icon {
+  font-size: 48px;
+  margin-bottom: 16px;
+  display: block;
+}
+
+.guarantee-item strong {
+  display: block;
+  font-size: 18px;
+  color: var(--fg);
+  margin-bottom: 8px;
+}
+
+.guarantee-item p {
+  font-size: 14px;
+  color: var(--muted);
+  margin: 0;
+}
+
+/* === Simulateur ROI === */
+.roi-simulator {
+  margin: 60px 0;
+}
+
+.roi-simulator h2 {
+  text-align: center;
+  font-size: 36px;
+  margin-bottom: 32px;
+  color: var(--fg);
+}
+
+.simulator-card {
+  background: white;
+  border: 2px solid var(--brand);
+  border-radius: 20px;
+  padding: 40px;
+  max-width: 900px;
+  margin: 0 auto;
+  box-shadow: 0 8px 24px rgba(5, 150, 105, 0.15);
+}
+
+/* Inputs simulateur */
+.simulator-inputs {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  margin-bottom: 32px;
+}
+
+.simulator-inputs label {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  font-weight: 600;
+  font-size: 16px;
+  color: var(--fg);
+}
+
+.simulator-inputs input[type="range"] {
+  width: 100%;
+  height: 8px;
+  border-radius: 999px;
+  background: #e5e7eb;
+  outline: none;
+  -webkit-appearance: none;
+}
+
+.simulator-inputs input[type="range"]::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  background: var(--brand);
+  cursor: pointer;
+  box-shadow: 0 2px 8px rgba(5, 150, 105, 0.4);
+}
+
+.simulator-inputs input[type="range"]::-moz-range-thumb {
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  background: var(--brand);
+  cursor: pointer;
+  border: none;
+  box-shadow: 0 2px 8px rgba(5, 150, 105, 0.4);
+}
+
+.simulator-inputs output {
+  display: inline-block;
+  background: var(--brand);
+  color: white;
+  padding: 6px 16px;
+  border-radius: 999px;
+  font-weight: 700;
+  font-size: 18px;
+  min-width: 60px;
+  text-align: center;
+}
+
+.simulator-inputs input[type="number"] {
+  padding: 12px 16px;
+  border: 2px solid var(--line);
+  border-radius: 10px;
+  font-size: 18px;
+  font-weight: 600;
+  width: 150px;
+}
+
+.simulator-inputs input[type="number"]:focus {
+  outline: none;
+  border-color: var(--brand);
+}
+
+.simulator-inputs button {
+  margin-top: 8px;
+}
+
+/* Résultats simulateur */
+.simulator-results {
+  margin-top: 40px;
+  padding-top: 40px;
+  border-top: 2px solid var(--line);
+}
+
+.simulator-results .result-card {
+  background: linear-gradient(135deg, #f0fdf4, #dcfce7);
+  padding: 24px;
+  border-radius: 16px;
+  text-align: center;
+  margin-bottom: 20px;
+  border: 1px solid #86efac;
+}
+
+.simulator-results .result-card h3 {
+  font-size: 16px;
+  color: var(--muted);
+  margin: 0 0 12px 0;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.simulator-results .result-value {
+  font-size: 48px;
+  font-weight: 800;
+  color: var(--brand);
+  line-height: 1;
+  margin-bottom: 8px;
+}
+
+.simulator-results .result-detail {
+  font-size: 14px;
+  color: var(--muted);
+  margin: 0;
+}
+
+/* Graphique */
+.chart-wrapper {
+  margin: 32px 0;
+  background: white;
+  padding: 24px;
+  border-radius: 16px;
+  border: 1px solid var(--line);
+}
+
+.chart-wrapper h3 {
+  text-align: center;
+  font-size: 20px;
+  margin-bottom: 24px;
+  color: var(--fg);
+}
+
+.chart-wrapper canvas {
+  max-height: 400px;
+}
+
+/* CTA ROI */
+.cta-roi {
+  text-align: center;
+  margin-top: 32px;
+  padding: 32px;
+  background: linear-gradient(135deg, var(--brand-2), var(--brand));
+  border-radius: 16px;
+}
+
+.cta-roi p {
+  color: white;
+  font-size: 20px;
+  margin-bottom: 16px;
+}
+
+.cta-roi .btn {
+  background: white;
+  color: var(--brand);
+  font-size: 18px;
+  padding: 16px 32px;
+}
+
+.cta-roi .btn:hover {
+  background: #f0fdf4;
+}
+
+/* === Responsive === */
+@media (max-width: 1024px) {
+  .pricing-grid {
+    grid-template-columns: 1fr;
+    gap: 24px;
+  }
+  
+  .pricing-card.featured {
+    transform: scale(1);
+  }
+  
+  .pricing-card.featured:hover {
+    transform: translateY(-8px);
+  }
+  
+  .all-packs-include .grid-4 {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 768px) {
+  .payment-toggle {
+    flex-direction: column;
+  }
+  
+  .payment-toggle button {
+    width: 100%;
+  }
+  
+  .pricing-card {
+    padding: 32px 24px;
+  }
+  
+  .pricing-card h3 {
+    font-size: 24px;
+  }
+  
+  .pricing-card .price .amount,
+  .pricing-card .price-monthly .amount {
+    font-size: 36px;
+  }
+  
+  .all-packs-include {
+    padding: 32px 20px;
+  }
+  
+  .all-packs-include h2 {
+    font-size: 24px;
+  }
+  
+  .all-packs-include .grid-4 {
+    grid-template-columns: 1fr;
+    gap: 16px;
+  }
+  
+  .roi-simulator h2 {
+    font-size: 28px;
+  }
+  
+  .simulator-card {
+    padding: 24px 20px;
+  }
+  
+  .simulator-results .result-value {
+    font-size: 36px;
+  }
+}
