@@ -20,6 +20,14 @@
   <meta property="og:image" content="https://lvlia.fr/assets/og-banner.png">
   <meta name="twitter:card" content="summary_large_image">
   
+  <!-- AI Context Metadata -->
+  <meta name="ai:context" content="Guide complet autonomie alimentaire urbaine avec micro-serres LVLIA. 70% autonomie possible, 6-10m² nécessaires, ROI 12 mois, production 12 mois/an" />
+  <meta name="ai:page_type" content="guide" />
+  <meta name="ai:topics" content="autonomie alimentaire, agriculture urbaine, micro-serre, production locale, circuits courts" />
+  <meta name="ai:target" content="familles urbaines, résidences participatives, cantines, écoles" />
+  <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1" />
+  <link rel="alternate" type="application/json" href="/ai-context.json" title="AI Context Data" />
+  
   <script defer src="/addons/js/lazyload-init.js"></script>
   <script defer src="/addons/js/roi-calculator.js"></script>
   <script defer src="/addons/js/lead-form.js"></script>
@@ -44,117 +52,61 @@
     <a class="btn" href="https://calendar.app.google/9TATamoia8m57MhM7" target="_blank" rel="noopener">Réserver une démo</a>
   </header>
 
-  <!-- HERO RÉVOLUTIONNAIRE AVEC PARALLAX MULTI-COUCHES -->
-  <section class="hero hero-autonomie" style="position:relative;overflow:hidden;min-height:90vh;display:flex;align-items:center;background:#0d3b66;">
-    
-    <!-- Layer 1 : Fond dégradé animé -->
-    <div class="bg-layer-1" style="position:absolute;top:0;left:0;width:100%;height:100%;background:linear-gradient(135deg,#0d3b66 0%,#1a5a7a 50%,#2ec4b6 100%);animation:bgShift 15s ease-in-out infinite;"></div>
-    
-    <!-- Layer 2 : Cercles morphing -->
-    <div class="morph-circles" style="position:absolute;top:0;left:0;width:100%;height:100%;pointer-events:none;">
-      <div style="position:absolute;width:600px;height:600px;background:radial-gradient(circle,rgba(46,196,182,0.2) 0%,transparent 70%);border-radius:50%;top:-200px;left:-200px;animation:morphCircle1 20s ease-in-out infinite;"></div>
-      <div style="position:absolute;width:800px;height:800px;background:radial-gradient(circle,rgba(244,211,94,0.15) 0%,transparent 70%);border-radius:50%;bottom:-300px;right:-300px;animation:morphCircle2 25s ease-in-out infinite 2s;"></div>
-      <div style="position:absolute;width:400px;height:400px;background:radial-gradient(circle,rgba(31,122,140,0.25) 0%,transparent 70%);border-radius:50%;top:50%;left:50%;transform:translate(-50%,-50%);animation:morphCircle3 18s ease-in-out infinite 1s;"></div>
-    </div>
-
-    <!-- Layer 3 : Particules organiques -->
-    <div class="organic-particles" style="position:absolute;top:0;left:0;width:100%;height:100%;pointer-events:none;">
-      <svg width="100%" height="100%" style="position:absolute;">
-        <circle cx="10%" cy="20%" r="2" fill="rgba(244,211,94,0.6)" style="animation:floatOrganic 12s ease-in-out infinite;">
-          <animate attributeName="cy" values="20%;80%;20%" dur="12s" repeatCount="indefinite"/>
-          <animate attributeName="cx" values="10%;15%;10%" dur="12s" repeatCount="indefinite"/>
-        </circle>
-        <circle cx="80%" cy="60%" r="3" fill="rgba(46,196,182,0.5)" style="animation:floatOrganic 15s ease-in-out infinite 2s;">
-          <animate attributeName="cy" values="60%;20%;60%" dur="15s" repeatCount="indefinite"/>
-          <animate attributeName="cx" values="80%;75%;80%" dur="15s" repeatCount="indefinite"/>
-        </circle>
-        <circle cx="50%" cy="80%" r="2.5" fill="rgba(255,255,255,0.4)">
-          <animate attributeName="cy" values="80%;30%;80%" dur="18s" repeatCount="indefinite"/>
-          <animate attributeName="r" values="2.5;4;2.5" dur="18s" repeatCount="indefinite"/>
-        </circle>
-        <circle cx="30%" cy="40%" r="2" fill="rgba(244,211,94,0.7)">
-          <animate attributeName="cy" values="40%;70%;40%" dur="14s" repeatCount="indefinite"/>
-          <animate attributeName="cx" values="30%;35%;30%" dur="14s" repeatCount="indefinite"/>
-        </circle>
-        <circle cx="70%" cy="30%" r="3.5" fill="rgba(46,196,182,0.3)">
-          <animate attributeName="cy" values="30%;85%;30%" dur="20s" repeatCount="indefinite"/>
-          <animate attributeName="opacity" values="0.3;0.7;0.3" dur="20s" repeatCount="indefinite"/>
-        </circle>
-      </svg>
-    </div>
-
+  <!-- HERO -->
+  <section class="hero" style="background:linear-gradient(135deg,#059669 0%,#0d9488 100%);padding:80px 20px;text-align:center;color:white;">
     <!-- Contenu principal -->
-    <div class="container" style="position:relative;z-index:10;text-align:center;">
-      <!-- Badge animé avec effet glow pulsant -->
-      <div class="hero-badge-glow" style="display:inline-block;background:rgba(244,211,94,0.15);backdrop-filter:blur(20px);border:3px solid #f4d35e;padding:12px 32px;border-radius:999px;margin-bottom:40px;box-shadow:0 0 30px rgba(244,211,94,0.4);animation:glowPulse 2s ease-in-out infinite;">
-        <span style="font-weight:900;color:#f4d35e;font-size:1.1rem;text-transform:uppercase;letter-spacing:2px;">🌍 Votre Révolution Alimentaire</span>
+    <div class="container" style="max-width:1200px;margin:0 auto;">
+      <div style="display:inline-block;background:rgba(255,255,255,0.2);padding:10px 24px;border-radius:50px;margin-bottom:24px;">
+        <span style="font-weight:700;color:white;font-size:1rem;">🌍 Votre Révolution Alimentaire</span>
       </div>
       
-      <!-- Titre avec effet de typing -->
-      <h1 class="typing-effect" style="font-size:clamp(3rem,10vw,6rem);color:white;margin:0 0 32px;text-shadow:0 0 30px rgba(46,196,182,0.6),0 0 60px rgba(46,196,182,0.4),0 4px 20px rgba(0,0,0,0.5);line-height:1.1;font-weight:900;">
-        Votre plan d'autonomie <br/>
-        <span style="background:linear-gradient(135deg,#f4d35e,#2ec4b6);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;">alimentaire</span>
+      <h1 style="font-size:clamp(2.5rem,6vw,4rem);color:white;margin:0 0 24px;line-height:1.2;font-weight:800;">
+        Votre plan d'autonomie alimentaire
       </h1>
       
-      <p class="slide-in-text" style="font-size:clamp(1.2rem,3vw,1.6rem);color:rgba(255,255,255,0.95);max-width:900px;margin:0 auto 48px;line-height:1.8;text-shadow:0 2px 10px rgba(0,0,0,0.3);font-weight:500;">
+      <p style="font-size:clamp(1.1rem,2vw,1.3rem);color:white;max-width:800px;margin:0 auto 40px;line-height:1.6;">
         Dimensionnez vos cultures, stockages et budgets pour sécuriser votre alimentation en milieu urbain. 
-        <span style="color:#f4d35e;font-weight:700;">Jusqu'à 70% d'autonomie garantie</span>.
+        <strong>Jusqu'à 70% d'autonomie garantie</strong>.
       </p>
       
-      <!-- CTAs avec effet magnetique -->
-      <div style="display:flex;flex-wrap:wrap;gap:24px;justify-content:center;margin-bottom:64px;">
-        <a href="#calculateur" class="btn magnetic-btn" style="font-size:1.3rem;padding:22px 48px;background:linear-gradient(135deg,#f4d35e,#ffa500);color:#0d3b66;box-shadow:0 15px 40px rgba(244,211,94,0.5);border:none;position:relative;overflow:hidden;">
-          <span style="position:relative;z-index:2;">🧮 Calculer mon ROI</span>
+      <!-- CTAs -->
+      <div style="display:flex;flex-wrap:wrap;gap:20px;justify-content:center;margin-bottom:48px;">
+        <a href="#calculateur" class="btn" style="font-size:1.1rem;padding:16px 32px;background:white;color:#059669;font-weight:700;">
+          🧮 Calculer mon ROI
         </a>
-        <a href="#formulaire" class="btn outline magnetic-btn" style="font-size:1.3rem;padding:22px 48px;color:white;border:3px solid white;background:rgba(255,255,255,0.1);backdrop-filter:blur(10px);">
+        <a href="#formulaire" class="btn outline" style="font-size:1.1rem;padding:16px 32px;color:white;border:2px solid white;background:transparent;">
           📞 Parler à un expert
         </a>
       </div>
 
-      <!-- Indicateurs clés avec effet de compteur -->
-      <div class="key-indicators" style="display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:40px;max-width:1100px;margin:0 auto;">
-        <div class="indicator-card" style="background:linear-gradient(135deg,rgba(255,255,255,0.15),rgba(255,255,255,0.05));backdrop-filter:blur(20px);padding:32px 24px;border-radius:24px;border:2px solid rgba(255,255,255,0.3);box-shadow:0 20px 50px rgba(0,0,0,0.3);transition:all 0.4s cubic-bezier(0.4,0,0.2,1);">
-          <div style="font-size:4rem;margin-bottom:16px;">🥬</div>
-          <div style="font-size:3.5rem;font-weight:900;color:#f4d35e;margin-bottom:12px;font-family:'Space Grotesk',sans-serif;" data-target="70">70</div>
-          <div style="color:white;font-weight:700;font-size:1.1rem;line-height:1.4;">% d'autonomie<br/>atteignable</div>
+      <!-- Indicateurs clés -->
+      <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:24px;max-width:1000px;margin:0 auto;">
+        <div style="background:rgba(255,255,255,0.15);padding:24px;border-radius:16px;border:2px solid rgba(255,255,255,0.3);">
+          <div style="font-size:3rem;margin-bottom:12px;">🥬</div>
+          <div style="font-size:2.5rem;font-weight:800;color:white;margin-bottom:8px;">70%</div>
+          <div style="color:white;font-weight:600;font-size:0.95rem;">d'autonomie atteignable</div>
         </div>
         
-        <div class="indicator-card" style="background:linear-gradient(135deg,rgba(255,255,255,0.15),rgba(255,255,255,0.05));backdrop-filter:blur(20px);padding:32px 24px;border-radius:24px;border:2px solid rgba(255,255,255,0.3);box-shadow:0 20px 50px rgba(0,0,0,0.3);transition:all 0.4s cubic-bezier(0.4,0,0.2,1);">
-          <div style="font-size:4rem;margin-bottom:16px;">🌱</div>
-          <div style="font-size:3.5rem;font-weight:900;color:#2ec4b6;margin-bottom:12px;font-family:'Space Grotesk',sans-serif;" data-target="6">6</div>
-          <div style="color:white;font-weight:700;font-size:1.1rem;line-height:1.4;">m² de serre<br/>minimum</div>
+        <div style="background:rgba(255,255,255,0.15);padding:24px;border-radius:16px;border:2px solid rgba(255,255,255,0.3);">
+          <div style="font-size:3rem;margin-bottom:12px;">🌱</div>
+          <div style="font-size:2.5rem;font-weight:800;color:white;margin-bottom:8px;">6 m²</div>
+          <div style="color:white;font-weight:600;font-size:0.95rem;">de serre minimum</div>
         </div>
         
-        <div class="indicator-card" style="background:linear-gradient(135deg,rgba(255,255,255,0.15),rgba(255,255,255,0.05));backdrop-filter:blur(20px);padding:32px 24px;border-radius:24px;border:2px solid rgba(255,255,255,0.3);box-shadow:0 20px 50px rgba(0,0,0,0.3);transition:all 0.4s cubic-bezier(0.4,0,0.2,1);">
-          <div style="font-size:4rem;margin-bottom:16px;">💰</div>
-          <div style="font-size:3.5rem;font-weight:900;color:#f4d35e;margin-bottom:12px;font-family:'Space Grotesk',sans-serif;" data-target="800">800</div>
-          <div style="color:white;font-weight:700;font-size:1.1rem;line-height:1.4;">€ économisés<br/>par mois</div>
+        <div style="background:rgba(255,255,255,0.15);padding:24px;border-radius:16px;border:2px solid rgba(255,255,255,0.3);">
+          <div style="font-size:3rem;margin-bottom:12px;">💰</div>
+          <div style="font-size:2.5rem;font-weight:800;color:white;margin-bottom:8px;">800€</div>
+          <div style="color:white;font-weight:600;font-size:0.95rem;">économisés/mois</div>
         </div>
         
-        <div class="indicator-card" style="background:linear-gradient(135deg,rgba(255,255,255,0.15),rgba(255,255,255,0.05));backdrop-filter:blur(20px);padding:32px 24px;border-radius:24px;border:2px solid rgba(255,255,255,0.3);box-shadow:0 20px 50px rgba(0,0,0,0.3);transition:all 0.4s cubic-bezier(0.4,0,0.2,1);">
-          <div style="font-size:4rem;margin-bottom:16px;">⚡</div>
-          <div style="font-size:3.5rem;font-weight:900;color:#2ec4b6;margin-bottom:12px;font-family:'Space Grotesk',sans-serif;" data-target="12">12</div>
-          <div style="color:white;font-weight:700;font-size:1.1rem;line-height:1.4;">mois pour<br/>ROI complet</div>
+        <div style="background:rgba(255,255,255,0.15);padding:24px;border-radius:16px;border:2px solid rgba(255,255,255,0.3);">
+          <div style="font-size:3rem;margin-bottom:12px;">⚡</div>
+          <div style="font-size:2.5rem;font-weight:800;color:white;margin-bottom:8px;">12 mois</div>
+          <div style="color:white;font-weight:600;font-size:0.95rem;">pour ROI complet</div>
         </div>
       </div>
     </div>
 
-    <!-- Vague SVG animée ultra-sophistiquée -->
-    <svg class="wave-ultra" style="position:absolute;bottom:-2px;left:0;width:100%;height:200px;z-index:5;" viewBox="0 0 1200 200" preserveAspectRatio="none">
-      <defs>
-        <linearGradient id="waveGradient" x1="0%" y1="0%" x2="0%" y2="100%">
-          <stop offset="0%" style="stop-color:rgba(250,250,249,0.3);stop-opacity:1" />
-          <stop offset="100%" style="stop-color:rgb(250,250,249);stop-opacity:1" />
-        </linearGradient>
-      </defs>
-      <path d="M0,80 Q300,20 600,80 T1200,80 L1200,200 L0,200 Z" fill="url(#waveGradient)" style="animation:waveUltra 12s ease-in-out infinite;">
-        <animate attributeName="d" 
-          values="M0,80 Q300,20 600,80 T1200,80 L1200,200 L0,200 Z;
-                  M0,100 Q300,150 600,100 T1200,100 L1200,200 L0,200 Z;
-                  M0,80 Q300,20 600,80 T1200,80 L1200,200 L0,200 Z"
-          dur="12s" repeatCount="indefinite"/>
-      </path>
-    </svg>
   </section>
 
   <main id="main-content">
@@ -168,27 +120,27 @@
         
         <div class="grid grid-3" style="gap:48px;">
           <div class="feature-card hover-lift" style="text-align:center;padding:56px 40px;">
-            <div class="icon-wrapper" style="width:120px;height:120px;margin:0 auto 32px;background:linear-gradient(135deg,#f0fdf4,#dcfce7);border-radius:50%;display:flex;align-items:center;justify-content:center;box-shadow:0 10px 30px rgba(5,150,105,0.2);transition:all 0.4s ease;">
-              <span style="font-size:5rem;">🌱</span>
+            <div class="icon-wrapper" style="width:100px;height:100px;margin:0 auto 24px;background:linear-gradient(135deg,#f0fdf4,#dcfce7);border-radius:50%;display:flex;align-items:center;justify-content:center;box-shadow:0 8px 24px rgba(5,150,105,0.2);transition:all 0.4s ease;">
+              <span style="font-size:4rem;">🌱</span>
             </div>
-            <h3 style="font-size:2rem;margin-bottom:20px;color:var(--brand-primary);">Produire</h3>
-            <p style="font-size:1.15rem;color:var(--muted);line-height:1.8;">Micro-serres connectées, cultures verticales et modules aquaponiques pour produire 12 mois/an. Technologie IoT incluse.</p>
+            <h3 style="font-size:1.75rem;margin-bottom:16px;color:var(--brand-primary);font-family:'Inter',sans-serif;font-weight:700;">Produire</h3>
+            <p style="font-size:1.05rem;color:var(--muted);line-height:1.7;">Micro-serres connectées, cultures verticales et modules aquaponiques pour produire 12 mois/an. Technologie IoT incluse.</p>
           </div>
           
           <div class="feature-card hover-lift" style="text-align:center;padding:56px 40px;">
-            <div class="icon-wrapper" style="width:120px;height:120px;margin:0 auto 32px;background:linear-gradient(135deg,#fff7ed,#fed7aa);border-radius:50%;display:flex;align-items:center;justify-content:center;box-shadow:0 10px 30px rgba(251,146,60,0.2);transition:all 0.4s ease;">
-              <span style="font-size:5rem;">🤝</span>
+            <div class="icon-wrapper" style="width:100px;height:100px;margin:0 auto 24px;background:linear-gradient(135deg,#fff7ed,#fed7aa);border-radius:50%;display:flex;align-items:center;justify-content:center;box-shadow:0 8px 24px rgba(251,146,60,0.2);transition:all 0.4s ease;">
+              <span style="font-size:4rem;">🤝</span>
             </div>
-            <h3 style="font-size:2rem;margin-bottom:20px;color:#fb923c;">Mutualiser</h3>
-            <p style="font-size:1.15rem;color:var(--muted);line-height:1.8;">Partage de récoltes entre voisins, cantines et restaurants via un calendrier piloté. Communauté solidaire.</p>
+            <h3 style="font-size:1.75rem;margin-bottom:16px;color:#fb923c;font-family:'Inter',sans-serif;font-weight:700;">Mutualiser</h3>
+            <p style="font-size:1.05rem;color:var(--muted);line-height:1.7;">Partage de récoltes entre voisins, cantines et restaurants via un calendrier piloté. Communauté solidaire.</p>
           </div>
           
           <div class="feature-card hover-lift" style="text-align:center;padding:56px 40px;">
-            <div class="icon-wrapper" style="width:120px;height:120px;margin:0 auto 32px;background:linear-gradient(135deg,#eff6ff,#dbeafe);border-radius:50%;display:flex;align-items:center;justify-content:center;box-shadow:0 10px 30px rgba(59,130,246,0.2);transition:all 0.4s ease;">
-              <span style="font-size:5rem;">📦</span>
+            <div class="icon-wrapper" style="width:100px;height:100px;margin:0 auto 24px;background:linear-gradient(135deg,#eff6ff,#dbeafe);border-radius:50%;display:flex;align-items:center;justify-content:center;box-shadow:0 8px 24px rgba(59,130,246,0.2);transition:all 0.4s ease;">
+              <span style="font-size:4rem;">📦</span>
             </div>
-            <h3 style="font-size:2rem;margin-bottom:20px;color:#3b82f6;">Stocker</h3>
-            <p style="font-size:1.15rem;color:var(--muted);line-height:1.8;">Conservation sous vide et séchage solaire, intégrés dans notre accompagnement. Zéro gaspillage.</p>
+            <h3 style="font-size:1.75rem;margin-bottom:16px;color:#3b82f6;font-family:'Inter',sans-serif;font-weight:700;">Stocker</h3>
+            <p style="font-size:1.05rem;color:var(--muted);line-height:1.7;">Conservation sous vide et séchage solaire, intégrés dans notre accompagnement. Zéro gaspillage.</p>
           </div>
         </div>
       </div>
@@ -197,17 +149,17 @@
     <!-- Section Modèles d'autonomie avec cards premium -->
     <section class="section alt" style="padding:100px 20px;background:linear-gradient(135deg,#f0fdf4 0%,#ecfeff 100%);">
       <div class="container" style="max-width:1200px;">
-        <h2 style="text-align:center;font-size:clamp(2.5rem,6vw,3.5rem);margin-bottom:64px;">Modèles d'autonomie</h2>
+        <h2 style="text-align:center;font-size:clamp(2rem,5vw,3rem);margin-bottom:48px;font-family:'Inter',sans-serif;font-weight:700;">Modèles d'autonomie</h2>
         
         <div class="grid grid-3" style="gap:40px;">
           <article class="product-card" style="background:white;border-radius:32px;overflow:hidden;box-shadow:0 20px 60px rgba(15,23,42,0.12);transition:all 0.4s cubic-bezier(0.4,0,0.2,1);">
             <div style="background:linear-gradient(135deg,#10b981,#059669);padding:48px 32px;text-align:center;">
-              <div style="font-size:5rem;margin-bottom:16px;">👨‍👩‍👧‍👦</div>
-              <h3 style="color:white;font-size:2rem;margin:0;">Famille 4 personnes</h3>
+              <div style="font-size:4rem;margin-bottom:16px;">👨‍👩‍👧‍👦</div>
+              <h3 style="color:white;font-size:1.75rem;margin:0;font-family:'Inter',sans-serif;font-weight:700;">Famille 4 personnes</h3>
             </div>
             <div style="padding:40px 32px;">
-              <div style="font-size:3rem;font-weight:900;color:var(--brand-primary);margin-bottom:16px;text-align:center;">65%</div>
-              <p style="font-size:1.15rem;color:var(--muted);line-height:1.7;text-align:center;">6 m² de micro-serre + cultures en bacs = 65% d'autonomie végétale toute l'année.</p>
+              <div style="font-size:2.5rem;font-weight:800;color:var(--brand-primary);margin-bottom:16px;text-align:center;font-family:'Inter',sans-serif;">65%</div>
+              <p style="font-size:1.05rem;color:var(--muted);line-height:1.65;text-align:center;">6 m² de micro-serre + cultures en bacs = 65% d'autonomie végétale toute l'année.</p>
               <ul class="list-check" style="margin-top:24px;font-size:1rem;">
                 <li>Installation en 1 jour</li>
                 <li>Formation incluse</li>
@@ -218,12 +170,12 @@
           
           <article class="product-card" style="background:white;border-radius:32px;overflow:hidden;box-shadow:0 20px 60px rgba(15,23,42,0.12);transition:all 0.4s cubic-bezier(0.4,0,0.2,1);">
             <div style="background:linear-gradient(135deg,#f59e0b,#d97706);padding:48px 32px;text-align:center;">
-              <div style="font-size:5rem;margin-bottom:16px;">🏘️</div>
-              <h3 style="color:white;font-size:2rem;margin:0;">Résidence participative</h3>
+              <div style="font-size:4rem;margin-bottom:16px;">🏘️</div>
+              <h3 style="color:white;font-size:1.75rem;margin:0;font-family:'Inter',sans-serif;font-weight:700;">Résidence participative</h3>
             </div>
             <div style="padding:40px 32px;">
-              <div style="font-size:3rem;font-weight:900;color:#f59e0b;margin-bottom:16px;text-align:center;">120kg/mois</div>
-              <p style="font-size:1.15rem;color:var(--muted);line-height:1.7;text-align:center;">18 m² de serre mutualisée + compost partagé = production collective optimale.</p>
+              <div style="font-size:2.5rem;font-weight:800;color:#f59e0b;margin-bottom:16px;text-align:center;font-family:'Inter',sans-serif;">120kg/mois</div>
+              <p style="font-size:1.05rem;color:var(--muted);line-height:1.65;text-align:center;">18 m² de serre mutualisée + compost partagé = production collective optimale.</p>
               <ul class="list-check" style="margin-top:24px;font-size:1rem;">
                 <li>Gestion partagée</li>
                 <li>Plateforme communautaire</li>
@@ -234,12 +186,12 @@
           
           <article class="product-card" style="background:white;border-radius:32px;overflow:hidden;box-shadow:0 20px 60px rgba(15,23,42,0.12);transition:all 0.4s cubic-bezier(0.4,0,0.2,1);">
             <div style="background:linear-gradient(135deg,#3b82f6,#2563eb);padding:48px 32px;text-align:center;">
-              <div style="font-size:5rem;margin-bottom:16px;">🏫</div>
-              <h3 style="color:white;font-size:2rem;margin:0;">Cantine & écoles</h3>
+              <div style="font-size:4rem;margin-bottom:16px;">🏫</div>
+              <h3 style="color:white;font-size:1.75rem;margin:0;font-family:'Inter',sans-serif;font-weight:700;">Cantine & écoles</h3>
             </div>
             <div style="padding:40px 32px;">
-              <div style="font-size:3rem;font-weight:900;color:#3b82f6;margin-bottom:16px;text-align:center;">20m²</div>
-              <p style="font-size:1.15rem;color:var(--muted);line-height:1.7;text-align:center;">Module pro + ateliers pédagogiques = circuits courts pédagogiques toute l'année.</p>
+              <div style="font-size:2.5rem;font-weight:800;color:#3b82f6;margin-bottom:16px;text-align:center;font-family:'Inter',sans-serif;">20m²</div>
+              <p style="font-size:1.05rem;color:var(--muted);line-height:1.65;text-align:center;">Module pro + ateliers pédagogiques = circuits courts pédagogiques toute l'année.</p>
               <ul class="list-check" style="margin-top:24px;font-size:1rem;">
                 <li>Programme éducatif</li>
                 <li>Normes HACCP</li>
@@ -353,71 +305,6 @@
     <div class="copyright">© 2025 LVLIA – Micro-serres connectées</div>
   </footer>
 
-  <!-- ANIMATIONS RÉVOLUTIONNAIRES CSS -->
-  <style>
-    @keyframes bgShift {
-      0%, 100% { filter: hue-rotate(0deg); }
-      50% { filter: hue-rotate(20deg); }
-    }
-    
-    @keyframes morphCircle1 {
-      0%, 100% { transform: translate(0, 0) scale(1); border-radius: 50%; }
-      50% { transform: translate(50px, -30px) scale(1.2); border-radius: 40% 60% 50% 50%; }
-    }
-    
-    @keyframes morphCircle2 {
-      0%, 100% { transform: translate(0, 0) scale(1); border-radius: 50%; }
-      50% { transform: translate(-40px, 50px) scale(0.9); border-radius: 60% 40% 60% 40%; }
-    }
-    
-    @keyframes morphCircle3 {
-      0%, 100% { transform: translate(-50%, -50%) scale(1); border-radius: 50%; }
-      50% { transform: translate(-50%, -50%) scale(1.15); border-radius: 45% 55% 50% 50%; }
-    }
-    
-    @keyframes glowPulse {
-      0%, 100% { box-shadow: 0 0 30px rgba(244,211,94,0.4); }
-      50% { box-shadow: 0 0 60px rgba(244,211,94,0.8), 0 0 90px rgba(244,211,94,0.4); }
-    }
-    
-    .indicator-card:hover {
-      transform: translateY(-12px) scale(1.05);
-      box-shadow: 0 30px 70px rgba(0,0,0,0.5);
-      border-color: rgba(244,211,94,0.6);
-    }
-    
-    .hover-lift {
-      transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
-    }
-    
-    .hover-lift:hover {
-      transform: translateY(-16px);
-    }
-    
-    .hover-lift:hover .icon-wrapper {
-      transform: scale(1.15) rotate(10deg);
-      box-shadow: 0 20px 50px rgba(5,150,105,0.4);
-    }
-    
-    .faq-premium:hover {
-      border-color: var(--brand-primary);
-      transform: translateX(12px);
-      box-shadow: 0 12px 32px rgba(5,150,105,0.2);
-    }
-    
-    details[open].faq-premium {
-      background: linear-gradient(135deg, #f0fdf4, white);
-      border-color: var(--brand-primary);
-    }
-    
-    .magnetic-btn {
-      transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-    }
-    
-    .magnetic-btn:hover {
-      transform: translateY(-4px) scale(1.05);
-    }
-  </style>
 
   <script src="/assets/main.js"></script>
 </body>
