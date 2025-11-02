@@ -1525,3 +1525,153 @@ article p {
 .no-scroll {
   overflow: hidden;
 }
+
+/* ========================================
+   🔥 ULTRA EFFECTS INTÉGRÉS
+   Effets premium pour toutes les pages
+   ======================================== */
+
+/* Glassmorphism Premium */
+.glass-effect {
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(20px) saturate(180%);
+  -webkit-backdrop-filter: blur(20px) saturate(180%);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+/* Particules flottantes */
+@keyframes floatParticle {
+  0%, 100% {
+    transform: translate(0, 0);
+    opacity: 0.6;
+  }
+  50% {
+    transform: translate(30px, -50px);
+    opacity: 1;
+  }
+}
+
+.particle {
+  animation: floatParticle var(--duration, 20s) ease-in-out infinite;
+}
+
+/* Morphing liquide */
+@keyframes liquidMorph {
+  0%, 100% {
+    border-radius: 60% 40% 30% 70% / 60% 30% 70% 40%;
+  }
+  50% {
+    border-radius: 30% 60% 70% 40% / 50% 60% 30% 60%;
+  }
+}
+
+.liquid-shape {
+  animation: liquidMorph 8s ease-in-out infinite;
+}
+
+/* Gradient animé */
+@keyframes gradientMove {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+.gradient-animated {
+  background: linear-gradient(270deg, var(--brand-primary), var(--brand-secondary), var(--emerald-500));
+  background-size: 400% 400%;
+  animation: gradientMove 8s ease infinite;
+}
+
+/* Glow pulsant */
+@keyframes glowPulse {
+  0%, 100% {
+    box-shadow: 0 0 20px rgba(5, 150, 105, 0.4);
+  }
+  50% {
+    box-shadow: 0 0 40px rgba(5, 150, 105, 0.8), 0 0 60px rgba(5, 150, 105, 0.4);
+  }
+}
+
+.glow-pulse {
+  animation: glowPulse 2s ease-in-out infinite;
+}
+
+/* Hover lift 3D */
+.hover-3d {
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  transform-style: preserve-3d;
+}
+
+.hover-3d:hover {
+  transform: translateY(-12px) rotateX(5deg) rotateY(5deg);
+  box-shadow: 0 30px 60px rgba(15, 23, 42, 0.3);
+}
+
+/* Effet magnetic */
+.magnetic {
+  transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.magnetic:hover {
+  transform: scale(1.05);
+}
+
+/* Ripple infini */
+@keyframes rippleEffect {
+  0% {
+    transform: scale(0);
+    opacity: 1;
+  }
+  100% {
+    transform: scale(3);
+    opacity: 0;
+  }
+}
+
+.ripple-container {
+  position: relative;
+  overflow: hidden;
+}
+
+.ripple-container::before,
+.ripple-container::after {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 100%;
+  height: 100%;
+  border: 2px solid var(--brand-primary);
+  border-radius: 50%;
+  transform: translate(-50%, -50%) scale(0);
+  animation: rippleEffect 3s ease-out infinite;
+}
+
+.ripple-container::after {
+  animation-delay: 1.5s;
+}
+
+/* Optimisation mobile */
+@media (max-width: 768px) {
+  /* Désactiver effets coûteux sur mobile */
+  .hover-3d:hover {
+    transform: translateY(-4px);
+  }
+  
+  .particle {
+    animation-duration: 30s; /* Plus lent sur mobile */
+  }
+  
+  /* Réduire blur sur mobile pour performance */
+  .glass-effect {
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+  }
+}
+
+/* Performance GPU */
+.gpu-boost {
+  transform: translateZ(0);
+  will-change: transform;
+  backface-visibility: hidden;
+}
