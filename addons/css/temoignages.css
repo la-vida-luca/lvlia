@@ -1,164 +1,306 @@
 /**
- * LVLIA - Styles page Témoignages
- * Version: 1.0.0
+ * LVLIA - Styles page Témoignages Premium V2.0
+ * Design storytelling visuel pour conversion maximale
  */
 
-/* === Grille témoignages === */
+/* === Grille témoignages PREMIUM === */
 .testimonials-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
-  gap: 24px;
-  margin: 40px 0;
+  grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+  gap: 32px;
+  margin: 48px 0;
 }
 
-/* === Carte témoignage === */
+/* === Carte témoignage avec effet PREMIUM === */
 .testimonial-card {
   background: white;
-  border: 1px solid var(--line);
-  border-radius: 16px;
-  padding: 32px 24px;
+  border: 2px solid var(--line);
+  border-radius: 24px;
+  padding: 40px 32px;
   text-align: center;
-  box-shadow: 0 4px 12px rgba(0,0,0,0.06);
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  box-shadow: 0 8px 24px rgba(15, 23, 42, 0.08);
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 16px;
+  gap: 20px;
+  position: relative;
+  overflow: hidden;
+}
+
+/* Effet de fond animé */
+.testimonial-card::before {
+  content: '';
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  background: radial-gradient(circle, rgba(5, 150, 105, 0.05) 0%, transparent 70%);
+  opacity: 0;
+  transition: opacity 0.4s ease, transform 0.4s ease;
+  pointer-events: none;
+}
+
+.testimonial-card:hover::before {
+  opacity: 1;
+  transform: rotate(180deg);
 }
 
 .testimonial-card:hover {
-  transform: translateY(-4px);
-  box-shadow: 0 8px 24px rgba(5, 150, 105, 0.15);
+  transform: translateY(-8px) scale(1.02);
+  box-shadow: 0 20px 40px rgba(5, 150, 105, 0.2);
+  border-color: var(--brand-primary);
 }
 
-/* === Avatar === */
+/* Barre supérieure colorée */
+.testimonial-card::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 6px;
+  background: var(--brand-gradient);
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 0.4s ease;
+}
+
+.testimonial-card:hover::after {
+  transform: scaleX(1);
+}
+
+/* === Avatar avec effet premium === */
 .testimonial-card .avatar {
-  width: 120px;
-  height: 120px;
+  width: 140px;
+  height: 140px;
   border-radius: 50%;
   object-fit: cover;
-  border: 4px solid var(--brand);
-  margin-bottom: 8px;
-  background: #f1f5f9;
+  border: 5px solid transparent;
+  background: var(--brand-gradient);
+  background-clip: padding-box;
+  padding: 3px;
+  margin-bottom: 12px;
+  transition: all 0.4s ease;
+  position: relative;
+  z-index: 2;
+  box-shadow: 0 8px 24px rgba(5, 150, 105, 0.2);
 }
 
-/* === Rating === */
+.testimonial-card:hover .avatar {
+  transform: scale(1.1) rotate(5deg);
+  box-shadow: 0 12px 32px rgba(5, 150, 105, 0.35);
+}
+
+/* Effet de halo autour de l'avatar */
+.testimonial-card .avatar::before {
+  content: '';
+  position: absolute;
+  top: -5px;
+  left: -5px;
+  right: -5px;
+  bottom: -5px;
+  background: var(--brand-gradient);
+  border-radius: 50%;
+  z-index: -1;
+  opacity: 0;
+  transition: opacity 0.4s ease;
+  animation: pulse 2s ease-in-out infinite;
+}
+
+.testimonial-card:hover .avatar::before {
+  opacity: 0.3;
+}
+
+/* === Rating avec effet premium === */
 .testimonial-card .rating {
   color: #fbbf24;
-  font-size: 20px;
-  letter-spacing: 2px;
-  margin-bottom: 8px;
+  font-size: 24px;
+  letter-spacing: 4px;
+  margin-bottom: 12px;
+  position: relative;
+  z-index: 2;
+  transition: all 0.3s ease;
 }
 
-/* === Citation === */
+.testimonial-card:hover .rating {
+  transform: scale(1.1);
+  filter: drop-shadow(0 4px 8px rgba(251, 191, 36, 0.4));
+}
+
+/* === Citation premium === */
 .testimonial-card blockquote {
   font-style: italic;
   color: var(--fg);
-  font-size: 16px;
-  line-height: 1.6;
+  font-size: 17px;
+  line-height: 1.7;
   margin: 0;
   border: none;
   background: transparent;
-  padding: 0;
+  padding: 0 12px;
   flex: 1;
-  min-height: 80px;
+  min-height: 100px;
   display: flex;
   align-items: center;
+  position: relative;
+  z-index: 2;
+  text-align: center;
+  font-weight: 500;
 }
 
 .testimonial-card blockquote::before {
   content: '"';
-  font-size: 48px;
-  color: var(--brand);
-  opacity: 0.3;
-  line-height: 0;
-  margin-right: 8px;
+  font-size: 80px;
+  font-family: Georgia, serif;
+  color: var(--brand-primary);
+  opacity: 0.15;
+  position: absolute;
+  top: -20px;
+  left: -10px;
+  line-height: 1;
+  z-index: -1;
 }
 
 .testimonial-card blockquote::after {
   content: '"';
-  font-size: 48px;
-  color: var(--brand);
-  opacity: 0.3;
-  line-height: 0;
-  margin-left: 8px;
+  font-size: 80px;
+  font-family: Georgia, serif;
+  color: var(--brand-primary);
+  opacity: 0.15;
+  position: absolute;
+  bottom: -40px;
+  right: -10px;
+  line-height: 1;
+  z-index: -1;
 }
 
-/* === Auteur === */
+/* === Auteur premium === */
 .testimonial-card .author {
-  margin-top: 8px;
+  margin-top: 12px;
+  position: relative;
+  z-index: 2;
 }
 
 .testimonial-card .author strong {
   display: block;
-  font-size: 18px;
-  font-weight: 700;
-  color: var(--fg);
-  margin-bottom: 4px;
+  font-size: 20px;
+  font-weight: 800;
+  background: var(--brand-gradient);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  margin-bottom: 6px;
 }
 
 .testimonial-card .author span {
   color: var(--muted);
+  font-size: 15px;
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+}
+
+.testimonial-card .author span::before {
+  content: '📍';
   font-size: 14px;
 }
 
-/* === Badge économies === */
+/* === Badge économies premium === */
 .testimonial-card .economics {
-  margin-top: 12px;
+  margin-top: 16px;
+  position: relative;
+  z-index: 2;
 }
 
 .testimonial-card .economics .badge {
   background: linear-gradient(135deg, #dcfce7, #bbf7d0);
   color: #047857;
-  padding: 10px 20px;
+  padding: 12px 24px;
   border-radius: 999px;
-  font-size: 15px;
-  font-weight: 700;
+  font-size: 16px;
+  font-weight: 800;
   display: inline-block;
-  border: 1px solid #86efac;
+  border: 2px solid #86efac;
+  box-shadow: 0 4px 12px rgba(5, 150, 105, 0.2);
+  transition: all 0.3s ease;
+  position: relative;
+  overflow: hidden;
 }
 
-/* === Badge vérifié === */
+.testimonial-card .economics .badge::before {
+  content: '💰';
+  margin-right: 6px;
+}
+
+.testimonial-card:hover .economics .badge {
+  transform: scale(1.08);
+  box-shadow: 0 6px 16px rgba(5, 150, 105, 0.35);
+}
+
+/* === Badge vérifié premium === */
 .testimonial-card .verified-badge {
-  color: var(--brand);
-  font-size: 14px;
-  font-weight: 600;
-  margin-top: 8px;
+  color: var(--brand-primary);
+  font-size: 15px;
+  font-weight: 700;
+  margin-top: 12px;
   display: flex;
   align-items: center;
-  gap: 6px;
+  gap: 8px;
   justify-content: center;
+  position: relative;
+  z-index: 2;
+  background: linear-gradient(135deg, #f0fdf4, #ecfeff);
+  padding: 8px 16px;
+  border-radius: 999px;
+  border: 1px solid #86efac;
+  transition: all 0.3s ease;
 }
 
 .testimonial-card .verified-badge::before {
   content: '✓';
-  background: var(--brand);
+  background: var(--brand-gradient);
   color: white;
-  width: 20px;
-  height: 20px;
+  width: 24px;
+  height: 24px;
   border-radius: 50%;
   display: inline-flex;
   align-items: center;
   justify-content: center;
   font-size: 14px;
   font-weight: bold;
+  box-shadow: 0 2px 8px rgba(5, 150, 105, 0.3);
 }
 
-/* === Section vidéos témoignages === */
+.testimonial-card:hover .verified-badge {
+  transform: scale(1.05);
+  background: linear-gradient(135deg, #dcfce7, #d1fae5);
+}
+
+/* === Section vidéos témoignages PREMIUM === */
 .video-testimonials {
-  margin: 60px 0 40px;
+  margin: 80px 0 60px;
+  position: relative;
 }
 
 .video-testimonials h2 {
   text-align: center;
-  margin-bottom: 32px;
-  font-size: 32px;
+  margin-bottom: 48px;
+  font-size: 48px;
+  font-family: 'Playfair Display', Georgia, serif;
+  font-weight: 800;
+  background: var(--brand-gradient);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
 }
 
 .video-testimonials .grid-3 {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  gap: 24px;
+  gap: 32px;
 }
 
 .video-wrapper {
@@ -166,9 +308,44 @@
   padding-bottom: 56.25%; /* 16:9 */
   height: 0;
   overflow: hidden;
-  border-radius: 12px;
-  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
-  background: #f1f5f9;
+  border-radius: 20px;
+  box-shadow: 0 8px 24px rgba(15, 23, 42, 0.1);
+  background: linear-gradient(135deg, #f1f5f9, #e2e8f0);
+  transition: all 0.4s ease;
+  border: 2px solid var(--line);
+}
+
+.video-wrapper:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 16px 40px rgba(5, 150, 105, 0.2);
+  border-color: var(--brand-primary);
+}
+
+.video-wrapper::before {
+  content: '▶';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 48px;
+  color: white;
+  background: var(--brand-gradient);
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1;
+  pointer-events: none;
+  opacity: 0.9;
+  transition: all 0.3s ease;
+  box-shadow: 0 8px 24px rgba(5, 150, 105, 0.4);
+}
+
+.video-wrapper:hover::before {
+  transform: translate(-50%, -50%) scale(1.2);
+  opacity: 1;
 }
 
 .video-wrapper iframe {
@@ -178,53 +355,223 @@
   width: 100%;
   height: 100%;
   border: none;
-  border-radius: 12px;
+  border-radius: 20px;
+  z-index: 2;
 }
 
-/* === Section CTA === */
+/* === Section CTA PREMIUM === */
 .testimonials-cta {
   text-align: center;
-  margin: 60px 0 40px;
-  padding: 48px 32px;
-  background: linear-gradient(135deg, #f0fdf4, #dcfce7);
-  border-radius: 20px;
-  border: 2px solid #86efac;
+  margin: 80px 0 48px;
+  padding: 64px 48px;
+  background: var(--brand-gradient);
+  border-radius: 32px;
+  border: none;
+  box-shadow: 0 20px 40px rgba(5, 150, 105, 0.3);
+  position: relative;
+  overflow: hidden;
+}
+
+.testimonials-cta::before {
+  content: '';
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  background: linear-gradient(45deg, transparent 30%, rgba(255, 255, 255, 0.1) 50%, transparent 70%);
+  animation: shine 3s ease-in-out infinite;
+  pointer-events: none;
+}
+
+@keyframes shine {
+  0% {
+    transform: translate(-100%, -100%);
+  }
+  100% {
+    transform: translate(100%, 100%);
+  }
 }
 
 .testimonials-cta h2 {
-  font-size: 36px;
-  margin-bottom: 16px;
-  color: var(--fg);
+  font-size: 48px;
+  margin-bottom: 20px;
+  color: white;
+  font-family: 'Playfair Display', Georgia, serif;
+  font-weight: 900;
+  text-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+  position: relative;
+  z-index: 2;
 }
 
 .testimonials-cta p {
-  font-size: 18px;
-  color: var(--muted);
-  margin-bottom: 24px;
-  max-width: 600px;
+  font-size: 20px;
+  color: rgba(255, 255, 255, 0.95);
+  margin-bottom: 32px;
+  max-width: 700px;
   margin-left: auto;
   margin-right: auto;
+  font-weight: 600;
+  line-height: 1.7;
+  position: relative;
+  z-index: 2;
 }
 
 .testimonials-cta .btn {
-  font-size: 18px;
-  padding: 16px 32px;
+  font-size: 20px;
+  padding: 20px 40px;
+  font-weight: 800;
+  background: white;
+  color: var(--brand-primary);
+  position: relative;
+  z-index: 2;
 }
 
-/* === Responsive mobile === */
-@media (max-width: 900px) {
+.testimonials-cta .btn:hover {
+  background: #f0fdf4;
+  transform: scale(1.08) translateY(-2px);
+  box-shadow: 0 12px 32px rgba(0, 0, 0, 0.25);
+}
+
+.testimonials-cta .btn.outline {
+  background: transparent;
+  color: white;
+  border: 3px solid white;
+  margin-top: 16px;
+}
+
+.testimonials-cta .btn.outline:hover {
+  background: rgba(255, 255, 255, 0.15);
+  backdrop-filter: blur(10px);
+}
+
+/* === Effet de compteur animé (utilisé par JS) === */
+.testimonial-count {
+  text-align: center;
+  margin: 48px 0 32px;
+  padding: 32px;
+  background: linear-gradient(135deg, #f0fdf4, #dcfce7);
+  border-radius: 24px;
+  border: 2px solid #86efac;
+}
+
+.testimonial-count h3 {
+  font-size: 24px;
+  color: var(--muted);
+  margin-bottom: 16px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.testimonial-count .count {
+  font-size: 72px;
+  font-weight: 900;
+  background: var(--brand-gradient);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  font-family: 'Space Grotesk', sans-serif;
+}
+
+.testimonial-count .detail {
+  font-size: 18px;
+  color: var(--muted);
+  margin-top: 8px;
+  font-weight: 600;
+}
+
+/* === Stats agrégées === */
+.testimonials-stats {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 24px;
+  margin: 60px 0;
+}
+
+.stat-item {
+  background: white;
+  padding: 32px 24px;
+  border-radius: 20px;
+  text-align: center;
+  border: 2px solid var(--line);
+  box-shadow: 0 8px 20px rgba(15, 23, 42, 0.08);
+  transition: all 0.3s ease;
+}
+
+.stat-item:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 16px 32px rgba(5, 150, 105, 0.2);
+  border-color: var(--brand-primary);
+}
+
+.stat-item .icon {
+  font-size: 48px;
+  margin-bottom: 16px;
+}
+
+.stat-item .value {
+  font-size: 48px;
+  font-weight: 900;
+  background: var(--brand-gradient);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  margin-bottom: 8px;
+  font-family: 'Space Grotesk', sans-serif;
+}
+
+.stat-item .label {
+  font-size: 16px;
+  color: var(--muted);
+  font-weight: 700;
+}
+
+/* === Animation d'entrée (utilisée par JS) === */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.fade-in-up {
+  animation: fadeInUp 0.8s ease-out;
+}
+
+/* === Responsive premium === */
+@media (max-width: 1024px) {
   .testimonials-grid {
-    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
-    gap: 20px;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 28px;
   }
   
   .video-testimonials .grid-3 {
     grid-template-columns: 1fr;
-    gap: 20px;
+    gap: 28px;
+  }
+  
+  .testimonials-stats {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 900px) {
+  .testimonials-grid {
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 24px;
   }
   
   .testimonials-cta h2 {
-    font-size: 28px;
+    font-size: 36px;
+  }
+  
+  .video-testimonials h2 {
+    font-size: 36px;
   }
 }
 
@@ -234,23 +581,36 @@
   }
   
   .testimonial-card {
-    padding: 24px 20px;
-  }
-  
-  .testimonial-card .avatar {
-    width: 100px;
-    height: 100px;
-  }
-  
-  .testimonials-cta {
     padding: 32px 24px;
   }
   
+  .testimonial-card .avatar {
+    width: 120px;
+    height: 120px;
+  }
+  
+  .testimonials-cta {
+    padding: 48px 32px;
+  }
+  
   .testimonials-cta h2 {
-    font-size: 24px;
+    font-size: 32px;
   }
   
   .testimonials-cta p {
-    font-size: 16px;
+    font-size: 18px;
+  }
+  
+  .video-testimonials h2 {
+    font-size: 32px;
+  }
+  
+  .testimonials-stats {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+  
+  .testimonial-count .count {
+    font-size: 56px;
   }
 }
