@@ -7,6 +7,48 @@
 document.addEventListener('DOMContentLoaded', function() {
   
   // ========================================
+  // 🌙 THEME TOGGLE (DARK/LIGHT MODE)
+  // ========================================
+  const themeToggle = createThemeToggle();
+  
+  function createThemeToggle() {
+    // Créer le bouton
+    const button = document.createElement('button');
+    button.className = 'theme-toggle magnetic';
+    button.setAttribute('aria-label', 'Changer de thème');
+    
+    // Récupérer la préférence sauvegardée
+    const savedTheme = localStorage.getItem('lvlia-theme');
+    const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+    const currentTheme = savedTheme || (prefersDark ? 'dark' : 'light');
+    
+    // Appliquer le thème
+    document.documentElement.setAttribute('data-theme', currentTheme);
+    button.textContent = currentTheme === 'dark' ? '☀️' : '🌙';
+    
+    // Toggle au clic
+    button.addEventListener('click', () => {
+      const current = document.documentElement.getAttribute('data-theme');
+      const newTheme = current === 'dark' ? 'light' : 'dark';
+      
+      document.documentElement.setAttribute('data-theme', newTheme);
+      localStorage.setItem('lvlia-theme', newTheme);
+      button.textContent = newTheme === 'dark' ? '☀️' : '🌙';
+      
+      // Animation subtile
+      button.style.transform = 'scale(0.8) rotate(360deg)';
+      setTimeout(() => {
+        button.style.transform = '';
+      }, 300);
+    });
+    
+    // Ajouter au body
+    document.body.appendChild(button);
+    
+    return button;
+  }
+  
+  // ========================================
   // 📱 MENU MOBILE PREMIUM
   // ========================================
   const menuToggle = document.querySelector('.mobile-menu-toggle');

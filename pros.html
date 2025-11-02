@@ -1,7 +1,6 @@
 <!doctype html>
 <html lang="fr">
 <head>
-  <!-- Google tag (gtag.js) -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-GEDJJ82JS6"></script>
   <script>
     window.dataLayer = window.dataLayer || [];
@@ -12,187 +11,405 @@
   
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  
-  <!-- Primary Meta Tags -->
   <title>Solutions Pro Agriculture Urbaine – Restaurants, Hôtels, Collectivités | LVLIA</title>
-  <meta name="description" content="Micro-serres connectées pour professionnels : restaurants, hôtels, épiceries, collectivités. Production locale, autonomie alimentaire, circuit court. Installation clé en main." />
-  <meta name="keywords" content="agriculture urbaine professionnelle, serre connectée restaurant, production locale hôtel, autonomie alimentaire collectivité, circuit court, ferme urbaine pro, légumes locaux restaurant" />
-  <link rel="canonical" href="https://lvlia.fr/pros.html" />
-  
-  <!-- Open Graph / Facebook -->
-  <meta property="og:type" content="website" />
-  <meta property="og:url" content="https://lvlia.fr/pros.html" />
-  <meta property="og:title" content="Solutions Pro Agriculture Urbaine pour Restaurants & Hôtels" />
-  <meta property="og:description" content="Micro-serres connectées pour professionnels. Production locale et autonomie alimentaire." />
-  <meta property="og:image" content="https://lvlia.fr/assets/og-banner.png" />
-  <meta property="og:locale" content="fr_FR" />
-  <meta property="og:site_name" content="LVLIA" />
-  
-  <!-- Twitter -->
-  <meta property="twitter:card" content="summary_large_image" />
-  <meta property="twitter:url" content="https://lvlia.fr/pros.html" />
-  <meta property="twitter:title" content="Solutions Pro Agriculture Urbaine pour Restaurants & Hôtels" />
-  <meta property="twitter:description" content="Micro-serres connectées pour professionnels. Production locale et autonomie alimentaire." />
-  <meta property="twitter:image" content="https://lvlia.fr/assets/og-banner.png" />
-  
-  <!-- Structured Data -->
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "Service",
-    "name": "Solutions Pro LVLIA",
-    "description": "Micro-serres connectées pour professionnels de la restauration et de l'hôtellerie",
-    "provider": {
-      "@type": "Organization",
-      "name": "LVLIA"
-    },
-    "areaServed": "FR",
-    "category": "Agriculture urbaine professionnelle"
-  }
-  </script>
+  <meta name="description" content="Micro-serres connectées pour professionnels : production locale, autonomie alimentaire, circuit court. Installation clé en main." />
   
   <link rel="stylesheet" href="assets/style.css" />
 </head>
 <body>
+
+<!-- LOADER PRO -->
+<div class="page-loader" style="position:fixed;top:0;left:0;width:100%;height:100%;background:linear-gradient(135deg,#0d3b66,#2ec4b6);z-index:10000;display:flex;align-items:center;justify-content:center;">
+  <div style="text-align:center;">
+    <div style="font-size:4rem;margin-bottom:20px;animation:bounce 1s infinite;">💼</div>
+    <p style="color:white;font-weight:800;font-size:1.3rem;">Chargement Solutions Pro...</p>
+  </div>
+</div>
+
 <header class="site-header">
   <a class="logo" href="index.html"><span>LVLIA</span></a>
-  <button class="mobile-menu-toggle" aria-label="Menu" aria-expanded="false" aria-controls="main-nav">☰</button>
+  <button class="mobile-menu-toggle" aria-label="Menu">☰</button>
   <nav class="main-nav" id="main-nav">
-    <a href="index.html">Accueil</a>
-    <a href="kit-particuliers.html">Micro-serres</a>
-    <a href="addons/pages/autonomie-alimentaire/">Autonomie Alimentaire</a>
-    <a href="addons/pages/hydroponie-domestique/">Hydroponie</a>
-    <a href="pros.html" class="active">Pro</a>
-    <a href="blog.html">Blog</a>
-    <a href="contact.html">Contact</a>
+    <a href="index.html">🏠 Accueil</a>
+    <a href="kit-particuliers.html">🌱 Micro-serres</a>
+    <a href="addons/pages/autonomie-alimentaire/">🎯 Autonomie</a>
+    <a href="addons/pages/hydroponie-domestique/">💧 Hydroponie</a>
+    <a href="pros.html" class="active">💼 Pro</a>
+    <a href="blog.html">📝 Blog</a>
+    <a href="contact.html">📧 Contact</a>
   </nav>
-  <a class="btn" href="https://calendar.app.google/9TATamoia8m57MhM7" target="_blank" rel="noopener">Réserver une démo</a>
+  <a class="btn magnetic" href="https://calendar.app.google/9TATamoia8m57MhM7" target="_blank">📅 Démo</a>
 </header>
-<section class="page-head">
-  <div class="container">
-    <h1>Fermes urbaines pro : ultra-frais, surveillées, garanties</h1>
-    <p>Pour restaurants, hôtels, épiceries. Production locale, traçabilité IoT, contrats de livraison.</p>
+
+<!-- HERO PRO ULTRA PREMIUM -->
+<section class="hero" style="background:linear-gradient(135deg,#0d3b66,#1f7a8c,#2ec4b6);padding:120px 20px;position:relative;overflow:hidden;min-height:85vh;display:flex;align-items:center;">
+  <!-- Canvas particules -->
+  <canvas id="proParticles" style="position:absolute;top:0;left:0;width:100%;height:100%;pointer-events:none;"></canvas>
+  
+  <!-- Cercles morphing -->
+  <div style="position:absolute;width:800px;height:800px;background:radial-gradient(circle,rgba(244,211,94,0.15),transparent);top:-300px;right:-300px;border-radius:50%;animation:liquidMorph 20s infinite;"></div>
+  
+  <div class="container" style="position:relative;z-index:2;max-width:1100px;">
+    <div class="glass-effect" style="padding:60px;border-radius:32px;">
+      <div class="hero-badge glow-pulse" style="display:inline-block;background:rgba(244,211,94,0.2);border:2px solid #f4d35e;padding:12px 28px;border-radius:999px;margin-bottom:32px;">
+        <span style="font-weight:800;color:#f4d35e;font-size:1.1rem;">🏆 Solutions Professionnelles Premium</span>
+      </div>
+      
+      <h1 style="font-size:clamp(2.5rem,8vw,5rem);color:white;margin:0 0 32px;text-shadow:0 0 30px rgba(46,196,182,0.8);line-height:1.1;">
+        Fermes urbaines pro : <br/>
+        <span style="background:linear-gradient(135deg,#f4d35e,#2ec4b6);-webkit-background-clip:text;-webkit-text-fill-color:transparent;">ultra-frais, surveillées, garanties</span>
+      </h1>
+      
+      <p style="font-size:clamp(1.2rem,3vw,1.6rem);color:rgba(255,255,255,0.95);margin-bottom:40px;line-height:1.7;">
+        Pour <strong style="color:#f4d35e;">restaurants, hôtels, épiceries</strong>. Production locale, traçabilité IoT, contrats de livraison garantis.
+      </p>
+      
+      <!-- Stats Pro -->
+      <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:24px;margin-bottom:40px;">
+        <div class="glass-effect hover-3d" style="padding:24px;border-radius:16px;text-align:center;">
+          <div style="font-size:3rem;font-weight:900;color:#f4d35e;" data-target="30">30</div>
+          <div style="color:white;font-weight:600;font-size:0.95rem;">kg/mois minimum</div>
+        </div>
+        <div class="glass-effect hover-3d" style="padding:24px;border-radius:16px;text-align:center;">
+          <div style="font-size:3rem;font-weight:900;color:#2ec4b6;" data-target="24">24</div>
+          <div style="color:white;font-weight:600;font-size:0.95rem;">h/24 support</div>
+        </div>
+        <div class="glass-effect hover-3d" style="padding:24px;border-radius:16px;text-align:center;">
+          <div style="font-size:3rem;font-weight:900;color:#f4d35e;" data-target="5490">5490</div>
+          <div style="color:white;font-weight:600;font-size:0.95rem;">€ à partir de</div>
+        </div>
+      </div>
+      
+      <div style="display:flex;gap:20px;flex-wrap:wrap;">
+        <a href="#secteurs" class="btn magnetic glow-pulse" style="font-size:1.2rem;padding:20px 40px;background:#f4d35e;color:#0d3b66;">
+          🎯 Voir les secteurs
+        </a>
+        <a href="#diagnostic" class="btn outline magnetic" style="font-size:1.2rem;padding:20px 40px;color:white;border-color:white;">
+          📞 Diagnostic gratuit
+        </a>
+      </div>
+    </div>
   </div>
 </section>
-<main class="container">
-  <section class="grid grid-3">
-    <div class="card">
-      <h2>Restaurants</h2>
-      <p>Herbes fraîches, micropousses, légumes de signature. Sur place ou en livraison contractée.</p>
-      <ul>
-        <li>📊 Traçabilité IoT complète</li>
-        <li>🌱 Production à la carte</li>
-        <li>📱 App monitoring qualité</li>
-        <li>📄 Storytelling client inclus</li>
-      </ul>
-      <p><strong>À partir de 5490€</strong></p>
-    </div>
-    <div class="card">
-      <h2>Hôtels</h2>
-      <p>Petit-déjeuner premium, brunch éco-responsable. Production visible des clients.</p>
-      <ul>
-        <li>🎆 Ferme urbaine en vitrine</li>
-        <li>📱 App monitoring clientèle</li>
-        <li>🎯 Formation équipes incluse</li>
-        <li>📦 Livraison quotidienne</li>
-      </ul>
-      <p><strong>À partir de 8990€</strong></p>
-    </div>
-    <div class="card">
-      <h2>Épiceries</h2>
-      <p>Légumes ultra-locaux, vente directe, ferme en boutique. Différenciation premium.</p>
-      <ul>
-        <li>🏪 Ferme urbaine clientèle</li>
-        <li>✂️ Récolte à la demande</li>
-        <li>📊 Traçabilité IoT complète</li>
-        <li>👥 Formation vendeurs</li>
-      </ul>
-      <p><strong>À partir de 12990€</strong></p>
-    </div>
-  </section>
 
-  <section class="section">
-    <h2>Installations LVLIA</h2>
-    <div class="grid grid-2" style="gap:16px">
-      <div class="card">
-        <img src="assets/photos/IMG_6813.jpeg" alt="Installation professionnelle LVLIA - Serre hydroponique connectée pour restaurant ou hôtel" style="width:100%;height:auto;border-radius:10px">
-      </div>
-      <div class="card">
-        <img src="assets/photos/IMG_6804.jpeg" alt="Cabinet de culture compact LVLIA - Solution pour espace réduit en épicerie ou restaurant" style="width:100%;height:auto;border-radius:10px">
-      </div>
+<main class="container" style="padding:80px 20px;">
+  
+  <!-- Secteurs d'activité -->
+  <section id="secteurs" style="margin-bottom:100px;">
+    <div style="text-align:center;margin-bottom:64px;">
+      <h2 style="font-size:clamp(2rem,5vw,3.5rem);margin-bottom:20px;">🎯 Votre secteur, notre expertise</h2>
+      <p style="font-size:1.2rem;color:var(--muted);max-width:700px;margin:0 auto;">Solutions sur-mesure pour chaque métier</p>
     </div>
-  </section>
-
-  <section class="section">
-    <h2>La différence connectée</h2>
-    <div class="grid grid-2">
-      <div class="card">
-        <img src="assets/photos/IMG_6814.jpeg" alt="Application LVLIA Farm pour professionnels - Monitoring température, pH, humidité en temps réel" style="width:100%;max-width:400px;height:auto;margin:0 auto 16px;display:block;border-radius:10px">
-        <h3>📱 Monitoring temps réel</h3>
-        <p>Capteurs pH, température, humidité. Alertes sur votre téléphone. Historiques de qualité pour vos clients.</p>
-      </div>
-      <div class="card">
-        <h3>🚚 Contrats de livraison</h3>
-        <p>Volumes garantis, qualité constante, livraison régulière. Vous planifiez vos menus en toute sérénité.</p>
-      </div>
-    </div>
-  </section>
-
-  <section class="section">
-    <h2>Demander votre diagnostic pro</h2>
-    <div class="card">
-      <form name="diagnostic-pro" method="POST" netlify class="contact-form">
-        <div class="grid grid-2">
-          <div>
-            <label>Nom complet<input type="text" name="name" required></label>
-            <label>Entreprise<input type="text" name="company" required></label>
-            <label>Email professionnel<input type="email" name="email" required></label>
-          </div>
-          <div>
-            <label>Téléphone<input type="tel" name="phone"></label>
-            <label>Type d’établissement
-              <select name="business-type" required>
-                <option value="">Sélectionner…</option>
-                <option value="restaurant">Restaurant</option>
-                <option value="hotel">Hôtel / Hébergement</option>
-                <option value="epicerie">Épicerie / Marché</option>
-                <option value="collectivite">Collectivité / École</option>
-                <option value="autre">Autre</option>
-              </select>
-            </label>
-            <label>Localisation<input type="text" name="location" placeholder="Ville, département" required></label>
-          </div>
+    
+    <div class="grid grid-3">
+      <div class="card hover-3d gpu-boost ripple-container" style="background:linear-gradient(135deg,#fff,#f0fdf4);">
+        <div style="text-align:center;margin-bottom:24px;">
+          <div style="font-size:5rem;margin-bottom:16px;">🍽️</div>
+          <h3 style="font-size:2rem;margin:0;">Restaurants</h3>
         </div>
-        <label>Votre projet
-          <textarea name="message" placeholder="Objectifs, volumes souhaités, espace disponible, timeline, budget indicatif…"></textarea>
-        </label>
-        <button type="submit" class="btn" style="width:100%">Demander un diagnostic gratuit</button>
-        <p style="color:#475569;font-size:14px;text-align:center;margin-top:8px">
-          Diagnostic sous 48h · Devis sous 7 jours · Installation sous 3 semaines
-        </p>
-      </form>
+        <p style="margin-bottom:24px;">Herbes fraîches, micropousses, légumes de signature. Production sur place ou livraison contractée.</p>
+        <ul class="list-check" style="margin-bottom:24px;">
+          <li>📊 Traçabilité IoT complète</li>
+          <li>🌱 Production à la carte</li>
+          <li>📱 App monitoring qualité</li>
+          <li>📄 Storytelling client inclus</li>
+          <li>🎯 Formation équipe</li>
+        </ul>
+        <div class="glass-effect" style="padding:20px;border-radius:12px;text-align:center;margin-bottom:20px;">
+          <strong style="font-size:2rem;color:var(--brand-primary);">À partir de 5 490€</strong>
+        </div>
+        <a class="btn magnetic" href="restaurants.html" style="width:100%;">🍴 En savoir plus</a>
+      </div>
+      
+      <div class="card hover-3d gpu-boost ripple-container" style="background:linear-gradient(135deg,#fff,#fff7ed);">
+        <div style="text-align:center;margin-bottom:24px;">
+          <div style="font-size:5rem;margin-bottom:16px;">🏨</div>
+          <h3 style="font-size:2rem;margin:0;">Hôtels</h3>
+        </div>
+        <p style="margin-bottom:24px;">Petit-déjeuner premium, brunch éco-responsable. Production visible des clients pour effet wow.</p>
+        <ul class="list-check" style="margin-bottom:24px;">
+          <li>✨ Ferme urbaine vitrine</li>
+          <li>📱 App monitoring clientèle</li>
+          <li>🎯 Formation équipes</li>
+          <li>📦 Livraison quotidienne</li>
+          <li>🌟 Impact marketing</li>
+        </ul>
+        <div class="glass-effect" style="padding:20px;border-radius:12px;text-align:center;margin-bottom:20px;">
+          <strong style="font-size:2rem;color:#f59e0b;">À partir de 8 990€</strong>
+        </div>
+        <a class="btn magnetic" href="hotels.html" style="width:100%;background:linear-gradient(135deg,#f59e0b,#d97706);">🏨 En savoir plus</a>
+      </div>
+      
+      <div class="card hover-3d gpu-boost ripple-container" style="background:linear-gradient(135deg,#fff,#eff6ff);">
+        <div style="text-align:center;margin-bottom:24px;">
+          <div style="font-size:5rem;margin-bottom:16px;">🏪</div>
+          <h3 style="font-size:2rem;margin:0;">Épiceries</h3>
+        </div>
+        <p style="margin-bottom:24px;">Légumes ultra-locaux, vente directe, ferme en boutique. Différenciation premium totale.</p>
+        <ul class="list-check" style="margin-bottom:24px;">
+          <li>🏪 Ferme visible clientèle</li>
+          <li>✂️ Récolte à la demande</li>
+          <li>📊 Traçabilité IoT</li>
+          <li>👥 Formation vendeurs</li>
+          <li>💎 Expérience client unique</li>
+        </ul>
+        <div class="glass-effect" style="padding:20px;border-radius:12px;text-align:center;margin-bottom:20px;">
+          <strong style="font-size:2rem;color:#3b82f6;">À partir de 12 990€</strong>
+        </div>
+        <a class="btn magnetic" href="epiceries.html" style="width:100%;background:linear-gradient(135deg,#3b82f6,#2563eb);">🛒 En savoir plus</a>
+      </div>
     </div>
   </section>
 
-  <section class="section">
-    <div class="container">
-      <blockquote>
-        «Nos fermes pro vous libèrent de la logistique. Vous vous concentrez sur vos clients, nous sur vos légumes.»
-      </blockquote>
-      <p style="text-align:center;margin-top:16px">
-        <a class="btn" href="https://calendar.app.google/9TATamoia8m57MhM7" target="_blank" rel="noopener">Démarrer mon diagnostic</a>
-      </p>
+  <!-- Installations -->
+  <section style="margin-bottom:100px;">
+    <h2 style="text-align:center;font-size:clamp(2rem,5vw,3rem);margin-bottom:48px;">📸 Installations LVLIA Pro</h2>
+    
+    <div class="grid grid-2">
+      <div class="card hover-3d gpu-boost" style="padding:0;overflow:hidden;">
+        <img src="assets/photos/IMG_6813.jpeg" alt="Installation pro LVLIA" style="width:100%;height:400px;object-fit:cover;">
+        <div class="glass-effect" style="position:absolute;bottom:0;left:0;right:0;padding:24px;backdrop-filter:blur(20px);">
+          <h3 style="color:white;margin:0;text-shadow:0 2px 8px rgba(0,0,0,0.3);">🍽️ Restaurant Le Jardin</h3>
+          <p style="color:rgba(255,255,255,0.9);margin:8px 0 0;">Production 25kg/mois - ROI 9 mois</p>
+        </div>
+      </div>
+      
+      <div class="card hover-3d gpu-boost" style="padding:0;overflow:hidden;">
+        <img src="assets/photos/IMG_6804.jpeg" alt="Installation compacte LVLIA" style="width:100%;height:400px;object-fit:cover;">
+        <div class="glass-effect" style="position:absolute;bottom:0;left:0;right:0;padding:24px;backdrop-filter:blur(20px);">
+          <h3 style="color:white;margin:0;text-shadow:0 2px 8px rgba(0,0,0,0.3);">🏨 Hôtel Le Panorama</h3>
+          <p style="color:rgba(255,255,255,0.9);margin:8px 0 0;">Production 35kg/mois - Effet wow garanti</p>
+        </div>
+      </div>
     </div>
   </section>
+
+  <!-- Différence connectée -->
+  <section style="margin-bottom:100px;">
+    <h2 style="text-align:center;font-size:clamp(2rem,5vw,3rem);margin-bottom:48px;">⚡ La différence connectée</h2>
+    
+    <div class="grid grid-2">
+      <div class="card hover-3d gpu-boost ripple-container" style="text-align:center;padding:48px;">
+        <div style="font-size:5rem;margin-bottom:24px;">📱</div>
+        <h3 style="font-size:1.8rem;margin-bottom:20px;">Monitoring temps réel</h3>
+        <p style="font-size:1.1rem;color:var(--muted);line-height:1.7;">Capteurs pH, température, humidité. Alertes sur votre téléphone. Historiques de qualité pour vos clients et certifications.</p>
+        <div class="glass-effect" style="margin-top:24px;padding:16px;border-radius:12px;">
+          <strong style="color:var(--brand-primary);font-size:1.1rem;">✓ Traçabilité complète incluse</strong>
+        </div>
+      </div>
+      
+      <div class="card hover-3d gpu-boost ripple-container" style="text-align:center;padding:48px;">
+        <div style="font-size:5rem;margin-bottom:24px;">🚚</div>
+        <h3 style="font-size:1.8rem;margin-bottom:20px;">Contrats de livraison</h3>
+        <p style="font-size:1.1rem;color:var(--muted);line-height:1.7;">Volumes garantis, qualité constante, livraison régulière. Vous planifiez vos menus en toute sérénité.</p>
+        <div class="glass-effect" style="margin-top:24px;padding:16px;border-radius:12px;">
+          <strong style="color:var(--brand-primary);font-size:1.1rem;">✓ Engagement de résultats</strong>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Formulaire diagnostic -->
+  <section id="diagnostic" class="section" style="padding:80px 0;">
+    <div class="card glass-effect hover-3d gpu-boost" style="max-width:900px;margin:0 auto;padding:56px;background:var(--brand-gradient);position:relative;overflow:hidden;">
+      
+      <!-- Pattern de fond -->
+      <div style="position:absolute;top:0;left:0;width:100%;height:100%;background:url('data:image/svg+xml,%3Csvg width=\"60\" height=\"60\" xmlns=\"http://www.w3.org/2000/svg\"%3E%3Cpath d=\"M30 0v60M0 30h60\" stroke=\"rgba(255,255,255,0.05)\" stroke-width=\"1\"/%3E%3C/svg%3E');opacity:0.3;"></div>
+      
+      <div style="position:relative;z-index:2;">
+        <h2 style="text-align:center;font-size:clamp(2rem,5vw,3rem);color:white;margin-bottom:16px;">🎯 Demander votre diagnostic pro gratuit</h2>
+        <p style="text-align:center;color:rgba(255,255,255,0.95);font-size:1.2rem;margin-bottom:48px;">Réponse sous 48h - Devis sous 7j - Installation sous 3 semaines</p>
+        
+        <form name="diagnostic-pro" method="POST" netlify class="contact-form" style="background:rgba(255,255,255,0.95);padding:48px;border-radius:24px;backdrop-filter:blur(10px);">
+          <div class="grid grid-2">
+            <label>
+              <span style="font-weight:700;">Nom complet</span>
+              <input type="text" name="name" required>
+            </label>
+            <label>
+              <span style="font-weight:700;">Entreprise</span>
+              <input type="text" name="company" required>
+            </label>
+          </div>
+          
+          <div class="grid grid-2">
+            <label>
+              <span style="font-weight:700;">Email professionnel</span>
+              <input type="email" name="email" required>
+            </label>
+            <label>
+              <span style="font-weight:700;">Téléphone</span>
+              <input type="tel" name="phone">
+            </label>
+          </div>
+          
+          <label>
+            <span style="font-weight:700;">Type d'établissement</span>
+            <select name="business-type" required>
+              <option value="">Sélectionner...</option>
+              <option value="restaurant">🍽️ Restaurant</option>
+              <option value="hotel">🏨 Hôtel / Hébergement</option>
+              <option value="epicerie">🏪 Épicerie / Marché</option>
+              <option value="collectivite">🏫 Collectivité / École</option>
+              <option value="autre">💼 Autre</option>
+            </select>
+          </label>
+          
+          <label>
+            <span style="font-weight:700;">Localisation</span>
+            <input type="text" name="location" placeholder="Ville, département" required>
+          </label>
+          
+          <label>
+            <span style="font-weight:700;">Votre projet</span>
+            <textarea name="message" rows="5" placeholder="Objectifs, volumes souhaités, espace disponible, timeline, budget indicatif..."></textarea>
+          </label>
+          
+          <button type="submit" class="btn magnetic glow-pulse" style="width:100%;font-size:1.3rem;padding:20px;background:var(--brand-gradient);color:white;">
+            🚀 Demander mon diagnostic gratuit
+          </button>
+          
+          <p style="text-align:center;color:var(--muted);font-size:0.9rem;margin-top:16px;">
+            🔒 Vos données sont sécurisées - 📞 Réponse sous 48h maximum
+          </p>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA Quote -->
+  <section style="margin:80px 0;">
+    <div class="card hover-3d" style="padding:48px;background:linear-gradient(135deg,#f0fdf4,#dcfce7);border:3px solid var(--brand-primary);text-align:center;">
+      <blockquote style="font-size:1.5rem;font-style:italic;color:var(--fg);margin:0 0 32px;border:none;background:none;padding:0;">
+        «Nos fermes pro vous libèrent de la logistique. <br/>
+        <strong style="color:var(--brand-primary);">Vous vous concentrez sur vos clients, nous sur vos légumes.</strong>»
+      </blockquote>
+      <a class="btn magnetic glow-pulse" href="https://calendar.app.google/9TATamoia8m57MhM7" target="_blank" style="font-size:1.2rem;padding:20px 40px;">
+        📅 Démarrer mon diagnostic
+      </a>
+    </div>
+  </section>
+  
 </main>
+
 <footer class="site-footer">
   <div class="footer-grid container">
-    <div><strong>LVLIA Fermes Urbaines</strong><br/>Caen, Normandie<br/><a href="mailto:lucas.horville@lvlia.net">lucas.horville@lvlia.net</a></div>
-    <div><a href="kit-particuliers.html">Fermes Connectées</a><br/><a href="pros.html">Pro</a><br/><a href="contact.html">Contact</a></div>
-    <div><a href="blog.html">Blog</a><br/><a href="https://calendar.app.google/9TATamoia8m57MhM7" target="_blank" rel="noopener">Réserver une démo</a><br/><a href="mentions-legales.html">Mentions légales</a> &bull; <a href="cgv.html">CGV</a> &bull; <a href="politique-confidentialite.html">Confidentialité</a></div>
+    <div><strong>LVLIA Pro</strong><br/>Caen, Normandie<br/><a href="mailto:lucas.horville@lvlia.net">lucas.horville@lvlia.net</a></div>
+    <div>
+      <a href="kit-particuliers.html">Micro-serres</a><br/>
+      <a href="pros.html">Pro</a><br/>
+      <a href="contact.html">Contact</a>
+    </div>
+    <div>
+      <a href="blog.html">Blog</a><br/>
+      <a href="https://calendar.app.google/9TATamoia8m57MhM7" target="_blank">Démo</a><br/>
+      <a href="mentions-legales.html">Mentions</a>
+    </div>
   </div>
-  <div class="copyright">© 2025 LVLIA – Fermes Urbaines Connectées</div>
+  <div class="copyright">© 2025 LVLIA – Solutions Professionnelles</div>
 </footer>
+
 <script src="assets/main.js"></script>
+
+<script>
+// Loader
+window.addEventListener('load', () => {
+  setTimeout(() => {
+    document.querySelector('.page-loader').style.opacity = '0';
+    setTimeout(() => document.querySelector('.page-loader').remove(), 500);
+  }, 1000);
+});
+
+// Particules Canvas Pro
+const canvas = document.getElementById('proParticles');
+if (canvas) {
+  const ctx = canvas.getContext('2d');
+  canvas.width = canvas.offsetWidth;
+  canvas.height = canvas.offsetHeight;
+  
+  const particles = [];
+  for (let i = 0; i < 60; i++) {
+    particles.push({
+      x: Math.random() * canvas.width,
+      y: Math.random() * canvas.height,
+      vx: (Math.random() - 0.5) * 0.8,
+      vy: (Math.random() - 0.5) * 0.8,
+      size: Math.random() * 4 + 1
+    });
+  }
+  
+  function animate() {
+    ctx.clearRect(0, 0, canvas.width, canvas.height);
+    particles.forEach((p, i) => {
+      p.x += p.vx;
+      p.y += p.vy;
+      if (p.x < 0 || p.x > canvas.width) p.vx *= -1;
+      if (p.y < 0 || p.y > canvas.height) p.vy *= -1;
+      
+      ctx.fillStyle = 'rgba(255,255,255,0.7)';
+      ctx.beginPath();
+      ctx.arc(p.x, p.y, p.size, 0, Math.PI * 2);
+      ctx.fill();
+      
+      // Connexions
+      particles.slice(i + 1).forEach(p2 => {
+        const dx = p.x - p2.x;
+        const dy = p.y - p2.y;
+        const dist = Math.sqrt(dx * dx + dy * dy);
+        if (dist < 120) {
+          ctx.strokeStyle = `rgba(244,211,94,${0.3 * (1 - dist / 120)})`;
+          ctx.lineWidth = 1;
+          ctx.beginPath();
+          ctx.moveTo(p.x, p.y);
+          ctx.lineTo(p2.x, p2.y);
+          ctx.stroke();
+        }
+      });
+    });
+    requestAnimationFrame(animate);
+  }
+  animate();
+  
+  window.addEventListener('resize', () => {
+    canvas.width = canvas.offsetWidth;
+    canvas.height = canvas.offsetHeight;
+  });
+}
+
+// Compteurs
+document.querySelectorAll('[data-target]').forEach(el => {
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting && !el.classList.contains('counted')) {
+        el.classList.add('counted');
+        const target = parseInt(el.dataset.target);
+        let current = 0;
+        const increment = target / 50;
+        const timer = setInterval(() => {
+          current += increment;
+          if (current >= target) {
+            el.textContent = target;
+            clearInterval(timer);
+          } else {
+            el.textContent = Math.floor(current);
+          }
+        }, 30);
+      }
+    });
+  });
+  observer.observe(el);
+});
+
+// Animations
+const bounceStyle = document.createElement('style');
+bounceStyle.textContent = `
+  @keyframes bounce {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-20px); }
+  }
+`;
+document.head.appendChild(bounceStyle);
+</script>
+
 </body>
 </html>
