@@ -3,160 +3,422 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Atteindre l'autonomie alimentaire | Fermes Urbaines</title>
-  <meta name="description" content="Stratégies concrètes pour gagner jusqu'à 70 % d'autonomie alimentaire en ville grâce aux micro-serres connectées.">
-  <link rel="preload" href="/addons/css/cro-modules.css" as="style">
+  <title>Atteindre l'autonomie alimentaire | LVLIA Fermes Urbaines</title>
+  <meta name="description" content="Stratégies concrètes pour gagner jusqu'à 70% d'autonomie alimentaire en ville grâce aux micro-serres connectées LVLIA.">
+  
+  <!-- NOUVEAU CSS PREMIUM -->
+  <link rel="stylesheet" href="/assets/style.css">
   <link rel="stylesheet" href="/addons/css/a11y-helpers.css">
   <link rel="stylesheet" href="/addons/css/cro-modules.css">
   <link rel="stylesheet" href="/addons/css/content-modules.css">
   <link rel="stylesheet" href="/addons/css/roi-calculator.css">
+  
   <meta property="og:type" content="article">
   <meta property="og:title" content="Plan autonomie alimentaire">
   <meta property="og:description" content="Feuille de route pour produire localement, stocker et mutualiser les ressources.">
-  <meta property="og:url" content="https://fermesurbaines.com/autonomie-alimentaire/">
-  <meta property="og:image" content="https://fermesurbaines.com/assets/autonomie.jpg">
+  <meta property="og:url" content="https://lvlia.fr/addons/pages/autonomie-alimentaire/">
+  <meta property="og:image" content="https://lvlia.fr/assets/og-banner.png">
   <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="Atteindre l'autonomie alimentaire">
-  <meta name="twitter:description" content="Analyse des surfaces, budget et ROI pour votre autonomie alimentaire.">
+  
   <script defer src="/addons/js/lazyload-init.js"></script>
   <script defer src="/addons/js/roi-calculator.js"></script>
   <script defer src="/addons/js/lead-form.js"></script>
   <script defer src="/addons/js/analytics-events.js"></script>
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "Organization",
-    "name": "Fermes Urbaines",
-    "url": "https://fermesurbaines.com",
-    "logo": "https://fermesurbaines.com/assets/logo.png",
-    "sameAs": ["https://www.linkedin.com/company/fermes-urbaines", "https://www.facebook.com/fermesurbaines"],
-    "contactPoint": {"@type": "ContactPoint", "telephone": "+33 2 00 00 00 00", "contactType": "customer service", "areaServed": "FR"}
-  }
-  </script>
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "LocalBusiness",
-    "name": "Fermes Urbaines Caen",
-    "image": "https://fermesurbaines.com/assets/atelier-caen.jpg",
-    "@id": "https://fermesurbaines.com/#local",
-    "url": "https://fermesurbaines.com",
-    "telephone": "+33 2 00 00 00 00",
-    "address": {"@type": "PostalAddress", "streetAddress": "12 rue de l'Agriculture Urbaine", "addressLocality": "Caen", "postalCode": "14000", "addressCountry": "FR"},
-    "openingHoursSpecification": [{"@type": "OpeningHoursSpecification", "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"], "opens": "09:00", "closes": "18:00"}],
-    "geo": {"@type": "GeoCoordinates", "latitude": 49.182863, "longitude": -0.370679}
-  }
-  </script>
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "FAQPage",
-    "mainEntity": [
-      {"@type": "Question", "name": "Quel est le coût d'une micro-serre connectée ?", "acceptedAnswer": {"@type": "Answer", "text": "Nos modèles démarrent à 8 900 € pour 6 m² avec accompagnement agronomique."}},
-      {"@type": "Question", "name": "Quelle consommation électrique prévoir ?", "acceptedAnswer": {"@type": "Answer", "text": "Comptez environ 22 € par mois grâce aux LED horticoles basse consommation."}}
-    ]
-  }
-  </script>
 </head>
 <body>
   <div class="a11y-helpers"><a class="skip-link" href="#main-content">Aller au contenu</a></div>
-  <header class="site-header" style="position:sticky;top:0;background:rgba(255,255,255,.92);backdrop-filter:blur(8px);border-bottom:1px solid #e5e7eb;display:flex;align-items:center;gap:16px;padding:12px 20px;z-index:50;flex-wrap:wrap;">
-    <a class="logo" href="/index.html" style="display:flex;gap:.5rem;align-items:center;font-weight:800;color:#059669;text-decoration:none;font-size:1.2rem;"><span>LVLIA</span></a>
-    <button class="mobile-menu-toggle" aria-label="Menu" aria-expanded="false" aria-controls="main-nav" style="display:none;background:none;border:none;cursor:pointer;padding:8px;color:#059669;font-size:24px;line-height:1;">☰</button>
-    <nav class="main-nav" id="main-nav" style="display:flex;gap:14px;flex:1;flex-wrap:wrap;">
-      <a href="/index.html" style="padding:10px 14px;border-radius:10px;color:#334155;text-decoration:none;min-height:44px;display:inline-flex;align-items:center;">Accueil</a>
-      <a href="/kit-particuliers.html" style="padding:10px 14px;border-radius:10px;color:#334155;text-decoration:none;min-height:44px;display:inline-flex;align-items:center;">Micro-serres</a>
-      <a href="/addons/pages/autonomie-alimentaire/" class="active" style="padding:10px 14px;border-radius:10px;background:#F0FDF4;color:#059669;text-decoration:none;min-height:44px;display:inline-flex;align-items:center;">Autonomie Alimentaire</a>
-      <a href="/addons/pages/hydroponie-domestique/" style="padding:10px 14px;border-radius:10px;color:#334155;text-decoration:none;min-height:44px;display:inline-flex;align-items:center;">Hydroponie</a>
-      <a href="/pros.html" style="padding:10px 14px;border-radius:10px;color:#334155;text-decoration:none;min-height:44px;display:inline-flex;align-items:center;">Pro</a>
-      <a href="/blog.html" style="padding:10px 14px;border-radius:10px;color:#334155;text-decoration:none;min-height:44px;display:inline-flex;align-items:center;">Blog</a>
-      <a href="/contact.html" style="padding:10px 14px;border-radius:10px;color:#334155;text-decoration:none;min-height:44px;display:inline-flex;align-items:center;">Contact</a>
+  
+  <!-- HEADER PREMIUM -->
+  <header class="site-header">
+    <a class="logo" href="/index.html"><span>LVLIA</span></a>
+    <button class="mobile-menu-toggle" aria-label="Menu" aria-expanded="false" aria-controls="main-nav">☰</button>
+    <nav class="main-nav" id="main-nav">
+      <a href="/index.html">Accueil</a>
+      <a href="/kit-particuliers.html">Micro-serres</a>
+      <a href="/addons/pages/autonomie-alimentaire/" class="active">Autonomie Alimentaire</a>
+      <a href="/addons/pages/hydroponie-domestique/">Hydroponie</a>
+      <a href="/pros.html">Pro</a>
+      <a href="/blog.html">Blog</a>
+      <a href="/contact.html">Contact</a>
     </nav>
-    <a class="btn" href="https://calendar.app.google/9TATamoia8m57MhM7" target="_blank" rel="noopener" style="background:#059669;color:#fff;border:none;border-radius:10px;padding:12px 20px;font-weight:700;cursor:pointer;text-decoration:none;display:inline-block;min-height:44px;line-height:1.4;">Réserver une démo</a>
+    <a class="btn" href="https://calendar.app.google/9TATamoia8m57MhM7" target="_blank" rel="noopener">Réserver une démo</a>
   </header>
-  <header class="cro-module" style="padding:3rem 1.5rem;background:linear-gradient(120deg,#2ec4b6,#0d3b66);color:white;">
-    <div style="max-width:960px;margin:0 auto;display:grid;gap:1.5rem;">
-      <h1 style="margin:0;font-size:clamp(2.4rem,4vw,3.6rem);">Votre plan d'autonomie alimentaire</h1>
-      <p style="margin:0;font-size:1.15rem;">Dimensionnez vos cultures, stockages et budgets pour sécuriser votre alimentation en milieu urbain.</p>
-      <a href="#calculateur" style="background:#f4d35e;color:#0d3b66;padding:0.9rem 1.5rem;border-radius:999px;font-weight:700;text-decoration:none;align-self:start;">Calculer mon ROI</a>
+
+  <!-- HERO RÉVOLUTIONNAIRE AVEC PARALLAX MULTI-COUCHES -->
+  <section class="hero hero-autonomie" style="position:relative;overflow:hidden;min-height:90vh;display:flex;align-items:center;background:#0d3b66;">
+    
+    <!-- Layer 1 : Fond dégradé animé -->
+    <div class="bg-layer-1" style="position:absolute;top:0;left:0;width:100%;height:100%;background:linear-gradient(135deg,#0d3b66 0%,#1a5a7a 50%,#2ec4b6 100%);animation:bgShift 15s ease-in-out infinite;"></div>
+    
+    <!-- Layer 2 : Cercles morphing -->
+    <div class="morph-circles" style="position:absolute;top:0;left:0;width:100%;height:100%;pointer-events:none;">
+      <div style="position:absolute;width:600px;height:600px;background:radial-gradient(circle,rgba(46,196,182,0.2) 0%,transparent 70%);border-radius:50%;top:-200px;left:-200px;animation:morphCircle1 20s ease-in-out infinite;"></div>
+      <div style="position:absolute;width:800px;height:800px;background:radial-gradient(circle,rgba(244,211,94,0.15) 0%,transparent 70%);border-radius:50%;bottom:-300px;right:-300px;animation:morphCircle2 25s ease-in-out infinite 2s;"></div>
+      <div style="position:absolute;width:400px;height:400px;background:radial-gradient(circle,rgba(31,122,140,0.25) 0%,transparent 70%);border-radius:50%;top:50%;left:50%;transform:translate(-50%,-50%);animation:morphCircle3 18s ease-in-out infinite 1s;"></div>
     </div>
-  </header>
+
+    <!-- Layer 3 : Particules organiques -->
+    <div class="organic-particles" style="position:absolute;top:0;left:0;width:100%;height:100%;pointer-events:none;">
+      <svg width="100%" height="100%" style="position:absolute;">
+        <circle cx="10%" cy="20%" r="2" fill="rgba(244,211,94,0.6)" style="animation:floatOrganic 12s ease-in-out infinite;">
+          <animate attributeName="cy" values="20%;80%;20%" dur="12s" repeatCount="indefinite"/>
+          <animate attributeName="cx" values="10%;15%;10%" dur="12s" repeatCount="indefinite"/>
+        </circle>
+        <circle cx="80%" cy="60%" r="3" fill="rgba(46,196,182,0.5)" style="animation:floatOrganic 15s ease-in-out infinite 2s;">
+          <animate attributeName="cy" values="60%;20%;60%" dur="15s" repeatCount="indefinite"/>
+          <animate attributeName="cx" values="80%;75%;80%" dur="15s" repeatCount="indefinite"/>
+        </circle>
+        <circle cx="50%" cy="80%" r="2.5" fill="rgba(255,255,255,0.4)">
+          <animate attributeName="cy" values="80%;30%;80%" dur="18s" repeatCount="indefinite"/>
+          <animate attributeName="r" values="2.5;4;2.5" dur="18s" repeatCount="indefinite"/>
+        </circle>
+        <circle cx="30%" cy="40%" r="2" fill="rgba(244,211,94,0.7)">
+          <animate attributeName="cy" values="40%;70%;40%" dur="14s" repeatCount="indefinite"/>
+          <animate attributeName="cx" values="30%;35%;30%" dur="14s" repeatCount="indefinite"/>
+        </circle>
+        <circle cx="70%" cy="30%" r="3.5" fill="rgba(46,196,182,0.3)">
+          <animate attributeName="cy" values="30%;85%;30%" dur="20s" repeatCount="indefinite"/>
+          <animate attributeName="opacity" values="0.3;0.7;0.3" dur="20s" repeatCount="indefinite"/>
+        </circle>
+      </svg>
+    </div>
+
+    <!-- Contenu principal -->
+    <div class="container" style="position:relative;z-index:10;text-align:center;">
+      <!-- Badge animé avec effet glow pulsant -->
+      <div class="hero-badge-glow" style="display:inline-block;background:rgba(244,211,94,0.15);backdrop-filter:blur(20px);border:3px solid #f4d35e;padding:12px 32px;border-radius:999px;margin-bottom:40px;box-shadow:0 0 30px rgba(244,211,94,0.4);animation:glowPulse 2s ease-in-out infinite;">
+        <span style="font-weight:900;color:#f4d35e;font-size:1.1rem;text-transform:uppercase;letter-spacing:2px;">🌍 Votre Révolution Alimentaire</span>
+      </div>
+      
+      <!-- Titre avec effet de typing -->
+      <h1 class="typing-effect" style="font-size:clamp(3rem,10vw,6rem);color:white;margin:0 0 32px;text-shadow:0 0 30px rgba(46,196,182,0.6),0 0 60px rgba(46,196,182,0.4),0 4px 20px rgba(0,0,0,0.5);line-height:1.1;font-weight:900;">
+        Votre plan d'autonomie <br/>
+        <span style="background:linear-gradient(135deg,#f4d35e,#2ec4b6);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;">alimentaire</span>
+      </h1>
+      
+      <p class="slide-in-text" style="font-size:clamp(1.2rem,3vw,1.6rem);color:rgba(255,255,255,0.95);max-width:900px;margin:0 auto 48px;line-height:1.8;text-shadow:0 2px 10px rgba(0,0,0,0.3);font-weight:500;">
+        Dimensionnez vos cultures, stockages et budgets pour sécuriser votre alimentation en milieu urbain. 
+        <span style="color:#f4d35e;font-weight:700;">Jusqu'à 70% d'autonomie garantie</span>.
+      </p>
+      
+      <!-- CTAs avec effet magnetique -->
+      <div style="display:flex;flex-wrap:wrap;gap:24px;justify-content:center;margin-bottom:64px;">
+        <a href="#calculateur" class="btn magnetic-btn" style="font-size:1.3rem;padding:22px 48px;background:linear-gradient(135deg,#f4d35e,#ffa500);color:#0d3b66;box-shadow:0 15px 40px rgba(244,211,94,0.5);border:none;position:relative;overflow:hidden;">
+          <span style="position:relative;z-index:2;">🧮 Calculer mon ROI</span>
+        </a>
+        <a href="#formulaire" class="btn outline magnetic-btn" style="font-size:1.3rem;padding:22px 48px;color:white;border:3px solid white;background:rgba(255,255,255,0.1);backdrop-filter:blur(10px);">
+          📞 Parler à un expert
+        </a>
+      </div>
+
+      <!-- Indicateurs clés avec effet de compteur -->
+      <div class="key-indicators" style="display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:40px;max-width:1100px;margin:0 auto;">
+        <div class="indicator-card" style="background:linear-gradient(135deg,rgba(255,255,255,0.15),rgba(255,255,255,0.05));backdrop-filter:blur(20px);padding:32px 24px;border-radius:24px;border:2px solid rgba(255,255,255,0.3);box-shadow:0 20px 50px rgba(0,0,0,0.3);transition:all 0.4s cubic-bezier(0.4,0,0.2,1);">
+          <div style="font-size:4rem;margin-bottom:16px;">🥬</div>
+          <div style="font-size:3.5rem;font-weight:900;color:#f4d35e;margin-bottom:12px;font-family:'Space Grotesk',sans-serif;" data-target="70">70</div>
+          <div style="color:white;font-weight:700;font-size:1.1rem;line-height:1.4;">% d'autonomie<br/>atteignable</div>
+        </div>
+        
+        <div class="indicator-card" style="background:linear-gradient(135deg,rgba(255,255,255,0.15),rgba(255,255,255,0.05));backdrop-filter:blur(20px);padding:32px 24px;border-radius:24px;border:2px solid rgba(255,255,255,0.3);box-shadow:0 20px 50px rgba(0,0,0,0.3);transition:all 0.4s cubic-bezier(0.4,0,0.2,1);">
+          <div style="font-size:4rem;margin-bottom:16px;">🌱</div>
+          <div style="font-size:3.5rem;font-weight:900;color:#2ec4b6;margin-bottom:12px;font-family:'Space Grotesk',sans-serif;" data-target="6">6</div>
+          <div style="color:white;font-weight:700;font-size:1.1rem;line-height:1.4;">m² de serre<br/>minimum</div>
+        </div>
+        
+        <div class="indicator-card" style="background:linear-gradient(135deg,rgba(255,255,255,0.15),rgba(255,255,255,0.05));backdrop-filter:blur(20px);padding:32px 24px;border-radius:24px;border:2px solid rgba(255,255,255,0.3);box-shadow:0 20px 50px rgba(0,0,0,0.3);transition:all 0.4s cubic-bezier(0.4,0,0.2,1);">
+          <div style="font-size:4rem;margin-bottom:16px;">💰</div>
+          <div style="font-size:3.5rem;font-weight:900;color:#f4d35e;margin-bottom:12px;font-family:'Space Grotesk',sans-serif;" data-target="800">800</div>
+          <div style="color:white;font-weight:700;font-size:1.1rem;line-height:1.4;">€ économisés<br/>par mois</div>
+        </div>
+        
+        <div class="indicator-card" style="background:linear-gradient(135deg,rgba(255,255,255,0.15),rgba(255,255,255,0.05));backdrop-filter:blur(20px);padding:32px 24px;border-radius:24px;border:2px solid rgba(255,255,255,0.3);box-shadow:0 20px 50px rgba(0,0,0,0.3);transition:all 0.4s cubic-bezier(0.4,0,0.2,1);">
+          <div style="font-size:4rem;margin-bottom:16px;">⚡</div>
+          <div style="font-size:3.5rem;font-weight:900;color:#2ec4b6;margin-bottom:12px;font-family:'Space Grotesk',sans-serif;" data-target="12">12</div>
+          <div style="color:white;font-weight:700;font-size:1.1rem;line-height:1.4;">mois pour<br/>ROI complet</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Vague SVG animée ultra-sophistiquée -->
+    <svg class="wave-ultra" style="position:absolute;bottom:-2px;left:0;width:100%;height:200px;z-index:5;" viewBox="0 0 1200 200" preserveAspectRatio="none">
+      <defs>
+        <linearGradient id="waveGradient" x1="0%" y1="0%" x2="0%" y2="100%">
+          <stop offset="0%" style="stop-color:rgba(250,250,249,0.3);stop-opacity:1" />
+          <stop offset="100%" style="stop-color:rgb(250,250,249);stop-opacity:1" />
+        </linearGradient>
+      </defs>
+      <path d="M0,80 Q300,20 600,80 T1200,80 L1200,200 L0,200 Z" fill="url(#waveGradient)" style="animation:waveUltra 12s ease-in-out infinite;">
+        <animate attributeName="d" 
+          values="M0,80 Q300,20 600,80 T1200,80 L1200,200 L0,200 Z;
+                  M0,100 Q300,150 600,100 T1200,100 L1200,200 L0,200 Z;
+                  M0,80 Q300,20 600,80 T1200,80 L1200,200 L0,200 Z"
+          dur="12s" repeatCount="indefinite"/>
+      </path>
+    </svg>
+  </section>
+
   <main id="main-content">
-    <section class="cro-module" style="padding:3rem 1.5rem;max-width:960px;margin:0 auto;display:grid;gap:1.5rem;">
-      <h2>3 leviers pour votre autonomie</h2>
-      <article>
-        <h3>Produire</h3>
-        <p>Micro-serres connectées, cultures verticales et modules aquaponiques pour produire 12 mois/an.</p>
-      </article>
-      <article>
-        <h3>Mutualiser</h3>
-        <p>Partage de récoltes entre voisins, cantines et restaurants via un calendrier piloté.</p>
-      </article>
-      <article>
-        <h3>Stocker</h3>
-        <p>Conservation sous vide et séchage solaire, intégrés dans notre accompagnement.</p>
-      </article>
-    </section>
-
-    <!-- Key numbers -->
-    <!--#include virtual="/addons/components/key-numbers.html" -->
-
-    <section class="cro-module" style="padding:3rem 1.5rem;max-width:960px;margin:0 auto;">
-      <h2>Modèles d'autonomie</h2>
-      <div style="display:grid;gap:1.5rem;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));">
-        <article>
-          <h3>Famille 4 personnes</h3>
-          <p>6 m² de micro-serre + cultures en bacs = 65 % d'autonomie végétale.</p>
-        </article>
-        <article>
-          <h3>Résidence participative</h3>
-          <p>18 m² de serre mutualisée + compost partagé = 120 kg/mois de récoltes.</p>
-        </article>
-        <article>
-          <h3>Cantine & écoles</h3>
-          <p>Module 20 m² + ateliers pédagogiques = circuits courts toute l'année.</p>
-        </article>
+    <!-- Section 3 leviers avec effet reveal -->
+    <section class="section" style="padding:100px 20px;position:relative;">
+      <div class="container" style="max-width:1200px;">
+        <div class="section-head center" style="margin-bottom:80px;">
+          <h2 style="font-size:clamp(2.5rem,6vw,4rem);margin-bottom:24px;">3 leviers pour votre autonomie</h2>
+          <p style="font-size:1.3rem;color:var(--muted);max-width:700px;margin:0 auto;">Une stratégie complète pour transformer votre alimentation</p>
+        </div>
+        
+        <div class="grid grid-3" style="gap:48px;">
+          <div class="feature-card hover-lift" style="text-align:center;padding:56px 40px;">
+            <div class="icon-wrapper" style="width:120px;height:120px;margin:0 auto 32px;background:linear-gradient(135deg,#f0fdf4,#dcfce7);border-radius:50%;display:flex;align-items:center;justify-content:center;box-shadow:0 10px 30px rgba(5,150,105,0.2);transition:all 0.4s ease;">
+              <span style="font-size:5rem;">🌱</span>
+            </div>
+            <h3 style="font-size:2rem;margin-bottom:20px;color:var(--brand-primary);">Produire</h3>
+            <p style="font-size:1.15rem;color:var(--muted);line-height:1.8;">Micro-serres connectées, cultures verticales et modules aquaponiques pour produire 12 mois/an. Technologie IoT incluse.</p>
+          </div>
+          
+          <div class="feature-card hover-lift" style="text-align:center;padding:56px 40px;">
+            <div class="icon-wrapper" style="width:120px;height:120px;margin:0 auto 32px;background:linear-gradient(135deg,#fff7ed,#fed7aa);border-radius:50%;display:flex;align-items:center;justify-content:center;box-shadow:0 10px 30px rgba(251,146,60,0.2);transition:all 0.4s ease;">
+              <span style="font-size:5rem;">🤝</span>
+            </div>
+            <h3 style="font-size:2rem;margin-bottom:20px;color:#fb923c;">Mutualiser</h3>
+            <p style="font-size:1.15rem;color:var(--muted);line-height:1.8;">Partage de récoltes entre voisins, cantines et restaurants via un calendrier piloté. Communauté solidaire.</p>
+          </div>
+          
+          <div class="feature-card hover-lift" style="text-align:center;padding:56px 40px;">
+            <div class="icon-wrapper" style="width:120px;height:120px;margin:0 auto 32px;background:linear-gradient(135deg,#eff6ff,#dbeafe);border-radius:50%;display:flex;align-items:center;justify-content:center;box-shadow:0 10px 30px rgba(59,130,246,0.2);transition:all 0.4s ease;">
+              <span style="font-size:5rem;">📦</span>
+            </div>
+            <h3 style="font-size:2rem;margin-bottom:20px;color:#3b82f6;">Stocker</h3>
+            <p style="font-size:1.15rem;color:var(--muted);line-height:1.8;">Conservation sous vide et séchage solaire, intégrés dans notre accompagnement. Zéro gaspillage.</p>
+          </div>
+        </div>
       </div>
     </section>
 
-    <section id="calculateur">
-      <!--#include virtual="/addons/components/roi-calculator.html" -->
-    </section>
-
-    <!-- Comparatif -->
-    <!--#include virtual="/addons/content/comparatif.html" -->
-
-    <section class="cro-module" style="padding:3rem 1.5rem;max-width:960px;margin:0 auto;">
-      <h2>FAQ autonomie alimentaire</h2>
-      <div class="faq-list">
-        <details><summary>Quel niveau d'autonomie viser ?</summary><p>Commencez par 40 % la première année, puis montez progressivement vers 70 %.</p></details>
-        <details><summary>Combien de surface minimale ?</summary><p>Entre 6 et 10 m² de micro-serre pour une famille selon la diversité souhaitée.</p></details>
-        <details><summary>Faut-il stocker l'énergie ?</summary><p>Les micro-serres se branchent sur le réseau existant, des panneaux solaires sont optionnels.</p></details>
-        <details><summary>Quid des protéines ?</summary><p>Complétez avec de la micro-ferme aquaponique ou des légumineuses à forte teneur protéique.</p></details>
-        <details><summary>Peut-on mutualiser les investissements ?</summary><p>Oui, nous proposons des modèles coopératifs avec partage des récoltes et des coûts.</p></details>
-        <details><summary>Comment gérer les pics de production ?</summary><p>Planification des récoltes, transformation et conservation via nos ateliers.</p></details>
-        <details><summary>Quels indicateurs suivre ?</summary><p>Rendement/m², coût par kg, émissions évitées et satisfaction des usagers.</p></details>
-        <details><summary>Quel support administratif ?</summary><p>Nous montons les dossiers de subvention et d'aides locales (ADEME, collectivités).</p></details>
-        <details><summary>Comment impliquer les habitants ?</summary><p>Ateliers participatifs mensuels et application communautaire.</p></details>
-        <details><summary>Quid de la résilience climatique ?</summary><p>Capteurs et automations maintiennent les paramètres malgré les vagues de chaleur ou froid.</p></details>
+    <!-- Section Modèles d'autonomie avec cards premium -->
+    <section class="section alt" style="padding:100px 20px;background:linear-gradient(135deg,#f0fdf4 0%,#ecfeff 100%);">
+      <div class="container" style="max-width:1200px;">
+        <h2 style="text-align:center;font-size:clamp(2.5rem,6vw,3.5rem);margin-bottom:64px;">Modèles d'autonomie</h2>
+        
+        <div class="grid grid-3" style="gap:40px;">
+          <article class="product-card" style="background:white;border-radius:32px;overflow:hidden;box-shadow:0 20px 60px rgba(15,23,42,0.12);transition:all 0.4s cubic-bezier(0.4,0,0.2,1);">
+            <div style="background:linear-gradient(135deg,#10b981,#059669);padding:48px 32px;text-align:center;">
+              <div style="font-size:5rem;margin-bottom:16px;">👨‍👩‍👧‍👦</div>
+              <h3 style="color:white;font-size:2rem;margin:0;">Famille 4 personnes</h3>
+            </div>
+            <div style="padding:40px 32px;">
+              <div style="font-size:3rem;font-weight:900;color:var(--brand-primary);margin-bottom:16px;text-align:center;">65%</div>
+              <p style="font-size:1.15rem;color:var(--muted);line-height:1.7;text-align:center;">6 m² de micro-serre + cultures en bacs = 65% d'autonomie végétale toute l'année.</p>
+              <ul class="list-check" style="margin-top:24px;font-size:1rem;">
+                <li>Installation en 1 jour</li>
+                <li>Formation incluse</li>
+                <li>Support 7j/7</li>
+              </ul>
+            </div>
+          </article>
+          
+          <article class="product-card" style="background:white;border-radius:32px;overflow:hidden;box-shadow:0 20px 60px rgba(15,23,42,0.12);transition:all 0.4s cubic-bezier(0.4,0,0.2,1);">
+            <div style="background:linear-gradient(135deg,#f59e0b,#d97706);padding:48px 32px;text-align:center;">
+              <div style="font-size:5rem;margin-bottom:16px;">🏘️</div>
+              <h3 style="color:white;font-size:2rem;margin:0;">Résidence participative</h3>
+            </div>
+            <div style="padding:40px 32px;">
+              <div style="font-size:3rem;font-weight:900;color:#f59e0b;margin-bottom:16px;text-align:center;">120kg/mois</div>
+              <p style="font-size:1.15rem;color:var(--muted);line-height:1.7;text-align:center;">18 m² de serre mutualisée + compost partagé = production collective optimale.</p>
+              <ul class="list-check" style="margin-top:24px;font-size:1rem;">
+                <li>Gestion partagée</li>
+                <li>Plateforme communautaire</li>
+                <li>Ateliers mensuels</li>
+              </ul>
+            </div>
+          </article>
+          
+          <article class="product-card" style="background:white;border-radius:32px;overflow:hidden;box-shadow:0 20px 60px rgba(15,23,42,0.12);transition:all 0.4s cubic-bezier(0.4,0,0.2,1);">
+            <div style="background:linear-gradient(135deg,#3b82f6,#2563eb);padding:48px 32px;text-align:center;">
+              <div style="font-size:5rem;margin-bottom:16px;">🏫</div>
+              <h3 style="color:white;font-size:2rem;margin:0;">Cantine & écoles</h3>
+            </div>
+            <div style="padding:40px 32px;">
+              <div style="font-size:3rem;font-weight:900;color:#3b82f6;margin-bottom:16px;text-align:center;">20m²</div>
+              <p style="font-size:1.15rem;color:var(--muted);line-height:1.7;text-align:center;">Module pro + ateliers pédagogiques = circuits courts pédagogiques toute l'année.</p>
+              <ul class="list-check" style="margin-top:24px;font-size:1rem;">
+                <li>Programme éducatif</li>
+                <li>Normes HACCP</li>
+                <li>Subventions possibles</li>
+              </ul>
+            </div>
+          </article>
+        </div>
       </div>
     </section>
 
-    <section id="formulaire">
-      <!--#include virtual="/addons/components/lead-form.html" -->
+    <!-- FAQ Premium -->
+    <section class="section" id="faq" style="padding:100px 20px;">
+      <div class="container" style="max-width:900px;">
+        <h2 style="text-align:center;font-size:clamp(2.5rem,6vw,3rem);margin-bottom:64px;">FAQ autonomie alimentaire</h2>
+        
+        <div style="display:grid;gap:24px;">
+          <details class="faq-premium" style="background:white;border:2px solid var(--line);border-radius:20px;padding:32px;cursor:pointer;transition:all 0.3s ease;">
+            <summary style="font-weight:800;font-size:1.2rem;color:var(--fg);cursor:pointer;display:flex;align-items:center;gap:16px;">
+              <span style="font-size:2rem;">🎯</span>
+              <span>Quel niveau d'autonomie viser ?</span>
+            </summary>
+            <p style="margin-top:20px;color:var(--muted);line-height:1.8;font-size:1.1rem;padding-left:56px;">Commencez par 40% la première année, puis montez progressivement vers 70%. L'important est la régularité, pas la perfection !</p>
+          </details>
+          
+          <details class="faq-premium" style="background:white;border:2px solid var(--line);border-radius:20px;padding:32px;cursor:pointer;transition:all 0.3s ease;">
+            <summary style="font-weight:800;font-size:1.2rem;color:var(--fg);cursor:pointer;display:flex;align-items:center;gap:16px;">
+              <span style="font-size:2rem;">📏</span>
+              <span>Combien de surface minimale ?</span>
+            </summary>
+            <p style="margin-top:20px;color:var(--muted);line-height:1.8;font-size:1.1rem;padding-left:56px;">Entre 6 et 10 m² de micro-serre pour une famille selon la diversité souhaitée. Plus vous avez d'espace, plus vous pouvez varier les cultures.</p>
+          </details>
+          
+          <details class="faq-premium" style="background:white;border:2px solid var(--line);border-radius:20px;padding:32px;cursor:pointer;transition:all 0.3s ease;">
+            <summary style="font-weight:800;font-size:1.2rem;color:var(--fg);cursor:pointer;display:flex;align-items:center;gap:16px;">
+              <span style="font-size:2rem;">🤝</span>
+              <span>Peut-on mutualiser les investissements ?</span>
+            </summary>
+            <p style="margin-top:20px;color:var(--muted);line-height:1.8;font-size:1.1rem;padding-left:56px;">Oui ! Nous proposons des modèles coopératifs avec partage des récoltes et des coûts. C'est même recommandé pour maximiser l'impact.</p>
+          </details>
+        </div>
+      </div>
     </section>
 
-    <!-- Calendar -->
-    <!--#include virtual="/addons/components/calendar.html" -->
-
-    <!-- FAQ global -->
-    <!--#include virtual="/addons/content/sitewide-faq.html" -->
+    <!-- Formulaire CTA Final -->
+    <section id="formulaire" class="section" style="padding:100px 20px;background:var(--brand-gradient);position:relative;overflow:hidden;">
+      <div style="position:absolute;top:0;left:0;width:100%;height:100%;background:url('data:image/svg+xml,%3Csvg width=\"60\" height=\"60\" xmlns=\"http://www.w3.org/2000/svg\"%3E%3Cpath d=\"M0 0h60v60H0z\" fill=\"none\"/%3E%3Cpath d=\"M30 0v60M0 30h60\" stroke=\"rgba(255,255,255,0.05)\" stroke-width=\"1\"/%3E%3C/svg%3E');opacity:0.3;"></div>
+      
+      <div class="container" style="max-width:800px;position:relative;z-index:2;">
+        <div style="text-align:center;margin-bottom:48px;">
+          <h2 style="font-size:clamp(2.5rem,6vw,4rem);color:white;margin-bottom:24px;text-shadow:0 4px 12px rgba(0,0,0,0.2);">Lancez votre projet d'autonomie</h2>
+          <p style="font-size:1.3rem;color:rgba(255,255,255,0.95);line-height:1.7;">Recevez un plan personnalisé gratuit en 48h</p>
+        </div>
+        
+        <div class="card" style="padding:56px;background:rgba(255,255,255,0.98);backdrop-filter:blur(20px);border-radius:32px;box-shadow:0 30px 80px rgba(0,0,0,0.3);">
+          <form class="contact-form" name="autonomie-lead" method="POST" netlify>
+            <div class="grid grid-2">
+              <label>
+                Nom complet
+                <input type="text" name="name" required>
+              </label>
+              <label>
+                Email
+                <input type="email" name="email" required>
+              </label>
+            </div>
+            <label>
+              Téléphone
+              <input type="tel" name="phone">
+            </label>
+            <label>
+              Votre situation
+              <select name="situation" required>
+                <option value="">Sélectionnez...</option>
+                <option value="famille">Famille</option>
+                <option value="coloc">Colocation</option>
+                <option value="residence">Résidence</option>
+                <option value="ecole">École/Cantine</option>
+                <option value="autre">Autre</option>
+              </select>
+            </label>
+            <label>
+              Votre objectif d'autonomie
+              <textarea name="message" rows="4" placeholder="Ex: Atteindre 50% d'autonomie en légumes frais pour ma famille de 4 personnes"></textarea>
+            </label>
+            <button type="submit" class="btn" style="width:100%;font-size:1.3rem;padding:20px;background:var(--brand-gradient);color:white;border:none;">
+              🚀 Recevoir mon plan gratuit
+            </button>
+          </form>
+        </div>
+      </div>
+    </section>
   </main>
 
-  <!-- Sticky CTA & cookie banner -->
-  <!--#include virtual="/addons/components/sticky-cta.html" -->
-  <!--#include virtual="/addons/components/cookie-banner.html" -->
-  <link rel="stylesheet" href="/addons/css/cookie-banner.css">
-  <script defer src="/addons/js/cookie-banner.js"></script>
+  <footer class="site-footer">
+    <div class="footer-grid container">
+      <div><strong>LVLIA Micro-serres</strong><br/>Caen, Normandie<br/><a href="mailto:lucas.horville@lvlia.net">lucas.horville@lvlia.net</a></div>
+      <div>
+        <a href="/kit-particuliers.html">Micro-serres</a><br/>
+        <a href="/addons/pages/autonomie-alimentaire/">Autonomie Alimentaire</a><br/>
+        <a href="/addons/pages/hydroponie-domestique/">Hydroponie</a><br/>
+        <a href="/pros.html">Pro</a>
+      </div>
+      <div>
+        <a href="/blog.html">Blog</a><br/>
+        <a href="/contact.html">Contact</a><br/>
+        <a href="https://calendar.app.google/9TATamoia8m57MhM7" target="_blank" rel="noopener">Réserver une démo</a><br/>
+        <a href="/mentions-legales.html">Mentions légales</a> • <a href="/cgv.html">CGV</a>
+      </div>
+    </div>
+    <div class="copyright">© 2025 LVLIA – Micro-serres connectées</div>
+  </footer>
+
+  <!-- ANIMATIONS RÉVOLUTIONNAIRES CSS -->
+  <style>
+    @keyframes bgShift {
+      0%, 100% { filter: hue-rotate(0deg); }
+      50% { filter: hue-rotate(20deg); }
+    }
+    
+    @keyframes morphCircle1 {
+      0%, 100% { transform: translate(0, 0) scale(1); border-radius: 50%; }
+      50% { transform: translate(50px, -30px) scale(1.2); border-radius: 40% 60% 50% 50%; }
+    }
+    
+    @keyframes morphCircle2 {
+      0%, 100% { transform: translate(0, 0) scale(1); border-radius: 50%; }
+      50% { transform: translate(-40px, 50px) scale(0.9); border-radius: 60% 40% 60% 40%; }
+    }
+    
+    @keyframes morphCircle3 {
+      0%, 100% { transform: translate(-50%, -50%) scale(1); border-radius: 50%; }
+      50% { transform: translate(-50%, -50%) scale(1.15); border-radius: 45% 55% 50% 50%; }
+    }
+    
+    @keyframes glowPulse {
+      0%, 100% { box-shadow: 0 0 30px rgba(244,211,94,0.4); }
+      50% { box-shadow: 0 0 60px rgba(244,211,94,0.8), 0 0 90px rgba(244,211,94,0.4); }
+    }
+    
+    .indicator-card:hover {
+      transform: translateY(-12px) scale(1.05);
+      box-shadow: 0 30px 70px rgba(0,0,0,0.5);
+      border-color: rgba(244,211,94,0.6);
+    }
+    
+    .hover-lift {
+      transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+    }
+    
+    .hover-lift:hover {
+      transform: translateY(-16px);
+    }
+    
+    .hover-lift:hover .icon-wrapper {
+      transform: scale(1.15) rotate(10deg);
+      box-shadow: 0 20px 50px rgba(5,150,105,0.4);
+    }
+    
+    .faq-premium:hover {
+      border-color: var(--brand-primary);
+      transform: translateX(12px);
+      box-shadow: 0 12px 32px rgba(5,150,105,0.2);
+    }
+    
+    details[open].faq-premium {
+      background: linear-gradient(135deg, #f0fdf4, white);
+      border-color: var(--brand-primary);
+    }
+    
+    .magnetic-btn {
+      transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    }
+    
+    .magnetic-btn:hover {
+      transform: translateY(-4px) scale(1.05);
+    }
+  </style>
+
+  <script src="/assets/main.js"></script>
 </body>
 </html>

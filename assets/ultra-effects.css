@@ -1,0 +1,610 @@
+/**
+ * 🔥 LVLIA ULTRA EFFECTS V3.0 - RÉVOLUTION VISUELLE
+ * Effets visuels jamais vus ailleurs - Niveau God Tier
+ * Copyright 2025 - LVLIA Design System
+ */
+
+/* ========================================
+   🎨 VARIABLES ULTRA
+   ======================================== */
+:root {
+  --ultra-glow: 0 0 20px rgba(5, 150, 105, 0.5), 0 0 40px rgba(5, 150, 105, 0.3), 0 0 60px rgba(5, 150, 105, 0.2);
+  --ultra-shadow: 0 40px 80px rgba(15, 23, 42, 0.25);
+  --neon-green: #10ff10;
+  --neon-blue: #00f0ff;
+  --neon-pink: #ff10f0;
+}
+
+/* ========================================
+   ✨ EFFET GLASSMORPHISM AVANCÉ
+   ======================================== */
+.glass-ultra {
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(30px) saturate(180%);
+  -webkit-backdrop-filter: blur(30px) saturate(180%);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1), inset 0 0 0 1px rgba(255, 255, 255, 0.1);
+}
+
+/* ========================================
+   🎭 EFFET MORPHING LIQUIDE
+   ======================================== */
+@keyframes liquidMorph {
+  0%, 100% {
+    border-radius: 60% 40% 30% 70% / 60% 30% 70% 40%;
+  }
+  25% {
+    border-radius: 30% 60% 70% 40% / 50% 60% 30% 60%;
+  }
+  50% {
+    border-radius: 40% 60% 60% 40% / 60% 30% 60% 40%;
+  }
+  75% {
+    border-radius: 70% 30% 40% 60% / 40% 70% 50% 60%;
+  }
+}
+
+.liquid-morph {
+  animation: liquidMorph 8s ease-in-out infinite;
+}
+
+/* ========================================
+   ⚡ EFFET TEXT GLITCH (CYBERPUNK)
+   ======================================== */
+.glitch-text {
+  position: relative;
+  animation: glitchSkew 5s infinite;
+}
+
+.glitch-text::before,
+.glitch-text::after {
+  content: attr(data-text);
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0.8;
+}
+
+.glitch-text::before {
+  animation: glitchTop 2s infinite;
+  clip-path: polygon(0 0, 100% 0, 100% 45%, 0 45%);
+  transform: translate(-2px, -2px);
+}
+
+.glitch-text::after {
+  animation: glitchBottom 2.5s infinite;
+  clip-path: polygon(0 60%, 100% 60%, 100% 100%, 0 100%);
+  transform: translate(2px, 2px);
+}
+
+@keyframes glitchTop {
+  0%, 90%, 100% { clip-path: polygon(0 0, 100% 0, 100% 45%, 0 45%); transform: translate(0, 0); }
+  91% { clip-path: polygon(0 0, 100% 0, 100% 15%, 0 15%); transform: translate(-5px, -2px); }
+  94% { clip-path: polygon(0 10%, 100% 10%, 100% 50%, 0 50%); transform: translate(3px, 1px); }
+}
+
+@keyframes glitchBottom {
+  0%, 92%, 100% { clip-path: polygon(0 60%, 100% 60%, 100% 100%, 0 100%); transform: translate(0, 0); }
+  93% { clip-path: polygon(0 70%, 100% 70%, 100% 100%, 0 100%); transform: translate(4px, 3px); }
+  96% { clip-path: polygon(0 55%, 100% 55%, 100% 100%, 0 100%); transform: translate(-3px, -2px); }
+}
+
+@keyframes glitchSkew {
+  0%, 98%, 100% { transform: skew(0deg); }
+  99% { transform: skew(2deg); }
+}
+
+/* ========================================
+   🌟 EFFET PARTICLE BURST
+   ======================================== */
+@keyframes particleBurst {
+  0% {
+    transform: translate(-50%, -50%) scale(0);
+    opacity: 1;
+  }
+  100% {
+    transform: translate(var(--tx), var(--ty)) scale(1);
+    opacity: 0;
+  }
+}
+
+.particle-burst {
+  position: absolute;
+  width: 10px;
+  height: 10px;
+  background: radial-gradient(circle, var(--brand-primary), transparent);
+  border-radius: 50%;
+  pointer-events: none;
+  animation: particleBurst 1s ease-out forwards;
+}
+
+/* ========================================
+   🎨 EFFET GRADIENT ANIMÉ
+   ======================================== */
+@keyframes gradientShift {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+.gradient-animate {
+  background: linear-gradient(270deg, #059669, #0F766E, #10b981, #2ec4b6);
+  background-size: 400% 400%;
+  animation: gradientShift 8s ease infinite;
+}
+
+/* ========================================
+   💫 EFFET NEON GLOW
+   ======================================== */
+@keyframes neonPulse {
+  0%, 100% {
+    text-shadow: 
+      0 0 5px currentColor,
+      0 0 10px currentColor,
+      0 0 20px currentColor,
+      0 0 40px var(--neon-green),
+      0 0 80px var(--neon-green);
+  }
+  50% {
+    text-shadow: 
+      0 0 2px currentColor,
+      0 0 5px currentColor,
+      0 0 10px currentColor,
+      0 0 20px var(--neon-green),
+      0 0 40px var(--neon-green);
+  }
+}
+
+.neon-text {
+  color: #fff;
+  animation: neonPulse 2s ease-in-out infinite;
+}
+
+/* ========================================
+   🔮 EFFET HOLOGRAM
+   ======================================== */
+@keyframes hologram {
+  0%, 100% {
+    transform: translateY(0) rotateX(0deg);
+    opacity: 1;
+  }
+  50% {
+    transform: translateY(-5px) rotateX(5deg);
+    opacity: 0.8;
+  }
+}
+
+.hologram {
+  position: relative;
+  animation: hologram 3s ease-in-out infinite;
+  background: linear-gradient(
+    180deg,
+    rgba(0, 240, 255, 0.2) 0%,
+    rgba(16, 255, 16, 0.2) 50%,
+    rgba(255, 16, 240, 0.2) 100%
+  );
+  background-size: 100% 200%;
+  animation: hologram 3s ease-in-out infinite, gradientShift 6s linear infinite;
+}
+
+.hologram::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: repeating-linear-gradient(
+    0deg,
+    rgba(0, 240, 255, 0.1) 0px,
+    transparent 2px,
+    transparent 4px
+  );
+  pointer-events: none;
+}
+
+/* ========================================
+   🌊 EFFET WAVE DISTORTION
+   ======================================== */
+@keyframes waveDistort {
+  0%, 100% {
+    clip-path: polygon(
+      0% 0%, 100% 0%, 100% 85%, 90% 90%, 80% 88%, 70% 92%, 60% 88%, 50% 90%, 40% 86%, 30% 92%, 20% 88%, 10% 90%, 0% 86%
+    );
+  }
+  50% {
+    clip-path: polygon(
+      0% 0%, 100% 0%, 100% 88%, 90% 84%, 80% 92%, 70% 86%, 60% 90%, 50% 88%, 40% 92%, 30% 86%, 20% 90%, 10% 88%, 0% 92%
+    );
+  }
+}
+
+.wave-distort {
+  animation: waveDistort 4s ease-in-out infinite;
+}
+
+/* ========================================
+   ⭐ EFFET STARFIELD
+   ======================================== */
+@keyframes starTwinkle {
+  0%, 100% { opacity: 0; transform: scale(0); }
+  50% { opacity: 1; transform: scale(1); }
+}
+
+.star {
+  position: absolute;
+  width: 2px;
+  height: 2px;
+  background: white;
+  border-radius: 50%;
+  animation: starTwinkle 3s ease-in-out infinite;
+}
+
+.star:nth-child(2n) { animation-delay: 0.5s; }
+.star:nth-child(3n) { animation-delay: 1s; }
+.star:nth-child(4n) { animation-delay: 1.5s; }
+
+/* ========================================
+   🎪 EFFET CAROUSEL 3D
+   ======================================== */
+.carousel-3d {
+  perspective: 1000px;
+  transform-style: preserve-3d;
+}
+
+.carousel-3d-item {
+  transform: rotateY(var(--rotation)) translateZ(300px);
+  transition: all 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.carousel-3d-item:hover {
+  transform: rotateY(var(--rotation)) translateZ(350px) scale(1.1);
+}
+
+/* ========================================
+   💎 EFFET DIAMOND SHINE
+   ======================================== */
+@keyframes diamondShine {
+  0% {
+    background-position: -1000px;
+  }
+  100% {
+    background-position: 1000px;
+  }
+}
+
+.diamond-shine {
+  position: relative;
+  overflow: hidden;
+}
+
+.diamond-shine::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+    90deg,
+    transparent,
+    rgba(255, 255, 255, 0.8),
+    transparent
+  );
+  animation: diamondShine 3s infinite;
+}
+
+/* ========================================
+   🌈 EFFET RAINBOW BORDER
+   ======================================== */
+@keyframes rainbowBorder {
+  0% { border-color: #ff0000; }
+  14% { border-color: #ff8800; }
+  28% { border-color: #ffff00; }
+  42% { border-color: #00ff00; }
+  57% { border-color: #00ffff; }
+  71% { border-color: #0088ff; }
+  85% { border-color: #8800ff; }
+  100% { border-color: #ff0000; }
+}
+
+.rainbow-border {
+  border: 3px solid;
+  animation: rainbowBorder 5s linear infinite;
+}
+
+/* ========================================
+   🔥 EFFET FIRE GLOW
+   ======================================== */
+@keyframes fireGlow {
+  0%, 100% {
+    box-shadow: 
+      0 0 10px rgba(255, 100, 0, 0.8),
+      0 0 20px rgba(255, 150, 0, 0.6),
+      0 0 30px rgba(255, 200, 0, 0.4),
+      0 0 40px rgba(255, 220, 0, 0.2);
+  }
+  50% {
+    box-shadow: 
+      0 0 20px rgba(255, 80, 0, 1),
+      0 0 40px rgba(255, 120, 0, 0.8),
+      0 0 60px rgba(255, 180, 0, 0.6),
+      0 0 80px rgba(255, 200, 0, 0.4);
+  }
+}
+
+.fire-glow {
+  animation: fireGlow 2s ease-in-out infinite;
+}
+
+/* ========================================
+   🎯 EFFET MAGNETIC HOVER
+   ======================================== */
+.magnetic {
+  transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.magnetic:hover {
+  transform: scale(1.05);
+  cursor: pointer;
+}
+
+/* JavaScript pour effet magnétique avancé */
+
+/* ========================================
+   🌀 EFFET VORTEX SPIN
+   ======================================== */
+@keyframes vortexSpin {
+  0% { transform: rotate(0deg) scale(1); }
+  50% { transform: rotate(180deg) scale(1.2); }
+  100% { transform: rotate(360deg) scale(1); }
+}
+
+.vortex {
+  animation: vortexSpin 4s cubic-bezier(0.4, 0, 0.2, 1) infinite;
+}
+
+/* ========================================
+   ✨ EFFET SPARKLE
+   ======================================== */
+@keyframes sparkle {
+  0%, 100% {
+    transform: scale(0) rotate(0deg);
+    opacity: 0;
+  }
+  50% {
+    transform: scale(1) rotate(180deg);
+    opacity: 1;
+  }
+}
+
+.sparkle {
+  position: relative;
+}
+
+.sparkle::after {
+  content: '✨';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  animation: sparkle 2s ease-in-out infinite;
+  font-size: 2rem;
+  pointer-events: none;
+}
+
+/* ========================================
+   🎨 EFFET PRISMA
+   ======================================== */
+@keyframes prismaShift {
+  0% { filter: hue-rotate(0deg) saturate(100%); }
+  100% { filter: hue-rotate(360deg) saturate(150%); }
+}
+
+.prisma {
+  animation: prismaShift 10s linear infinite;
+}
+
+/* ========================================
+   💫 EFFET COSMIC DUST
+   ======================================== */
+@keyframes cosmicFloat {
+  0%, 100% {
+    transform: translate(0, 0) rotate(0deg);
+    opacity: 0.3;
+  }
+  25% {
+    transform: translate(10px, -20px) rotate(90deg);
+    opacity: 0.7;
+  }
+  50% {
+    transform: translate(-5px, -40px) rotate(180deg);
+    opacity: 1;
+  }
+  75% {
+    transform: translate(-15px, -20px) rotate(270deg);
+    opacity: 0.7;
+  }
+}
+
+.cosmic-dust {
+  position: absolute;
+  width: 3px;
+  height: 3px;
+  background: rgba(255, 255, 255, 0.8);
+  border-radius: 50%;
+  animation: cosmicFloat 6s ease-in-out infinite;
+}
+
+/* ========================================
+   🎭 EFFET TEXT REVEAL
+   ======================================== */
+@keyframes textReveal {
+  0% {
+    clip-path: polygon(0 0, 0 0, 0 100%, 0 100%);
+  }
+  100% {
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+  }
+}
+
+.text-reveal {
+  animation: textReveal 1.5s cubic-bezier(0.77, 0, 0.175, 1) forwards;
+}
+
+/* ========================================
+   🌊 EFFET RIPPLE INFINITE
+   ======================================== */
+@keyframes rippleInfinite {
+  0% {
+    transform: scale(0);
+    opacity: 1;
+  }
+  100% {
+    transform: scale(4);
+    opacity: 0;
+  }
+}
+
+.ripple-infinite {
+  position: relative;
+}
+
+.ripple-infinite::before,
+.ripple-infinite::after {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 100%;
+  height: 100%;
+  border: 2px solid var(--brand-primary);
+  border-radius: 50%;
+  transform: translate(-50%, -50%) scale(0);
+  animation: rippleInfinite 3s ease-out infinite;
+}
+
+.ripple-infinite::after {
+  animation-delay: 1.5s;
+}
+
+/* ========================================
+   🎪 EFFET PARALLAX DEPTH
+   ======================================== */
+.parallax-layer {
+  transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.parallax-layer[data-depth="1"] {
+  transform: translateZ(100px) scale(0.9);
+}
+
+.parallax-layer[data-depth="2"] {
+  transform: translateZ(200px) scale(0.8);
+}
+
+.parallax-layer[data-depth="3"] {
+  transform: translateZ(300px) scale(0.7);
+}
+
+/* ========================================
+   ⚡ EFFET LIGHTNING
+   ======================================== */
+@keyframes lightning {
+  0%, 90%, 100% { opacity: 0; }
+  91%, 93%, 95% { opacity: 1; }
+  92%, 94% { opacity: 0.3; }
+}
+
+.lightning {
+  position: absolute;
+  width: 2px;
+  height: 100%;
+  background: linear-gradient(to bottom, 
+    transparent,
+    rgba(255, 255, 255, 1) 40%,
+    rgba(255, 255, 255, 1) 60%,
+    transparent
+  );
+  animation: lightning 4s ease-in-out infinite;
+  box-shadow: 0 0 20px rgba(255, 255, 255, 0.8);
+}
+
+/* ========================================
+   🎨 EFFET BLOB ANIMATION
+   ======================================== */
+@keyframes blobAnimation {
+  0%, 100% {
+    border-radius: 60% 40% 30% 70% / 60% 30% 70% 40%;
+    transform: rotate(0deg) scale(1);
+  }
+  20% {
+    border-radius: 30% 60% 70% 40% / 50% 60% 30% 60%;
+    transform: rotate(72deg) scale(1.05);
+  }
+  40% {
+    border-radius: 40% 60% 60% 40% / 60% 30% 60% 40%;
+    transform: rotate(144deg) scale(0.95);
+  }
+  60% {
+    border-radius: 70% 30% 40% 60% / 40% 70% 50% 60%;
+    transform: rotate(216deg) scale(1.1);
+  }
+  80% {
+    border-radius: 50% 50% 50% 50% / 50% 50% 50% 50%;
+    transform: rotate(288deg) scale(1);
+  }
+}
+
+.blob {
+  animation: blobAnimation 15s ease-in-out infinite;
+}
+
+/* ========================================
+   🎯 CLASSES UTILITAIRES ULTRA
+   ======================================== */
+.ultra-shadow {
+  box-shadow: var(--ultra-shadow);
+}
+
+.ultra-glow {
+  box-shadow: var(--ultra-glow);
+}
+
+.smooth-edges {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.gpu-accelerated {
+  transform: translateZ(0);
+  will-change: transform;
+}
+
+.no-select {
+  user-select: none;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+}
+
+/* ========================================
+   🚀 ANIMATIONS DE PERFORMANCE
+   ======================================== */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
+
+/* Optimisation GPU */
+.hardware-accelerated {
+  transform: translate3d(0, 0, 0);
+  backface-visibility: hidden;
+  perspective: 1000px;
+}
