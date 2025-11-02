@@ -1,119 +1,224 @@
 /**
- * LVLIA - Styles page Tarifs
- * Version: 1.0.0
+ * LVLIA - Styles page Tarifs Premium V2.0
+ * Design révolutionnaire pour conversion maximale
  */
 
-/* === Toggle paiement === */
+/* === Toggle paiement PREMIUM === */
 .payment-toggle {
   display: flex;
   justify-content: center;
-  gap: 12px;
-  margin: 32px 0 40px;
+  gap: 16px;
+  margin: 40px 0 48px;
   flex-wrap: wrap;
+  background: linear-gradient(135deg, #f0fdf4, #ecfeff);
+  padding: 12px;
+  border-radius: 999px;
+  box-shadow: 0 4px 16px rgba(5, 150, 105, 0.1);
+  border: 2px solid #d1fae5;
 }
 
 .payment-toggle button {
-  padding: 12px 32px;
-  border: 2px solid var(--line);
-  background: white;
+  padding: 14px 36px;
+  border: 2px solid transparent;
+  background: transparent;
   color: var(--muted);
   border-radius: 999px;
   font-size: 16px;
-  font-weight: 600;
+  font-weight: 700;
   cursor: pointer;
-  transition: all 0.3s ease;
-  min-height: 44px;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  min-height: 48px;
+  position: relative;
+  overflow: hidden;
+}
+
+.payment-toggle button::before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 0;
+  height: 0;
+  background: var(--brand-gradient);
+  border-radius: 999px;
+  transform: translate(-50%, -50%);
+  transition: width 0.4s ease, height 0.4s ease;
+  z-index: -1;
 }
 
 .payment-toggle button:hover {
-  border-color: var(--brand);
   color: var(--brand);
+  transform: translateY(-2px);
 }
 
 .payment-toggle button.active {
-  background: var(--brand);
+  background: var(--brand-gradient);
   color: white;
-  border-color: var(--brand);
+  border-color: transparent;
+  box-shadow: 0 4px 16px rgba(5, 150, 105, 0.4);
+  transform: scale(1.05);
 }
 
-/* === Grille pricing === */
+.payment-toggle button.active::before {
+  width: 200%;
+  height: 200%;
+}
+
+/* === Grille pricing PREMIUM === */
 .pricing-grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 32px;
-  margin: 40px 0;
+  margin: 48px 0;
+  position: relative;
 }
 
-/* === Carte pricing === */
+/* === Carte pricing PREMIUM === */
 .pricing-card {
   background: white;
   border: 2px solid var(--line);
-  border-radius: 20px;
-  padding: 40px 32px;
+  border-radius: 24px;
+  padding: 48px 36px;
   display: flex;
   flex-direction: column;
   position: relative;
-  transition: all 0.3s ease;
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  box-shadow: 0 8px 24px rgba(15, 23, 42, 0.08);
+  overflow: hidden;
+}
+
+.pricing-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 6px;
+  background: var(--brand-gradient);
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 0.4s ease;
+}
+
+.pricing-card:hover::before {
+  transform: scaleX(1);
 }
 
 .pricing-card:hover {
-  transform: translateY(-8px);
-  box-shadow: 0 12px 32px rgba(5, 150, 105, 0.2);
+  transform: translateY(-12px) scale(1.02);
+  box-shadow: 0 20px 40px rgba(5, 150, 105, 0.25);
+  border-color: var(--brand-primary);
 }
 
-/* Carte featured (Premium) */
+/* Carte featured (Premium) - EFFET WOW */
 .pricing-card.featured {
-  border-color: var(--brand);
+  border-color: var(--brand-primary);
   border-width: 3px;
-  background: linear-gradient(180deg, #f0fdf4 0%, white 100%);
-  transform: scale(1.05);
+  background: linear-gradient(180deg, #f0fdf4 0%, white 50%, white 100%);
+  transform: scale(1.08);
+  box-shadow: 0 12px 32px rgba(5, 150, 105, 0.2), 0 0 0 1px rgba(5, 150, 105, 0.1);
+  position: relative;
+  z-index: 10;
+}
+
+.pricing-card.featured::after {
+  content: '';
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  background: conic-gradient(
+    from 0deg at 50% 50%,
+    transparent 0deg,
+    rgba(5, 150, 105, 0.05) 90deg,
+    transparent 180deg
+  );
+  animation: rotate 8s linear infinite;
+  pointer-events: none;
+}
+
+@keyframes rotate {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
 }
 
 .pricing-card.featured:hover {
-  transform: scale(1.05) translateY(-8px);
+  transform: scale(1.08) translateY(-12px);
+  box-shadow: 0 24px 48px rgba(5, 150, 105, 0.35), 0 0 60px rgba(5, 150, 105, 0.2);
 }
 
-/* Badge "POPULAIRE" */
+/* Badge "POPULAIRE" - Effet brillant */
 .popular-badge {
   position: absolute;
-  top: -16px;
+  top: -18px;
   left: 50%;
   transform: translateX(-50%);
-  background: var(--brand);
+  background: var(--brand-gradient);
   color: white;
-  padding: 8px 24px;
+  padding: 10px 28px;
   border-radius: 999px;
   font-size: 13px;
-  font-weight: 700;
-  letter-spacing: 1px;
-  box-shadow: 0 4px 12px rgba(5, 150, 105, 0.4);
+  font-weight: 800;
+  letter-spacing: 1.2px;
+  box-shadow: 0 8px 16px rgba(5, 150, 105, 0.5);
+  text-transform: uppercase;
+  position: relative;
+  overflow: hidden;
+  z-index: 20;
+}
+
+.popular-badge::before {
+  content: '';
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  background: linear-gradient(45deg, transparent 30%, rgba(255, 255, 255, 0.3) 50%, transparent 70%);
+  animation: shine 3s ease-in-out infinite;
+}
+
+@keyframes shine {
+  0% { transform: translateX(-100%); }
+  100% { transform: translateX(100%); }
 }
 
 /* Titre pack */
 .pricing-card h3 {
-  font-size: 28px;
-  margin: 0 0 24px 0;
+  font-size: 32px;
+  margin: 0 0 28px 0;
   text-align: center;
   color: var(--fg);
+  font-family: 'Playfair Display', Georgia, serif;
+  font-weight: 800;
+  position: relative;
+  z-index: 2;
 }
 
-/* Prix */
+/* Prix avec effet gradient */
 .pricing-card .price,
 .pricing-card .price-monthly {
   text-align: center;
-  margin-bottom: 32px;
-  padding-bottom: 32px;
+  margin-bottom: 36px;
+  padding-bottom: 36px;
   border-bottom: 2px solid var(--line);
+  position: relative;
+  z-index: 2;
 }
 
 .pricing-card .price .amount,
 .pricing-card .price-monthly .amount {
   display: block;
-  font-size: 48px;
-  font-weight: 800;
-  color: var(--brand);
+  font-size: 56px;
+  font-weight: 900;
+  background: var(--brand-gradient);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
   line-height: 1;
-  margin-bottom: 8px;
+  margin-bottom: 12px;
+  font-family: 'Space Grotesk', sans-serif;
 }
 
 .pricing-card .price .period,
@@ -121,308 +226,522 @@
   display: block;
   font-size: 16px;
   color: var(--muted);
-  font-weight: 500;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
 }
 
-/* Features liste */
+/* Features liste PREMIUM */
 .pricing-card .features {
   list-style: none;
   padding: 0;
-  margin: 0 0 32px 0;
+  margin: 0 0 36px 0;
   flex: 1;
+  position: relative;
+  z-index: 2;
 }
 
 .pricing-card .features li {
-  padding: 12px 0;
+  padding: 14px 0;
   color: var(--fg);
   font-size: 16px;
   display: flex;
   align-items: flex-start;
-  gap: 12px;
-  line-height: 1.5;
+  gap: 14px;
+  line-height: 1.6;
+  transition: all 0.2s ease;
+  border-radius: 8px;
+  margin: 0 -8px;
+  padding-left: 8px;
+}
+
+.pricing-card .features li:hover {
+  background: var(--emerald-50);
+  transform: translateX(4px);
 }
 
 .pricing-card .features li::before {
   content: '✓';
-  color: var(--brand);
+  color: white;
   font-weight: bold;
-  font-size: 18px;
+  font-size: 14px;
   flex-shrink: 0;
+  width: 24px;
+  height: 24px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--brand-gradient);
+  border-radius: 50%;
+  box-shadow: 0 2px 8px rgba(5, 150, 105, 0.3);
 }
 
-/* Abonnement */
+/* Abonnement avec effet glassmorphism */
 .pricing-card .subscription {
-  background: #f9fafb;
-  padding: 16px;
-  border-radius: 12px;
+  background: linear-gradient(135deg, rgba(240, 253, 244, 0.8), rgba(236, 254, 255, 0.8));
+  backdrop-filter: blur(10px);
+  padding: 20px;
+  border-radius: 16px;
   text-align: center;
-  margin-bottom: 24px;
-  border: 1px solid var(--line);
+  margin-bottom: 28px;
+  border: 2px solid rgba(5, 150, 105, 0.2);
+  box-shadow: 0 4px 12px rgba(5, 150, 105, 0.1);
+  position: relative;
+  z-index: 2;
 }
 
 .pricing-card .subscription strong {
   display: block;
-  font-size: 24px;
-  color: var(--brand);
-  margin-bottom: 4px;
+  font-size: 28px;
+  background: var(--brand-gradient);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  margin-bottom: 6px;
+  font-weight: 800;
 }
 
 .pricing-card .subscription span {
   font-size: 14px;
   color: var(--muted);
+  font-weight: 600;
 }
 
-/* Bouton */
+/* Bouton avec effet avancé */
 .pricing-card .btn {
   width: 100%;
   text-align: center;
   font-size: 18px;
-  padding: 16px 24px;
+  padding: 18px 28px;
+  font-weight: 800;
+  position: relative;
+  z-index: 2;
+  transition: all 0.3s ease;
 }
 
-/* === Section "Tous les packs incluent" === */
+.pricing-card:hover .btn {
+  transform: scale(1.05);
+  box-shadow: 0 12px 24px rgba(5, 150, 105, 0.4);
+}
+
+/* === Section "Tous les packs incluent" PREMIUM === */
 .all-packs-include {
-  margin: 60px 0;
-  padding: 48px 32px;
-  background: linear-gradient(135deg, #f0fdf4, #dcfce7);
-  border-radius: 20px;
+  margin: 80px 0;
+  padding: 64px 48px;
+  background: linear-gradient(135deg, #f0fdf4 0%, #dcfce7 50%, #d1fae5 100%);
+  border-radius: 32px;
+  box-shadow: 0 12px 32px rgba(5, 150, 105, 0.15);
+  border: 2px solid #86efac;
+  position: relative;
+  overflow: hidden;
+}
+
+.all-packs-include::before {
+  content: '';
+  position: absolute;
+  top: -50%;
+  right: -50%;
+  width: 100%;
+  height: 100%;
+  background: radial-gradient(circle, rgba(5, 150, 105, 0.08) 0%, transparent 70%);
+  animation: float 20s ease-in-out infinite;
+  pointer-events: none;
+}
+
+@keyframes float {
+  0%, 100% {
+    transform: translate(0, 0) rotate(0deg);
+  }
+  50% {
+    transform: translate(30px, -30px) rotate(180deg);
+  }
 }
 
 .all-packs-include h2 {
   text-align: center;
-  font-size: 32px;
-  margin-bottom: 40px;
+  font-size: 40px;
+  margin-bottom: 48px;
   color: var(--fg);
+  font-family: 'Playfair Display', Georgia, serif;
+  font-weight: 800;
+  position: relative;
+  z-index: 2;
 }
 
 .all-packs-include .grid-4 {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
-  gap: 24px;
+  gap: 28px;
+  position: relative;
+  z-index: 2;
 }
 
 .guarantee-item {
   background: white;
-  padding: 24px;
-  border-radius: 16px;
+  padding: 32px 24px;
+  border-radius: 20px;
   text-align: center;
-  border: 1px solid #86efac;
-  transition: transform 0.3s ease;
+  border: 2px solid #86efac;
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  position: relative;
+  overflow: hidden;
+  box-shadow: 0 4px 12px rgba(5, 150, 105, 0.08);
+}
+
+.guarantee-item::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(135deg, var(--emerald-50), var(--teal-50));
+  opacity: 0;
+  transition: opacity 0.4s ease;
+}
+
+.guarantee-item:hover::before {
+  opacity: 1;
 }
 
 .guarantee-item:hover {
-  transform: translateY(-4px);
-  box-shadow: 0 8px 20px rgba(5, 150, 105, 0.15);
+  transform: translateY(-8px) scale(1.05);
+  box-shadow: 0 16px 32px rgba(5, 150, 105, 0.25);
+  border-color: var(--brand-primary);
 }
 
 .guarantee-item .icon {
-  font-size: 48px;
-  margin-bottom: 16px;
+  font-size: 56px;
+  margin-bottom: 20px;
   display: block;
+  position: relative;
+  z-index: 2;
+  transition: transform 0.4s ease;
+}
+
+.guarantee-item:hover .icon {
+  transform: scale(1.2) rotate(10deg);
 }
 
 .guarantee-item strong {
   display: block;
   font-size: 18px;
   color: var(--fg);
-  margin-bottom: 8px;
+  margin-bottom: 10px;
+  font-weight: 800;
+  position: relative;
+  z-index: 2;
 }
 
 .guarantee-item p {
   font-size: 14px;
   color: var(--muted);
   margin: 0;
+  position: relative;
+  z-index: 2;
+  font-weight: 600;
 }
 
-/* === Simulateur ROI === */
+/* === Simulateur ROI PREMIUM === */
 .roi-simulator {
-  margin: 60px 0;
+  margin: 80px 0;
 }
 
 .roi-simulator h2 {
   text-align: center;
-  font-size: 36px;
-  margin-bottom: 32px;
+  font-size: 48px;
+  margin-bottom: 48px;
   color: var(--fg);
+  font-family: 'Playfair Display', Georgia, serif;
+  font-weight: 800;
+  background: var(--brand-gradient);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
 }
 
 .simulator-card {
   background: white;
-  border: 2px solid var(--brand);
-  border-radius: 20px;
-  padding: 40px;
-  max-width: 900px;
+  border: 3px solid var(--brand-primary);
+  border-radius: 32px;
+  padding: 56px 48px;
+  max-width: 1000px;
   margin: 0 auto;
-  box-shadow: 0 8px 24px rgba(5, 150, 105, 0.15);
+  box-shadow: 0 20px 40px rgba(5, 150, 105, 0.2);
+  position: relative;
+  overflow: hidden;
 }
 
-/* Inputs simulateur */
+.simulator-card::before {
+  content: '';
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  background: linear-gradient(45deg, transparent, rgba(5, 150, 105, 0.03), transparent);
+  animation: shimmer 3s ease-in-out infinite;
+  pointer-events: none;
+}
+
+@keyframes shimmer {
+  0%, 100% {
+    transform: translateX(-50%) translateY(-50%);
+  }
+  50% {
+    transform: translateX(50%) translateY(50%);
+  }
+}
+
+/* Inputs simulateur PREMIUM */
 .simulator-inputs {
   display: flex;
   flex-direction: column;
-  gap: 24px;
-  margin-bottom: 32px;
+  gap: 32px;
+  margin-bottom: 40px;
+  position: relative;
+  z-index: 2;
 }
 
 .simulator-inputs label {
   display: flex;
   flex-direction: column;
-  gap: 12px;
-  font-weight: 600;
-  font-size: 16px;
+  gap: 14px;
+  font-weight: 700;
+  font-size: 17px;
   color: var(--fg);
 }
 
 .simulator-inputs input[type="range"] {
   width: 100%;
-  height: 8px;
+  height: 10px;
   border-radius: 999px;
-  background: #e5e7eb;
+  background: linear-gradient(to right, var(--emerald-200), var(--teal-200));
   outline: none;
   -webkit-appearance: none;
+  box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
 .simulator-inputs input[type="range"]::-webkit-slider-thumb {
   -webkit-appearance: none;
   appearance: none;
-  width: 24px;
-  height: 24px;
+  width: 28px;
+  height: 28px;
   border-radius: 50%;
-  background: var(--brand);
+  background: var(--brand-gradient);
   cursor: pointer;
-  box-shadow: 0 2px 8px rgba(5, 150, 105, 0.4);
+  box-shadow: 0 4px 12px rgba(5, 150, 105, 0.5);
+  transition: all 0.3s ease;
+}
+
+.simulator-inputs input[type="range"]::-webkit-slider-thumb:hover {
+  transform: scale(1.2);
+  box-shadow: 0 6px 16px rgba(5, 150, 105, 0.6);
 }
 
 .simulator-inputs input[type="range"]::-moz-range-thumb {
-  width: 24px;
-  height: 24px;
+  width: 28px;
+  height: 28px;
   border-radius: 50%;
-  background: var(--brand);
+  background: var(--brand-gradient);
   cursor: pointer;
   border: none;
-  box-shadow: 0 2px 8px rgba(5, 150, 105, 0.4);
+  box-shadow: 0 4px 12px rgba(5, 150, 105, 0.5);
+  transition: all 0.3s ease;
+}
+
+.simulator-inputs input[type="range"]::-moz-range-thumb:hover {
+  transform: scale(1.2);
+  box-shadow: 0 6px 16px rgba(5, 150, 105, 0.6);
 }
 
 .simulator-inputs output {
   display: inline-block;
-  background: var(--brand);
+  background: var(--brand-gradient);
   color: white;
-  padding: 6px 16px;
+  padding: 8px 20px;
   border-radius: 999px;
-  font-weight: 700;
-  font-size: 18px;
-  min-width: 60px;
+  font-weight: 800;
+  font-size: 20px;
+  min-width: 70px;
   text-align: center;
+  box-shadow: 0 4px 12px rgba(5, 150, 105, 0.3);
 }
 
 .simulator-inputs input[type="number"] {
-  padding: 12px 16px;
+  padding: 16px 20px;
   border: 2px solid var(--line);
-  border-radius: 10px;
-  font-size: 18px;
-  font-weight: 600;
-  width: 150px;
+  border-radius: 16px;
+  font-size: 20px;
+  font-weight: 700;
+  width: 180px;
+  transition: all 0.3s ease;
+  background: var(--bg-secondary);
 }
 
 .simulator-inputs input[type="number"]:focus {
   outline: none;
-  border-color: var(--brand);
+  border-color: var(--brand-primary);
+  background: white;
+  box-shadow: 0 0 0 4px rgba(5, 150, 105, 0.1);
 }
 
 .simulator-inputs button {
-  margin-top: 8px;
+  margin-top: 12px;
 }
 
-/* Résultats simulateur */
+/* Résultats simulateur PREMIUM */
 .simulator-results {
-  margin-top: 40px;
-  padding-top: 40px;
-  border-top: 2px solid var(--line);
+  margin-top: 48px;
+  padding-top: 48px;
+  border-top: 3px solid var(--brand-primary);
+  position: relative;
+  z-index: 2;
 }
 
 .simulator-results .result-card {
   background: linear-gradient(135deg, #f0fdf4, #dcfce7);
-  padding: 24px;
-  border-radius: 16px;
+  padding: 32px 28px;
+  border-radius: 20px;
   text-align: center;
-  margin-bottom: 20px;
-  border: 1px solid #86efac;
+  margin-bottom: 24px;
+  border: 2px solid #86efac;
+  box-shadow: 0 8px 20px rgba(5, 150, 105, 0.15);
+  transition: all 0.3s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+.simulator-results .result-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(135deg, rgba(255, 255, 255, 0.5), transparent);
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.simulator-results .result-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 12px 28px rgba(5, 150, 105, 0.25);
+}
+
+.simulator-results .result-card:hover::before {
+  opacity: 1;
 }
 
 .simulator-results .result-card h3 {
   font-size: 16px;
   color: var(--muted);
-  margin: 0 0 12px 0;
-  font-weight: 600;
+  margin: 0 0 16px 0;
+  font-weight: 700;
   text-transform: uppercase;
-  letter-spacing: 0.5px;
+  letter-spacing: 1px;
+  position: relative;
+  z-index: 2;
 }
 
 .simulator-results .result-value {
-  font-size: 48px;
-  font-weight: 800;
-  color: var(--brand);
+  font-size: 56px;
+  font-weight: 900;
+  background: var(--brand-gradient);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
   line-height: 1;
-  margin-bottom: 8px;
+  margin-bottom: 12px;
+  font-family: 'Space Grotesk', sans-serif;
+  position: relative;
+  z-index: 2;
 }
 
 .simulator-results .result-detail {
   font-size: 14px;
   color: var(--muted);
   margin: 0;
+  font-weight: 600;
+  position: relative;
+  z-index: 2;
 }
 
-/* Graphique */
+/* Graphique PREMIUM */
 .chart-wrapper {
-  margin: 32px 0;
+  margin: 40px 0;
   background: white;
-  padding: 24px;
-  border-radius: 16px;
-  border: 1px solid var(--line);
+  padding: 32px;
+  border-radius: 20px;
+  border: 2px solid var(--line);
+  box-shadow: 0 8px 20px rgba(5, 150, 105, 0.1);
 }
 
 .chart-wrapper h3 {
   text-align: center;
-  font-size: 20px;
-  margin-bottom: 24px;
+  font-size: 24px;
+  margin-bottom: 32px;
   color: var(--fg);
+  font-weight: 800;
 }
 
 .chart-wrapper canvas {
   max-height: 400px;
 }
 
-/* CTA ROI */
+/* CTA ROI PREMIUM */
 .cta-roi {
   text-align: center;
-  margin-top: 32px;
-  padding: 32px;
-  background: linear-gradient(135deg, var(--brand-2), var(--brand));
-  border-radius: 16px;
+  margin-top: 48px;
+  padding: 48px 40px;
+  background: var(--brand-gradient);
+  border-radius: 24px;
+  box-shadow: 0 12px 32px rgba(5, 150, 105, 0.3);
+  position: relative;
+  overflow: hidden;
+}
+
+.cta-roi::before {
+  content: '';
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  background: linear-gradient(45deg, transparent 30%, rgba(255, 255, 255, 0.1) 50%, transparent 70%);
+  animation: shine 3s ease-in-out infinite;
 }
 
 .cta-roi p {
   color: white;
-  font-size: 20px;
-  margin-bottom: 16px;
+  font-size: 22px;
+  margin-bottom: 20px;
+  position: relative;
+  z-index: 2;
+  font-weight: 700;
 }
 
 .cta-roi .btn {
   background: white;
-  color: var(--brand);
-  font-size: 18px;
-  padding: 16px 32px;
+  color: var(--brand-primary);
+  font-size: 20px;
+  padding: 20px 40px;
+  font-weight: 800;
+  position: relative;
+  z-index: 2;
 }
 
 .cta-roi .btn:hover {
   background: #f0fdf4;
+  transform: scale(1.05);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
 }
 
-/* === Responsive === */
+/* === Responsive PREMIUM === */
 @media (max-width: 1024px) {
   .pricing-grid {
     grid-template-columns: 1fr;
-    gap: 24px;
+    gap: 32px;
   }
   
   .pricing-card.featured {
@@ -430,7 +749,7 @@
   }
   
   .pricing-card.featured:hover {
-    transform: translateY(-8px);
+    transform: translateY(-12px);
   }
   
   .all-packs-include .grid-4 {
@@ -441,6 +760,7 @@
 @media (max-width: 768px) {
   .payment-toggle {
     flex-direction: column;
+    padding: 8px;
   }
   
   .payment-toggle button {
@@ -448,40 +768,40 @@
   }
   
   .pricing-card {
-    padding: 32px 24px;
+    padding: 40px 28px;
   }
   
   .pricing-card h3 {
-    font-size: 24px;
+    font-size: 28px;
   }
   
   .pricing-card .price .amount,
   .pricing-card .price-monthly .amount {
-    font-size: 36px;
+    font-size: 44px;
   }
   
   .all-packs-include {
-    padding: 32px 20px;
+    padding: 40px 24px;
   }
   
   .all-packs-include h2 {
-    font-size: 24px;
+    font-size: 32px;
   }
   
   .all-packs-include .grid-4 {
     grid-template-columns: 1fr;
-    gap: 16px;
+    gap: 20px;
   }
   
   .roi-simulator h2 {
-    font-size: 28px;
+    font-size: 36px;
   }
   
   .simulator-card {
-    padding: 24px 20px;
+    padding: 32px 24px;
   }
   
   .simulator-results .result-value {
-    font-size: 36px;
+    font-size: 44px;
   }
 }
