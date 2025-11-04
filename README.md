@@ -28,8 +28,8 @@ LVLIA transforme votre salon en ferme autonome ultra-productive grâce à l'inte
 
 ### 💰 Business Model
 
-- **Marge 1m²** : 66.4% (1.988€ net)
-- **Marge 2m²** : 66.0% (3.953€ net)
+- **Marge 1m²** : 
+- **Marge 2m²** : 
 - **Paiement** : Mollie (CB, Apple Pay, Google Pay, PayPal)
 - **Livraison** : Gratuite France métropolitaine
 
