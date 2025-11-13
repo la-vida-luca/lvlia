@@ -39,4 +39,4 @@
 - [x] Tester l’encodage `robots.txt` via https://www.google.com/webmasters/tools/robots-testing-tool.
 - [ ] Ouvrir tickets pour enrichir les pages secteurs et articles blog (sprint M03).
 
-_MAJ : 15 février 2025 – Lucas Horville & IA LVLIA_
+_MAJ : 15 novembre 2025 – Lucas Horville & IA LVLIA_
