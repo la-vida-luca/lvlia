@@ -58,6 +58,46 @@
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "Quel volume produisez-vous chaque mois ?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Nos micro-fermes professionnelles livrent entre 30 et 80 kg de végétaux frais par mois selon la configuration et le profil client (restaurant, hôtel, collectivité)."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "L'installation est-elle clé en main ?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Oui. Nos équipes certifiées se chargent de la livraison, de l'installation et de la formation complète. Le délai moyen est de 3 semaines après validation du devis."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Quel accompagnement agronomique est inclus ?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Chaque client dispose d'un agronome référent disponible 24h/24 par chat, téléphone et visio. Nous analysons vos données IoT chaque semaine pour anticiper les besoins."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Proposez-vous des solutions de financement ?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Nous proposons des solutions de leasing à partir de 189€ HT/mois ainsi que des dossiers de subventions (ADEME, régions) préparés par nos équipes."
+        }
+      }
+    ]
+  }
+  </script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
     "@type": "BreadcrumbList",
     "itemListElement": [
       {"@type": "ListItem", "position": 1, "name": "Accueil", "item": "https://lvlia.fr/"},
@@ -145,7 +185,15 @@
 </section>
 
 <main class="container" style="padding:80px 20px;">
-  
+
+  <nav aria-label="Fil d'Ariane" style="max-width:1100px;margin:0 auto 48px;">
+    <ol style="display:flex;gap:12px;flex-wrap:wrap;font-size:0.95rem;color:var(--muted);padding:0;margin:0;list-style:none;">
+      <li><a href="index.html" style="color:var(--brand-primary);text-decoration:none;">Accueil</a></li>
+      <li aria-hidden="true">›</li>
+      <li aria-current="page" style="font-weight:600;">Solutions professionnelles</li>
+    </ol>
+  </nav>
+
   <!-- Secteurs d'activité -->
   <section id="secteurs" style="margin-bottom:100px;">
     <div style="text-align:center;margin-bottom:64px;">
@@ -258,6 +306,53 @@
           <strong style="color:var(--brand-primary);font-size:1.1rem;">✓ Engagement de résultats</strong>
         </div>
       </div>
+    </div>
+  </section>
+
+  <!-- FAQ Pro -->
+  <section id="faq-pro" style="margin-bottom:100px;">
+    <h2 style="text-align:center;font-size:clamp(2rem,5vw,3rem);margin-bottom:48px;">❓ Questions fréquentes Pro</h2>
+
+    <div style="max-width:1000px;margin:0 auto;display:grid;gap:24px;">
+      <details class="card hover-3d gpu-boost" style="padding:32px;">
+        <summary style="font-size:1.2rem;font-weight:700;color:var(--brand-primary);list-style:none;display:flex;justify-content:space-between;align-items:center;">
+          <span>📦 Quel volume produisez-vous chaque mois ?</span>
+          <span style="font-size:1.6rem;">+</span>
+        </summary>
+        <p style="margin:20px 0 0;line-height:1.7;color:var(--muted);padding-left:32px;">
+          Nos micro-fermes génèrent <strong>30 à 80 kg de récoltes/mois</strong> selon la surface choisie et votre cadence de récolte. Nous dimensionnons chaque projet pour couvrir vos menus signature.
+        </p>
+      </details>
+
+      <details class="card hover-3d gpu-boost" style="padding:32px;">
+        <summary style="font-size:1.2rem;font-weight:700;color:var(--brand-primary);list-style:none;display:flex;justify-content:space-between;align-items:center;">
+          <span>🔧 L'installation est-elle clé en main ?</span>
+          <span style="font-size:1.6rem;">+</span>
+        </summary>
+        <p style="margin:20px 0 0;line-height:1.7;color:var(--muted);padding-left:32px;">
+          Oui, livraison, montage, calibration IoT et formation équipes sont inclus. <strong>Mise en route sous 3 semaines</strong> après validation du devis, partout en France métropolitaine.
+        </p>
+      </details>
+
+      <details class="card hover-3d gpu-boost" style="padding:32px;">
+        <summary style="font-size:1.2rem;font-weight:700;color:var(--brand-primary);list-style:none;display:flex;justify-content:space-between;align-items:center;">
+          <span>🧑‍🌾 Quel accompagnement agronomique est prévu ?</span>
+          <span style="font-size:1.6rem;">+</span>
+        </summary>
+        <p style="margin:20px 0 0;line-height:1.7;color:var(--muted);padding-left:32px;">
+          Un agronome LVLIA suit vos données en continu via notre plateforme. <strong>Support 24h/24</strong> par chat, téléphone ou visio, rapports hebdomadaires et plan d'action personnalisé.
+        </p>
+      </details>
+
+      <details class="card hover-3d gpu-boost" style="padding:32px;">
+        <summary style="font-size:1.2rem;font-weight:700;color:var(--brand-primary);list-style:none;display:flex;justify-content:space-between;align-items:center;">
+          <span>💶 Existe-t-il des solutions de financement ?</span>
+          <span style="font-size:1.6rem;">+</span>
+        </summary>
+        <p style="margin:20px 0 0;line-height:1.7;color:var(--muted);padding-left:32px;">
+          Nous proposons des offres de leasing dès <strong>189€ HT/mois</strong> avec option d'achat ainsi qu'un accompagnement sur les dossiers de subventions ADEME, régionales et européennes.
+        </p>
+      </details>
     </div>
   </section>
 

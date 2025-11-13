@@ -6,6 +6,7 @@
   - Renforcement des métadonnées (SEO + IA) sur les pages Pro et Contact.
   - Structuration avancée en JSON-LD (Service, ContactPage, FAQPage, Breadcrumbs) pour alimenter les rich results Google et les réponses directes LLM.
   - Normalisation UTF-8 du `robots.txt` pour éviter les erreurs d’encodage et ajouter la révision 2025.
+  - Mise en cohérence contenu/balisage : fils d’Ariane visibles, FAQ Pro enrichie et numéro de téléphone aligné sur tous les supports.
 - **Impact attendu** : amélioration du CTR organique B2B, meilleure compréhension des offres par les agents conversationnels, crawling sans friction pour les bots IA.
 
 ## 2. Audit technique
@@ -14,6 +15,9 @@
 | Balises meta Pro | Absence de balises sociales/IA complètes | Ajout OG/Twitter, méta IA, canonical | ✅ Fait |
 | Balises meta Contact | Faible sémantique IA, pas de FAQ structurée | Ajout meta + ContactPage/FAQPage | ✅ Fait |
 | `robots.txt` | Caractères accentués corrompus, date obsolète | Réécriture UTF-8 + mise à jour 2025 | ✅ Fait |
+| Breadcrumbs | Manquants sur pages clés | Ajout JSON-LD + navigation front visible | ✅ Fait |
+| Données de contact | `tel:` placeholder incohérent | Harmonisation numéro + affichage clair | ✅ Fait |
+| FAQ Pro | Absente côté contenu | Ajout section détaillée + schema FAQPage | ✅ Fait |
 | Sitemap | Très complet mais volumineux | Vérifier cohérence trimestrielle | 🔄 À suivre |
 | Blog posts | Métadonnées correctes, manque d’IA meta | Ajouter couche AI sur les posts prioritaires | 🎯 Opportunité |
 
