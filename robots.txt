@@ -1,6 +1,6 @@
 # Robots.txt optimisé pour SEO et crawlers IA
 # LVLIA - Micro-serres connectées
-# Dernière mise à jour : 2025-02-15
+# Dernière mise à jour : 2025-11-15
 
 # ============================================
 # RÈGLES GÉNÉRALES POUR TOUS LES ROBOTS
